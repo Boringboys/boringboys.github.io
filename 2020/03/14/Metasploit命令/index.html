@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="John Doe">
+    
+    <meta name="description" content="我的小网站">
+    
+    
+    
+    
+    
+    
+    <title>Metasploit命令 | Boringboys</title>
+    <link href="http://www.boringboys.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/mylogo.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://www.boringboys.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://www.boringboys.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">Boringboys</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="">
+                    <a href="/tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://www.boringboys.top">Boringboys</a>
+        >
+        <span>Metasploit命令</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2020/03/14/Metasploit%E5%91%BD%E4%BB%A4/">Metasploit命令</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2020-03-14
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2020/03/14/Metasploit%E5%91%BD%E4%BB%A4/">Metasploit命令</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2020-03-14
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h1 id="metasploit命令"><a href="#metasploit命令" class="headerlink" title="metasploit命令"></a>metasploit命令</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>作为一个英语渣，为了自己后期的学习，我把metasploit的帮助菜单简单翻译了一下，<br>方便自己查看的同时也分享给大家。</p>
+<p>…翻译中…</p>
+<h1 id="核心命令"><a href="#核心命令" class="headerlink" title="核心命令"></a>核心命令</h1><pre><code>命令          描述
+-------       -----------
+?             帮助菜单
+banner        在命令行里显示一个好看的metasploit图案（一个很有趣的命令^0^）
+cd            更改当前工作目录
+color         启用或禁用颜色输出
+connect       连接到一个主机
+exit          退出msfconsole
+get           获得一个上下文特定变量的值
+getg          获得一个全局变量的值
+grep          从另一个命令的输出中查找符合条件的行
+help          帮助菜单
+history       显示历史命令
+load          加载框架插件
+quit          退出msfconsole（有提示Y/N）
+repeat        重复一个命令列表
+route         通过会话路由流量
+save          保存活动数据
+sessions      转储会话列表并显示有关会话的信息
+set           设置一个上下文特定变量的值
+setg          设置一个全局变量的值
+sleep         在指定的秒数内不执行任何操作
+spool         将控制台输出写入某个文件
+threads       查看和操纵后台线程
+unload        卸载框架插件
+unset         取消设置一个或多个上下文特定变量的值
+unsetg        取消设置一个或多个全局变量的值
+version       显示框架和控制台库版本号</code></pre><h1 id="Module-Commands"><a href="#Module-Commands" class="headerlink" title="Module Commands"></a>Module Commands</h1><pre><code>Command       Description
+-------       -----------
+advanced      Displays advanced options for one or more modules
+back          Move back from the current context
+info          Displays information about one or more modules
+loadpath      Searches for and loads modules from a path
+options       Displays global options or for one or more modules
+popm          Pops the latest module off the stack and makes it active
+previous      Sets the previously loaded module as the current module
+pushm         Pushes the active or list of modules onto the module stack
+reload_all    Reloads all modules from all defined module paths
+search        Searches module names and descriptions
+show          Displays modules of a given type, or all modules
+use           Selects a module by name</code></pre><h1 id="Job-Commands"><a href="#Job-Commands" class="headerlink" title="Job Commands"></a>Job Commands</h1><pre><code>Command       Description
+-------       -----------
+handler       Start a payload handler as job
+jobs          Displays and manages jobs
+kill          Kill a job
+rename_job    Rename a job</code></pre><h1 id="Resource-Script-Commands"><a href="#Resource-Script-Commands" class="headerlink" title="Resource Script Commands"></a>Resource Script Commands</h1><pre><code>Command       Description
+-------       -----------
+makerc        Save commands entered since start to a file
+resource      Run the commands stored in a file</code></pre><h1 id="Database-Backend-Commands"><a href="#Database-Backend-Commands" class="headerlink" title="Database Backend Commands"></a>Database Backend Commands</h1><pre><code>Command           Description
+-------           -----------
+analyze           Analyze database information about a specific address or address range
+db_connect        Connect to an existing data service
+db_disconnect     Disconnect from the current data service
+db_export         Export a file containing the contents of the database
+db_import         Import a scan result file (filetype will be auto-detected)
+db_nmap           Executes nmap and records the output automatically
+db_rebuild_cache  Rebuilds the database-stored module cache
+db_remove         Remove the saved data service entry
+db_save           Save the current data service connection as the default to reconnect on startup
+db_status         Show the current data service status
+hosts             List all hosts in the database
+loot              List all loot in the database
+notes             List all notes in the database
+services          List all services in the database
+vulns             List all vulnerabilities in the database
+workspace         Switch between database workspaces</code></pre><h1 id="Credentials-Backend-Commands"><a href="#Credentials-Backend-Commands" class="headerlink" title="Credentials Backend Commands"></a>Credentials Backend Commands</h1><pre><code>Command       Description
+-------       -----------
+creds         List all credentials in the database</code></pre><h1 id="Developer-Commands"><a href="#Developer-Commands" class="headerlink" title="Developer Commands"></a>Developer Commands</h1><pre><code>Command       Description
+-------       -----------
+edit          Edit the current module or a file with the preferred editor
+irb           Open an interactive Ruby shell in the current context
+log           Display framework.log paged to the end if possible
+pry           Open the Pry debugger on the current module or Framework
+reload_lib    Reload Ruby library files from specified paths</code></pre><h1 id="msfconsole"><a href="#msfconsole" class="headerlink" title="msfconsole"></a>msfconsole</h1><p><code>msfconsole</code> is the primary interface to Metasploit Framework. There is quite a<br>lot that needs go here, please be patient and keep an eye on this space!</p>
+<h2 id="Building-ranges-and-lists"><a href="#Building-ranges-and-lists" class="headerlink" title="Building ranges and lists"></a>Building ranges and lists</h2><p>Many commands and options that take a list of things can use ranges to avoid<br>having to manually list each desired thing. All ranges are inclusive.</p>
+<h3 id="Ranges-of-IDs"><a href="#Ranges-of-IDs" class="headerlink" title="Ranges of IDs"></a>Ranges of IDs</h3><p>Commands that take a list of IDs can use ranges to help. Individual IDs must be<br>separated by a <code>,</code> (no space allowed) and ranges can be expressed with either<br><code>-</code> or <code>..</code>.</p>
+<h3 id="Ranges-of-IPs"><a href="#Ranges-of-IPs" class="headerlink" title="Ranges of IPs"></a>Ranges of IPs</h3><p>There are several ways to specify ranges of IP addresses that can be mixed<br>together. The first way is a list of IPs separated by just a <code></code> (ASCII space),<br>with an optional <code>,</code>. The next way is two complete IP addresses in the form of<br><code>BEGINNING_ADDRESS-END_ADDRESS</code> like <code>127.0.1.44-127.0.2.33</code>. CIDR<br>specifications may also be used, however the whole address must be given to<br>Metasploit like <code>127.0.0.0/8</code> and not <code>127/8</code>, contrary to the RFC.<br>Additionally, a netmask can be used in conjunction with a domain name to<br>dynamically resolve which block to target. All these methods work for both IPv4<br>and IPv6 addresses. IPv4 addresses can also be specified with special octet<br>ranges from the <a href="https://nmap.org/book/man-target-specification.html" target="_blank" rel="noopener">NMAP target<br>specification</a></p>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><p>Terminate the first sessions:</p>
+<pre><code>sessions -k 1</code></pre><p>Stop some extra running jobs:</p>
+<pre><code>jobs -k 2-6,7,8,11..15</code></pre><p>Check a set of IP addresses:</p>
+<pre><code>check 127.168.0.0/16, 127.0.0-2.1-4,15 127.0.0.255</code></pre><p>Target a set of IPv6 hosts:</p>
+<pre><code>set RHOSTS fe80::3990:0000/110, ::1-::f0f0</code></pre><p>Target a block from a resolved domain name:</p>
+<pre><code>set RHOSTS www.example.test/24</code></pre><p>Framework: 5.0.16-dev-a5184d39dc6a3a8cf2b85538327b57706057e94c</p>
+<p>Console  : 5.0.16-dev-a5184d39dc6a3a8cf2b85538327b57706057e94c</p>
+<blockquote>
+<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/Metasploit命令/">https://www.boringboys.top/article/Metasploit命令/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+</blockquote>
+
+    </div>
+</article>
+
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            John Doe
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/mylogo.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"><p>我的小网站</p>
+</p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020/03/14/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020/03/14/%E7%BD%91%E7%BB%9C%E7%AF%87%E4%B9%8B%E5%B9%BF%E6%92%AD%E5%9F%9F%E5%92%8C%E5%86%B2%E7%AA%81%E5%9F%9F/">网络篇之广播域和冲突域</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020/03/14/%E5%AF%86%E7%A0%81%E5%AD%A6Diffie-Hellman%E5%AF%86%E9%92%A5%E4%BA%A4%E6%8D%A2%E5%8D%8F%E8%AE%AE/">密码学Diffie-Hellman密钥交换协议</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020/03/14/Nessus%E5%9C%A8Windows%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/">Nessus在Windows上的安装</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020/03/14/Metasploit%E5%91%BD%E4%BB%A4/">Metasploit命令</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020/03/14/hello-world/">Hello World</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020/03/14/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020/03/14/Metasploit%E5%91%BD%E4%BB%A4/">Metasploit命令</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020/03/14/%E5%AF%86%E7%A0%81%E5%AD%A6Diffie-Hellman%E5%AF%86%E9%92%A5%E4%BA%A4%E6%8D%A2%E5%8D%8F%E8%AE%AE/">密码学Diffie-Hellman密钥交换协议</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020/03/14/Nessus%E5%9C%A8Windows%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/">Nessus在Windows上的安装</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020/03/14/%E7%BD%91%E7%BB%9C%E7%AF%87%E4%B9%8B%E5%B9%BF%E6%92%AD%E5%9F%9F%E5%92%8C%E5%86%B2%E7%AA%81%E5%9F%9F/">网络篇之广播域和冲突域</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020/03/14/hello-world/">Hello World</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2020/03/14/Metasploit%E5%91%BD%E4%BB%A4/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2020/03/14/Metasploit%E5%91%BD%E4%BB%A4/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2020/03/14/Metasploit%E5%91%BD%E4%BB%A4/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
+    </li>
+    
+    <li>
+        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
+    </li>
+    
+    <li>
+        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/ZEROKISEKI/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://coding.net/u/SORA1" target="_blank">Coding</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/aonosora/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 John Doe Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '6'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+</html>
