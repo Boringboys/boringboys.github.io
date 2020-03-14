@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>正则表达式</title>
+    <url>/2020/03/14/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p><strong>正则表达式</strong>，又称规则表达式。（英语：Regular Expression，代码中简写为regex、regexp或RE），计算机科学的一个概念。<br>正则表达式通常被用来检索、替换那些符合某个模式(规则)的文本。</p>
+<p>正则表达式由一些普通字符和一些元字符（metacharacters）组成。普通字符包括大小写的字母和数字，而元字符则具有特殊的含义。<br>下表列出了所有的元字符和对它们的描述。</p>
+<table>
+ <tr>
+  <th>字符</th><th>描述</th> 
+</tr>
+ <tr>
+  <td>\</td><td>将下一个字符标记为特殊字符、或一个原义字符、或一个向后引用、或一个八进制转义符。</td> 
+</tr>
+ <tr>
+  <td>^</td><td>匹配输入字符串的开始位置。</td> 
+</tr>
+ <tr>
+  <td>$</td><td>匹配输入字符串的结束位置。</td> 
+</tr>
+ <tr>
+  <td>*</td><td>匹配前面的子表达式零次或多次。</td> 
+</tr>
+ <tr>
+  <td>+</td><td>匹配前面的子表达式一次或多次。</td> 
+</tr>
+ <tr>
+  <td>?</td><td>匹配前面的子表达式零次或一次。</td> 
+</tr>
+ <tr>
+  <td>{n}</td><td>n 是一个非负整数。匹配确定的 n 次。</td> 
+</tr>
+ <tr>
+  <td>{n,}</td><td>n 是一个非负整数。至少匹配n 次。</td> 
+</tr>
+ <tr>
+  <td>{n,m}</td><td>m和n均为非负整数，其中n<=m。最少匹配n次且最多匹配m次。</td> 
+</tr>
+ <tr>
+  <td>?</td><td>当该字符紧跟在任何一个其他限制符（*,+,?，{n}，{n,}，{n,m}）后面时，匹配模式是非贪婪的。非贪婪模式尽可能少地匹配所搜索的字符串，而默认的贪婪模式则尽可能多地匹配所搜索的字符串。</td> 
+</tr>
+ <tr>
+  <td>.</td><td>匹配除换行符（\n、\r）之外的任何单个字符。</td> 
+</tr>
+ <tr>
+  <td>(pattern)</td><td>匹配pattern并获取这一匹配。</td> 
+</tr>
+ <tr>
+  <td>(?:pattern)</td><td>非获取匹配，匹配pattern但不获取匹配结果，不进行存储供以后使用。这在使用或字符“(|)”来组合一个模式的各个部分时很有用。</td> 
+</tr>
+ <tr>
+  <td>(?=pattern)</td><td>非获取匹配，正向肯定预查，在任何匹配pattern的字符串开始处匹配查找字符串，该匹配不需要获取供以后使用。</td> 
+</tr>
+ <tr>
+  <td>(?!pattern)</td><td>非获取匹配，正向否定预查，在任何不匹配pattern的字符串开始处匹配查找字符串，该匹配不需要获取供以后使用。</td> 
+</tr>
+ <tr>
+  <td>(?<=pattern)</td><td>非获取匹配，反向肯定预查，与正向肯定预查类似，只是方向相反。</td> 
+</tr>
+ <tr>
+  <td>(?<<e>!patte_n)</td><td>非获取匹配，反向否定预查，与正向否定预查类似，只是方向相反。</td> 
+</tr>
+ <tr>
+  <td>x|y</td><td>匹配x或y。</td> 
+</tr>
+ <tr>
+  <td>[xyz]</td><td>字符集合。匹配所包含的任意一个字符。</td> 
+</tr>
+ <tr>
+  <td>[^xyz]</td><td>负值字符集合。匹配未包含的任意字符。</td> 
+</tr>
+<tr>
+  <td>[a-z]</td><td>字符范围。匹配指定范围内的任意字符。</td> 
+</tr>
+<tr>
+  <td>[^a-z]</td><td>负值字符范围。匹配任何不在指定范围内的任意字符。</td> 
+</tr>
+<tr>
+  <td>\b</td><td>匹配一个单词的边界，也就是指单词和空格间的位置（即正则表达式的“匹配”有两种概念，一种是匹配字符，一种是匹配位置，这里的\b就是匹配位置的）。</td> 
+</tr>
+<tr>
+  <td>\B</td><td>匹配非单词边界。</td> 
+</tr>
+<tr>
+  <td>\cx</td><td>匹配由x指明的控制字符。</td> 
+</tr>
+<tr>
+  <td>\d</td><td>匹配一个数字字符。等价于[0-9]。grep 要加上-P，perl正则支持。</td> 
+</tr>
+<tr>
+  <td>\D</td><td>匹配一个非数字字符。等价于[^0-9]。grep要加上-P，perl正则支持。</td> 
+</tr>
+<tr>
+  <td>\f</td><td>匹配一个换页符。等价于\x0c和\cL。</td> 
+</tr>
+<tr>
+  <td>\n</td><td>匹配一个换行符。等价于\x0a和\cJ。</td> 
+</tr>
+<tr>
+  <td>\r</td><td>匹配一个回车符。等价于\x0d和\cM。</td> 
+</tr>
+<tr>
+  <td>\s</td><td>匹配任何不可见字符，包括空格、制表符、换页符等等。等价于[ \f\n\r\t\v]。</td> 
+</tr>
+<tr>
+  <td>\S</td><td>匹配任何可见字符。等价于[^ \f\n\r\t\v]。</td> 
+</tr>
+<tr>
+  <td>\t</td><td>匹配一个制表符。等价于\x09和\cI。</td> 
+</tr>
+<tr>
+  <td>\v</td><td>匹配一个垂直制表符。等价于\x0b和\cK。</td> 
+</tr>
+<tr>
+  <td>\w</td><td>匹配包括下划线的任何单词字符。类似但不等价于“[A-Za-z0-9_]”，这里的"单词"字符使用Unicode字符集。</td> 
+</tr>
+<tr>
+  <td>\W</td><td>匹配任何非单词字符。等价于“[^A-Za-z0-9_]”。</td> 
+</tr>
+<tr>
+  <td>\xn</td><td>匹配n，其中n为十六进制转义值。十六进制转义值必须为确定的两个数字长。</td> 
+</tr>
+<tr>
+  <td>\num</td><td>匹配num，其中num是一个正整数。对所获取的匹配的引用。</td> 
+</tr>
+<tr>
+  <td>\n</td><td>标识一个八进制转义值或一个向后引用。如果\n之前至少n个获取的子表达式，则n为向后引用。否则，如果n为八进制数字（0-7），则n为一个八进制转义值。</td> 
+</tr>
+<tr>
+  <td>\nm</td><td>标识一个八进制转义值或一个向后引用。如果\nm之前至少有nm个获得子表达式，则nm为向后引用。如果\nm之前至少有n个获取，则n为一个后跟文字m的向后引用。如果前面的条件都不满足，若n和m均为八进制数字（0-7），则\nm将匹配八进制转义值nm。</td> 
+</tr>
+<tr>
+  <td>\nml</td><td>如果n为八进制数字（0-7），且m和l均为八进制数字（0-7），则匹配八进制转义值nml。</td> 
+</tr>
+<tr>
+  <td>\un</td><td>匹配n，其中n是一个用四个十六进制数字表示的Unicode字符。</td> 
+</tr>
+
+<tr>
+  <td>\p{P}</td><td>小写 p 是 property 的意思，表示 Unicode 属性，用于 Unicode 正表达式的前缀。中括号内的“P”表示Unicode 字符集七个字符属性之一：<br/>标点字符。
+<br/>其他六个属性：<br/>
+L：字母；<br/>
+M：标记符号（一般不会单独出现）；<br/>
+Z：分隔符（比如空格、换行等）；<br/>
+S：符号（比如数学符号、货币符号等）；<br/>
+N：数字（比如阿拉伯数字、罗马数字等）；<br/>
+C：其他字符。<br/><br/>
+ps:部分语言不支持此语法</td> 
+</tr>
+<tr>
+  <td>\<<br/>\></td><td>匹配词（word）的开始（\<）和结束（\>）。</td> 
+</tr>
+<tr>
+  <td>( )</td><td>将( 和 ) 之间的表达式定义为“组”（group），并且将匹配这个表达式的字符保存到一个临时区域（一个正则表达式中最多可以保存9个），它们可以用 \1 到\9 的符号来引用。</td> 
+</tr>
+<tr>
+  <td>|</td><td>将两个匹配条件进行逻辑“或”（Or）运算。</td> 
+</tr>
+</table>
+
+<blockquote>
+<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/正则表达式/">https://www.boringboys.top/article/正则表达式/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>网络篇之广播域和冲突域</title>
+    <url>/2020/03/14/%E7%BD%91%E7%BB%9C%E7%AF%87%E4%B9%8B%E5%B9%BF%E6%92%AD%E5%9F%9F%E5%92%8C%E5%86%B2%E7%AA%81%E5%9F%9F/</url>
+    <content><![CDATA[<h1 id="广播域和冲突域"><a href="#广播域和冲突域" class="headerlink" title="广播域和冲突域"></a>广播域和冲突域</h1><h2 id="广播域"><a href="#广播域" class="headerlink" title="广播域"></a>广播域</h2><p>简单地说，广播域是一种环境，在该环境中通过线路发送的广播消息，可以被所有该环境中的主机或节点接收。</p>
+<h2 id="冲突域"><a href="#冲突域" class="headerlink" title="冲突域"></a>冲突域</h2><p>冲突域是其中的流量可能与其他流量相冲突的网络。冲突域中所有节点都链接到同一个被交换机和学习型网桥划分的相互连接的中继器集合。</p>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>在同一个冲突域中的每一个节点都能接收到所有被发送的帧；<br>在同一个广播域中的每一个节点都能接收到任一设备发送的广播帧；  </p>
+<p>冲突域是基于物理层的，所以一些处在数据链路层的设备能够划分冲突域；<br>广播域是基于数据链路层的，所以广播域只能有像路由器这样的网络层设备来划分。</p>
+<blockquote>
+<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/网络篇之广播域和冲突域/">https://www.boringboys.top/article/网络篇之广播域和冲突域/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>密码学Diffie-Hellman密钥交换协议</title>
+    <url>/2020/03/14/%E5%AF%86%E7%A0%81%E5%AD%A6Diffie-Hellman%E5%AF%86%E9%92%A5%E4%BA%A4%E6%8D%A2%E5%8D%8F%E8%AE%AE/</url>
+    <content><![CDATA[<h1 id="密码学–Diffie-Hellman密钥交换协议"><a href="#密码学–Diffie-Hellman密钥交换协议" class="headerlink" title="密码学–Diffie-Hellman密钥交换协议"></a>密码学–Diffie-Hellman密钥交换协议</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p><strong>Diffie-Hellman密钥交换协议</strong>（Diffie-Hellman key exchange agreement）简称“D-H<strong>协议</strong>”，是1976年 Whitfield Diffie 和 Martin Hellman 合作发明的安全协议，它可以让双方在完全没有对方任何预先信息的条件下通过不安全信道创建起一个密钥。这个密钥可以在后续的通信中作为对称密钥来加密通信内容。</p>
+<h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h2><p>（1）通信双方 Alice 和 Bob 先确定<em>两个大素数</em> p 和 q ，这两个数不需要保密，因此通信双方可以通过不安全信道协商并确定这两个数；</p>
+<p>（2）Alice 选择一个大的<em>随机数</em> <code>r1</code> 并计算：<code>A=q^r1 (mod p)</code>；</p>
+<p>（3）Alice 将 <code>A</code> 发送给 Bob；</p>
+<p>（4）Bob 选择另外一个大的<em>随机数</em> <code>r2</code> 并计算：<code>B=q^r2 (mod p)</code>；</p>
+<p>（5）Bob 将 <code>B</code> 发送给 Alice；</p>
+<p>（6）Alice 计算密钥：<code>k1=B^r1 (mod p)</code>；</p>
+<p>（7）Bob 计算密钥：<code>k2=A^r2 (mod p)</code></p>
+<p>ps:最后，Alice 和 Bob 计算得到的 <code>k1=k2</code>，即得到的密钥</p>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>（1）假设 Alice 和 Bob 选取的 <code>p=11 ， q=5</code>；</p>
+<p>（2）Alice 选择的随机数取 <code>r1=3</code>，则 <code>A=5^3 (mod 11)=4</code>；</p>
+<p>（3）Alice 将 <code>A=4</code> 发送给 Bob；</p>
+<p>（4）Bob 选择的随机数取 <code>r2=6</code>，则 <code>B=5^6 (mod 11)=5</code>；</p>
+<p>（5）Bob 将 <code>B=5</code> 发送给 Alice；</p>
+<p>（6）Alice 计算：<code>k1=5^3 (mod 11)=4</code>；</p>
+<p>（7）Bob 计算：<code>k2=4^6 (mod 11)=4</code>；</p>
+<p>（8）交换得到的密钥：<code>k1=k2=4</code></p>
+<h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><p><em>D-H协议的安全性在于，在有限域中计算离散对数远远难于在同一个域中计算指数。</em></p>
+<p>从上面给出的例子解释，就是当 Alice 知道 r1=3，以及 p 和 q 的情况下可以十分容易的计算得到 A；<br>而第三方在只知道 p，q 和 A 的情况下却很难计算得到 Alice 取得随机数 r1，所以无法使用 Bob 通过公共信道发送的 B 计算得到密钥 k；<br>对于 Bob 取的随机数 r2，与对 Alice 的分析一样，第三方同样难以通过计算得到，也就难以通过 Alice 发送的 A 计算出密钥。</p>
+<h2 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h2><p>D-H协议也存在缺陷，即容易受到<strong>中间人攻击</strong> ( <strong>Man-in-the-Middle Attack</strong> ，简称 <strong>“MITM攻击”</strong> ) ，就是通过拦截正常的网络通信数据，并进行数据篡改和嗅探，而通信双方却毫不知情。</p>
+<p>中间人攻击的过程如下：</p>
+<p>（1）第一步和上面所说的一样，通信双方 Alice 和 Bob 先确定两个大素数 <code>p</code> 和 <code>q</code> ，这两个数不需要保密，因此通信双方可以通过不安全信道协商并确定这两个数；<br>设 <code>p=11 ，q=5</code>；</p>
+<p>（2）窥探者 Eve 监听他们两个的会话，并得到了 <code>p</code> 和 <code>q</code> 的值；</p>
+<p>（3）Alice、Bob、Eve 同时选择随机数：<br>设 Alice 选择的还是 <code>r1=3</code> ，Bob 选择的是 <code>r2=6</code>，Eve 选择两个随机数 <code>r1&#39;=8，r2&#39;=9</code>；</p>
+<p>（4）Alice、Bob、Eve 分别计算 <code>q^r (mod p)</code>：<br>Alice 计算得 <code>A=4</code> ，Bob 计算得 <code>B=5</code> ，Eve 计算得 <code>A&#39;=13,B&#39;=12</code></p>
+<p>（5）然后按照协议 Alice 将自己计算的 <code>A</code> 发送给 Bob，此时 Eve 截获这个 <code>A</code>，并将自己计算得到的 <code>A&#39;</code> 发送给 Bob，Bob 对此过程并不知情；</p>
+<p>（6）同样 Eve 也截获了 Bob 发送给 Alice 的 <code>B</code>，并将 <code>B&#39;</code> 发送给 Alice，Alice 同样对此过程毫不知情；</p>
+<p>（7）此时 Eve 可以根据截获的 <code>A</code> 、<code>B</code> 分别计算出 <em>自己和 Alice 通信的密钥</em> 以及 <em>自己和Bob通信的密钥</em>，分别与 Alice 、Bob 共享不同的密钥。</p>
+<p>这样一来，Eve 就可以分别与 Alice 和 Bob 通信，而 Alice 和 Bob 仍认为和自己通信的是对方，对第三方并不知情。</p>
+<blockquote>
+<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/密码学Diffie-Hellman密钥交换协议">https://www.boringboys.top/article/密码学Diffie-Hellman密钥交换协议</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>Nessus在Windows上的安装</title>
+    <url>/2020/03/14/Nessus%E5%9C%A8Windows%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h1 id="Nessus在Windows上的安装"><a href="#Nessus在Windows上的安装" class="headerlink" title="Nessus在Windows上的安装"></a>Nessus在Windows上的安装</h1><h2 id="Nessus"><a href="#Nessus" class="headerlink" title="Nessus"></a>Nessus</h2><p><a href="https://baike.baidu.com/item/Nessus/10718713" target="_blank" rel="noopener">Nessus</a> 是目前全世界最多人使用的系统漏洞扫描与分析软件。总共有超过75,000个机构使用Nessus 作为扫描该机构电脑系统的软件。<br>该工具提供完整的电脑漏洞扫描服务，并及时更新其漏洞数据库。<br>Nessus不同于传统的漏洞扫描工具，它可以同时在本机或远端上遥控，进行系统的漏洞分析扫描。</p>
+<h2 id="获取安装包"><a href="#获取安装包" class="headerlink" title="获取安装包"></a>获取安装包</h2><p>Nessus的下载地址:<a href="https://www.tenable.com/downloads/nessus" target="_blank" rel="noopener">https://www.tenable.com/downloads/nessus</a><br>点击此链接在浏览器打开如下所示的界面：</p>
+<img src="https://www.boringboys.top/images/img/Nessus_install/download_page.png" width="95%">
+
+<p>然后选择要下载的版本，这里我选择的是Nessus-8.3.1-x64.msi，即Windows版的安装包；</p>
+<h2 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h2><p>在使用Nessus之前，必须先激活服务才可以使用，激活服务的激活码可以在官网获取；</p>
+<p>（1）首先在刚才的下载界面，可以看到一个“Get Activation Code”按钮，如下图所示，点击它即可前往获取激活码；</p>
+<img src="https://www.boringboys.top/images/img/Nessus_install/get_code.png" width="95%">
+
+<p>（2）然后会让你选择获取哪种激活码，如下图所示：  </p>
+<ul>
+<li>一种是Professional版的，即专业版，需要付费获得激活码；  </li>
+<li>另外一种是Home版的，即免费版；<br>这里我选择了Home版，点击“Register Now”，前往注册界面；</li>
+</ul>
+<img src="https://www.boringboys.top/images/img/Nessus_install/chose_free.png" width="95%">
+
+<p>（3）在注册界面填写信息以及邮箱，然后点击“Register”按钮，如下图；</p>
+<img src="https://www.boringboys.top/images/img/Nessus_install/register.png" width="95%">
+
+<p>（4）当显示如下所示的“Thank You for Registing …”页面时，说明你已经成功获得激活码，激活码以邮件形式发送到了你所填写的邮箱；</p>
+<img src="https://www.boringboys.top/images/img/Nessus_install/thanks_page.png" width="95%">
+
+<h2 id="安装Nessus"><a href="#安装Nessus" class="headerlink" title="安装Nessus"></a>安装Nessus</h2><p>（1）点击前面下载的xxx.msi安装包，安装Nessus；</p>
+<img src="https://www.boringboys.top/images/img/Nessus_install/install.png" width="95%">
+
+<p>按照安装导向成功安装Nessus后，会自动在浏览器打开一个如下图所示的页面，如果没有可以自己在浏览器输入“<a href="https://localhost:8834”打开；">https://localhost:8834”打开；</a></p>
+<img src="https://www.boringboys.top/images/img/Nessus_install/create_account.png" width="95%">
+
+<p>如果输入链接后无法访问，可能是Nessus服务没有运行，前往Nessus的安装目录点击执行“nessus-service.exe”即可，如图双击“nessus-service.exe”启动Nessus服务，<br>双击“Nessus Web Client”可以打开网页版客户端，即“http:localhost:8834”；</p>
+<img src="https://www.boringboys.top/images/img/Nessus_install/nessus.png" width="95%">
+
+<p>（2）在打开的“Create an account”页面，输入用户名和密码创建一个账号，以后再次打开此页面使用Nessus时，需要使用这里设置的用户名和密码登录；<br>（3）点击“Continue”后，会出现一个界面让你输入激活码，将前面获得的激活码输入然后继续；<br>（4）然后就是如下图所示的初始化界面了，这一步会下载并安装一些插件，时间会有点久，但没有任何操作，等它完成就可以了；</p>
+<img src="https://www.boringboys.top/images/img/Nessus_install/nessus_initializing.png" width="95%">
+
+<p>（5）完成之后，显示下面的界面，表示安装成功，你可以创建自己的扫描任务并执行了。</p>
+<img src="https://www.boringboys.top/images/img/Nessus_install/success.png" width="95%">
+
+
+<blockquote>
+<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/Nessus在Windows上的安装/">https://www.boringboys.top/article/Nessus在Windows上的安装/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>Metasploit命令</title>
+    <url>/2020/03/14/Metasploit%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="metasploit命令"><a href="#metasploit命令" class="headerlink" title="metasploit命令"></a>metasploit命令</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>作为一个英语渣，为了自己后期的学习，我把metasploit的帮助菜单简单翻译了一下，<br>方便自己查看的同时也分享给大家。</p>
+<p>…翻译中…</p>
+<h1 id="核心命令"><a href="#核心命令" class="headerlink" title="核心命令"></a>核心命令</h1><pre><code>命令          描述
+-------       -----------
+?             帮助菜单
+banner        在命令行里显示一个好看的metasploit图案（一个很有趣的命令^0^）
+cd            更改当前工作目录
+color         启用或禁用颜色输出
+connect       连接到一个主机
+exit          退出msfconsole
+get           获得一个上下文特定变量的值
+getg          获得一个全局变量的值
+grep          从另一个命令的输出中查找符合条件的行
+help          帮助菜单
+history       显示历史命令
+load          加载框架插件
+quit          退出msfconsole（有提示Y/N）
+repeat        重复一个命令列表
+route         通过会话路由流量
+save          保存活动数据
+sessions      转储会话列表并显示有关会话的信息
+set           设置一个上下文特定变量的值
+setg          设置一个全局变量的值
+sleep         在指定的秒数内不执行任何操作
+spool         将控制台输出写入某个文件
+threads       查看和操纵后台线程
+unload        卸载框架插件
+unset         取消设置一个或多个上下文特定变量的值
+unsetg        取消设置一个或多个全局变量的值
+version       显示框架和控制台库版本号</code></pre><h1 id="Module-Commands"><a href="#Module-Commands" class="headerlink" title="Module Commands"></a>Module Commands</h1><pre><code>Command       Description
+-------       -----------
+advanced      Displays advanced options for one or more modules
+back          Move back from the current context
+info          Displays information about one or more modules
+loadpath      Searches for and loads modules from a path
+options       Displays global options or for one or more modules
+popm          Pops the latest module off the stack and makes it active
+previous      Sets the previously loaded module as the current module
+pushm         Pushes the active or list of modules onto the module stack
+reload_all    Reloads all modules from all defined module paths
+search        Searches module names and descriptions
+show          Displays modules of a given type, or all modules
+use           Selects a module by name</code></pre><h1 id="Job-Commands"><a href="#Job-Commands" class="headerlink" title="Job Commands"></a>Job Commands</h1><pre><code>Command       Description
+-------       -----------
+handler       Start a payload handler as job
+jobs          Displays and manages jobs
+kill          Kill a job
+rename_job    Rename a job</code></pre><h1 id="Resource-Script-Commands"><a href="#Resource-Script-Commands" class="headerlink" title="Resource Script Commands"></a>Resource Script Commands</h1><pre><code>Command       Description
+-------       -----------
+makerc        Save commands entered since start to a file
+resource      Run the commands stored in a file</code></pre><h1 id="Database-Backend-Commands"><a href="#Database-Backend-Commands" class="headerlink" title="Database Backend Commands"></a>Database Backend Commands</h1><pre><code>Command           Description
+-------           -----------
+analyze           Analyze database information about a specific address or address range
+db_connect        Connect to an existing data service
+db_disconnect     Disconnect from the current data service
+db_export         Export a file containing the contents of the database
+db_import         Import a scan result file (filetype will be auto-detected)
+db_nmap           Executes nmap and records the output automatically
+db_rebuild_cache  Rebuilds the database-stored module cache
+db_remove         Remove the saved data service entry
+db_save           Save the current data service connection as the default to reconnect on startup
+db_status         Show the current data service status
+hosts             List all hosts in the database
+loot              List all loot in the database
+notes             List all notes in the database
+services          List all services in the database
+vulns             List all vulnerabilities in the database
+workspace         Switch between database workspaces</code></pre><h1 id="Credentials-Backend-Commands"><a href="#Credentials-Backend-Commands" class="headerlink" title="Credentials Backend Commands"></a>Credentials Backend Commands</h1><pre><code>Command       Description
+-------       -----------
+creds         List all credentials in the database</code></pre><h1 id="Developer-Commands"><a href="#Developer-Commands" class="headerlink" title="Developer Commands"></a>Developer Commands</h1><pre><code>Command       Description
+-------       -----------
+edit          Edit the current module or a file with the preferred editor
+irb           Open an interactive Ruby shell in the current context
+log           Display framework.log paged to the end if possible
+pry           Open the Pry debugger on the current module or Framework
+reload_lib    Reload Ruby library files from specified paths</code></pre><h1 id="msfconsole"><a href="#msfconsole" class="headerlink" title="msfconsole"></a>msfconsole</h1><p><code>msfconsole</code> is the primary interface to Metasploit Framework. There is quite a<br>lot that needs go here, please be patient and keep an eye on this space!</p>
+<h2 id="Building-ranges-and-lists"><a href="#Building-ranges-and-lists" class="headerlink" title="Building ranges and lists"></a>Building ranges and lists</h2><p>Many commands and options that take a list of things can use ranges to avoid<br>having to manually list each desired thing. All ranges are inclusive.</p>
+<h3 id="Ranges-of-IDs"><a href="#Ranges-of-IDs" class="headerlink" title="Ranges of IDs"></a>Ranges of IDs</h3><p>Commands that take a list of IDs can use ranges to help. Individual IDs must be<br>separated by a <code>,</code> (no space allowed) and ranges can be expressed with either<br><code>-</code> or <code>..</code>.</p>
+<h3 id="Ranges-of-IPs"><a href="#Ranges-of-IPs" class="headerlink" title="Ranges of IPs"></a>Ranges of IPs</h3><p>There are several ways to specify ranges of IP addresses that can be mixed<br>together. The first way is a list of IPs separated by just a <code></code> (ASCII space),<br>with an optional <code>,</code>. The next way is two complete IP addresses in the form of<br><code>BEGINNING_ADDRESS-END_ADDRESS</code> like <code>127.0.1.44-127.0.2.33</code>. CIDR<br>specifications may also be used, however the whole address must be given to<br>Metasploit like <code>127.0.0.0/8</code> and not <code>127/8</code>, contrary to the RFC.<br>Additionally, a netmask can be used in conjunction with a domain name to<br>dynamically resolve which block to target. All these methods work for both IPv4<br>and IPv6 addresses. IPv4 addresses can also be specified with special octet<br>ranges from the <a href="https://nmap.org/book/man-target-specification.html" target="_blank" rel="noopener">NMAP target<br>specification</a></p>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><p>Terminate the first sessions:</p>
+<pre><code>sessions -k 1</code></pre><p>Stop some extra running jobs:</p>
+<pre><code>jobs -k 2-6,7,8,11..15</code></pre><p>Check a set of IP addresses:</p>
+<pre><code>check 127.168.0.0/16, 127.0.0-2.1-4,15 127.0.0.255</code></pre><p>Target a set of IPv6 hosts:</p>
+<pre><code>set RHOSTS fe80::3990:0000/110, ::1-::f0f0</code></pre><p>Target a block from a resolved domain name:</p>
+<pre><code>set RHOSTS www.example.test/24</code></pre><p>Framework: 5.0.16-dev-a5184d39dc6a3a8cf2b85538327b57706057e94c</p>
+<p>Console  : 5.0.16-dev-a5184d39dc6a3a8cf2b85538327b57706057e94c</p>
+<blockquote>
+<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/Metasploit命令/">https://www.boringboys.top/article/Metasploit命令/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>安全</category>
+      </categories>
+      <tags>
+        <tag>安全</tag>
+        <tag>工具</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/03/14/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>hello world</tag>
+        <tag>first post</tag>
+      </tags>
+  </entry>
+</search>
