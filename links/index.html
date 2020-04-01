@@ -132,10 +132,11 @@
         var gitalk = new Gitalk({
             clientID: '198263188d4839476f77',
             clientSecret: '191b4db05dddbd27c73bb8d793cbfa6baa9b416e',
-            id: window.location.pathname,
             repo: 'boringboys.github.io',
             owner: 'Boringboys',
-            admin: 'Boringboys'
+            admin: 'Boringboys',
+			id: location.pathname,      // Ensure uniqueness and length less than 50
+			distractionFreeMode: true  // Facebook-like distraction free mode
         })
         gitalk.render('gitalk-container')
     </script>
