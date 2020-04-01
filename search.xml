@@ -1,10 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>广播域和冲突域</title>
+    <url>/2019/05/24/%E7%BD%91%E7%BB%9C%E7%AF%87%E4%B9%8B%E5%B9%BF%E6%92%AD%E5%9F%9F%E5%92%8C%E5%86%B2%E7%AA%81%E5%9F%9F/</url>
+    <content><![CDATA[<h2 id="广播域"><a href="#广播域" class="headerlink" title="广播域"></a>广播域</h2><p>简单地说，广播域是一种环境，在该环境中通过线路发送的广播消息，可以被所有该环境中的主机或节点接收。</p>
+<h2 id="冲突域"><a href="#冲突域" class="headerlink" title="冲突域"></a>冲突域</h2><p>冲突域是其中的流量可能与其他流量相冲突的网络。冲突域中所有节点都链接到同一个被交换机和学习型网桥划分的相互连接的中继器集合。</p>
+<a id="more"></a>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>在同一个冲突域中的每一个节点都能接收到所有被发送的帧；<br>在同一个广播域中的每一个节点都能接收到任一设备发送的广播帧；  </p>
+<p>冲突域是基于物理层的，所以一些处在数据链路层的设备能够划分冲突域；<br>广播域是基于数据链路层的，所以广播域只能有像路由器这样的网络层设备来划分。</p>
+<blockquote>
+<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/网络篇之广播域和冲突域/">https://www.boringboys.top/article/网络篇之广播域和冲突域/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>网络</category>
+      </categories>
+      <tags>
+        <tag>广播域</tag>
+        <tag>冲突域</tag>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>正则表达式</title>
-    <url>/2020/03/14/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
-    <content><![CDATA[<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p><strong>正则表达式</strong>，又称规则表达式。（英语：Regular Expression，代码中简写为regex、regexp或RE），计算机科学的一个概念。<br>正则表达式通常被用来检索、替换那些符合某个模式(规则)的文本。</p>
-<p>正则表达式由一些普通字符和一些元字符（metacharacters）组成。普通字符包括大小写的字母和数字，而元字符则具有特殊的含义。<br>下表列出了所有的元字符和对它们的描述。</p>
+    <url>/2019/05/09/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[<p><strong>正则表达式</strong>，又称规则表达式。（英语：Regular Expression，代码中简写为regex、regexp或RE），计算机科学的一个概念。<br>正则表达式通常被用来检索、替换那些符合某个模式(规则)的文本。</p>
+<p>正则表达式由一些普通字符和一些元字符（metacharacters）组成。普通字符包括大小写的字母和数字，而元字符则具有特殊的含义。</p>
+<a id="more"></a>
+<p>下表列出了所有的元字符和对它们的描述。</p>
 <table>
  <tr>
   <th>字符</th><th>描述</th> 
@@ -159,7 +182,7 @@ ps:部分语言不支持此语法</td>
 </table>
 
 <blockquote>
-<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/正则表达式/" target="_blank" rel="noopener">https://www.boringboys.top/article/正则表达式/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/正则表达式/">https://www.boringboys.top/article/正则表达式/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -170,73 +193,11 @@ ps:部分语言不支持此语法</td>
       </tags>
   </entry>
   <entry>
-    <title>广播域和冲突域</title>
-    <url>/2020/03/14/%E7%BD%91%E7%BB%9C%E7%AF%87%E4%B9%8B%E5%B9%BF%E6%92%AD%E5%9F%9F%E5%92%8C%E5%86%B2%E7%AA%81%E5%9F%9F/</url>
-    <content><![CDATA[<h1 id="广播域和冲突域"><a href="#广播域和冲突域" class="headerlink" title="广播域和冲突域"></a>广播域和冲突域</h1><h2 id="广播域"><a href="#广播域" class="headerlink" title="广播域"></a>广播域</h2><p>简单地说，广播域是一种环境，在该环境中通过线路发送的广播消息，可以被所有该环境中的主机或节点接收。</p>
-<h2 id="冲突域"><a href="#冲突域" class="headerlink" title="冲突域"></a>冲突域</h2><p>冲突域是其中的流量可能与其他流量相冲突的网络。冲突域中所有节点都链接到同一个被交换机和学习型网桥划分的相互连接的中继器集合。</p>
-<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>在同一个冲突域中的每一个节点都能接收到所有被发送的帧；<br>在同一个广播域中的每一个节点都能接收到任一设备发送的广播帧；  </p>
-<p>冲突域是基于物理层的，所以一些处在数据链路层的设备能够划分冲突域；<br>广播域是基于数据链路层的，所以广播域只能有像路由器这样的网络层设备来划分。</p>
-<blockquote>
-<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/网络篇之广播域和冲突域/" target="_blank" rel="noopener">https://www.boringboys.top/article/网络篇之广播域和冲突域/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>广播域</tag>
-        <tag>冲突域</tag>
-        <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>密码学 Diffie-Hellman密钥交换协议</title>
-    <url>/2020/03/14/%E5%AF%86%E7%A0%81%E5%AD%A6Diffie-Hellman%E5%AF%86%E9%92%A5%E4%BA%A4%E6%8D%A2%E5%8D%8F%E8%AE%AE/</url>
-    <content><![CDATA[<h1 id="密码学–Diffie-Hellman密钥交换协议"><a href="#密码学–Diffie-Hellman密钥交换协议" class="headerlink" title="密码学–Diffie-Hellman密钥交换协议"></a>密码学–Diffie-Hellman密钥交换协议</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p><strong>Diffie-Hellman密钥交换协议</strong>（Diffie-Hellman key exchange agreement）简称“D-H<strong>协议</strong>”，是1976年 Whitfield Diffie 和 Martin Hellman 合作发明的安全协议，它可以让双方在完全没有对方任何预先信息的条件下通过不安全信道创建起一个密钥。这个密钥可以在后续的通信中作为对称密钥来加密通信内容。</p>
-<h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h2><p>（1）通信双方 Alice 和 Bob 先确定<em>两个大素数</em> p 和 q ，这两个数不需要保密，因此通信双方可以通过不安全信道协商并确定这两个数；</p>
-<p>（2）Alice 选择一个大的<em>随机数</em> <code>r1</code> 并计算：<code>A=q^r1 (mod p)</code>；</p>
-<p>（3）Alice 将 <code>A</code> 发送给 Bob；</p>
-<p>（4）Bob 选择另外一个大的<em>随机数</em> <code>r2</code> 并计算：<code>B=q^r2 (mod p)</code>；</p>
-<p>（5）Bob 将 <code>B</code> 发送给 Alice；</p>
-<p>（6）Alice 计算密钥：<code>k1=B^r1 (mod p)</code>；</p>
-<p>（7）Bob 计算密钥：<code>k2=A^r2 (mod p)</code></p>
-<p>ps:最后，Alice 和 Bob 计算得到的 <code>k1=k2</code>，即得到的密钥</p>
-<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>（1）假设 Alice 和 Bob 选取的 <code>p=11 ， q=5</code>；</p>
-<p>（2）Alice 选择的随机数取 <code>r1=3</code>，则 <code>A=5^3 (mod 11)=4</code>；</p>
-<p>（3）Alice 将 <code>A=4</code> 发送给 Bob；</p>
-<p>（4）Bob 选择的随机数取 <code>r2=6</code>，则 <code>B=5^6 (mod 11)=5</code>；</p>
-<p>（5）Bob 将 <code>B=5</code> 发送给 Alice；</p>
-<p>（6）Alice 计算：<code>k1=5^3 (mod 11)=4</code>；</p>
-<p>（7）Bob 计算：<code>k2=4^6 (mod 11)=4</code>；</p>
-<p>（8）交换得到的密钥：<code>k1=k2=4</code></p>
-<h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><p><em>D-H协议的安全性在于，在有限域中计算离散对数远远难于在同一个域中计算指数。</em></p>
-<p>从上面给出的例子解释，就是当 Alice 知道 r1=3，以及 p 和 q 的情况下可以十分容易的计算得到 A；<br>而第三方在只知道 p，q 和 A 的情况下却很难计算得到 Alice 取得随机数 r1，所以无法使用 Bob 通过公共信道发送的 B 计算得到密钥 k；<br>对于 Bob 取的随机数 r2，与对 Alice 的分析一样，第三方同样难以通过计算得到，也就难以通过 Alice 发送的 A 计算出密钥。</p>
-<h2 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h2><p>D-H协议也存在缺陷，即容易受到<strong>中间人攻击</strong> ( <strong>Man-in-the-Middle Attack</strong> ，简称 <strong>“MITM攻击”</strong> ) ，就是通过拦截正常的网络通信数据，并进行数据篡改和嗅探，而通信双方却毫不知情。</p>
-<p>中间人攻击的过程如下：</p>
-<p>（1）第一步和上面所说的一样，通信双方 Alice 和 Bob 先确定两个大素数 <code>p</code> 和 <code>q</code> ，这两个数不需要保密，因此通信双方可以通过不安全信道协商并确定这两个数；<br>设 <code>p=11 ，q=5</code>；</p>
-<p>（2）窥探者 Eve 监听他们两个的会话，并得到了 <code>p</code> 和 <code>q</code> 的值；</p>
-<p>（3）Alice、Bob、Eve 同时选择随机数：<br>设 Alice 选择的还是 <code>r1=3</code> ，Bob 选择的是 <code>r2=6</code>，Eve 选择两个随机数 <code>r1&#39;=8，r2&#39;=9</code>；</p>
-<p>（4）Alice、Bob、Eve 分别计算 <code>q^r (mod p)</code>：<br>Alice 计算得 <code>A=4</code> ，Bob 计算得 <code>B=5</code> ，Eve 计算得 <code>A&#39;=13,B&#39;=12</code></p>
-<p>（5）然后按照协议 Alice 将自己计算的 <code>A</code> 发送给 Bob，此时 Eve 截获这个 <code>A</code>，并将自己计算得到的 <code>A&#39;</code> 发送给 Bob，Bob 对此过程并不知情；</p>
-<p>（6）同样 Eve 也截获了 Bob 发送给 Alice 的 <code>B</code>，并将 <code>B&#39;</code> 发送给 Alice，Alice 同样对此过程毫不知情；</p>
-<p>（7）此时 Eve 可以根据截获的 <code>A</code> 、<code>B</code> 分别计算出 <em>自己和 Alice 通信的密钥</em> 以及 <em>自己和Bob通信的密钥</em>，分别与 Alice 、Bob 共享不同的密钥。</p>
-<p>这样一来，Eve 就可以分别与 Alice 和 Bob 通信，而 Alice 和 Bob 仍认为和自己通信的是对方，对第三方并不知情。</p>
-<blockquote>
-<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/密码学Diffie-Hellman密钥交换协议" target="_blank" rel="noopener">https://www.boringboys.top/article/密码学Diffie-Hellman密钥交换协议</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>密码学</category>
-      </categories>
-      <tags>
-        <tag>安全</tag>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Nessus在Windows上的安装</title>
-    <url>/2020/03/14/Nessus%E5%9C%A8Windows%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h1 id="Nessus在Windows上的安装"><a href="#Nessus在Windows上的安装" class="headerlink" title="Nessus在Windows上的安装"></a>Nessus在Windows上的安装</h1><h2 id="Nessus"><a href="#Nessus" class="headerlink" title="Nessus"></a>Nessus</h2><p><a href="https://baike.baidu.com/item/Nessus/10718713" target="_blank" rel="noopener">Nessus</a> 是目前全世界最多人使用的系统漏洞扫描与分析软件。总共有超过75,000个机构使用Nessus 作为扫描该机构电脑系统的软件。<br>该工具提供完整的电脑漏洞扫描服务，并及时更新其漏洞数据库。<br>Nessus不同于传统的漏洞扫描工具，它可以同时在本机或远端上遥控，进行系统的漏洞分析扫描。</p>
+    <url>/2019/04/23/Nessus%E5%9C%A8Windows%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="Nessus"><a href="#Nessus" class="headerlink" title="Nessus"></a>Nessus</h2><p><a href="https://baike.baidu.com/item/Nessus/10718713" target="_blank" rel="noopener">Nessus</a> 是目前全世界最多人使用的系统漏洞扫描与分析软件。总共有超过75,000个机构使用Nessus 作为扫描该机构电脑系统的软件。<br>该工具提供完整的电脑漏洞扫描服务，并及时更新其漏洞数据库。</p>
+<a id="more"></a>
+<p>Nessus不同于传统的漏洞扫描工具，它可以同时在本机或远端上遥控，进行系统的漏洞分析扫描。</p>
 <h2 id="获取安装包"><a href="#获取安装包" class="headerlink" title="获取安装包"></a>获取安装包</h2><p>Nessus的下载地址:<a href="https://www.tenable.com/downloads/nessus" target="_blank" rel="noopener">https://www.tenable.com/downloads/nessus</a><br>点击此链接在浏览器打开如下所示的界面：</p>
 <img src="https://www.boringboys.top/images/img/Nessus_install/download_page.png" width="95%">
 
@@ -275,7 +236,7 @@ ps:部分语言不支持此语法</td>
 
 
 <blockquote>
-<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/Nessus在Windows上的安装/" target="_blank" rel="noopener">https://www.boringboys.top/article/Nessus在Windows上的安装/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/Nessus在Windows上的安装/">https://www.boringboys.top/article/Nessus在Windows上的安装/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -288,8 +249,9 @@ ps:部分语言不支持此语法</td>
   </entry>
   <entry>
     <title>Metasploit命令</title>
-    <url>/2020/03/14/Metasploit%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="metasploit命令"><a href="#metasploit命令" class="headerlink" title="metasploit命令"></a>metasploit命令</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>作为一个英语渣，为了自己后期的学习，我把metasploit的帮助菜单简单翻译了一下，<br>方便自己查看的同时也分享给大家。</p>
+    <url>/2019/03/29/Metasploit%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>为了方便自己后期的学习，我把metasploit的帮助信息简单翻译了一下，包括命令和一些用法描述。</p>
+<a id="more"></a>
 <p>…翻译中…</p>
 <h1 id="核心命令"><a href="#核心命令" class="headerlink" title="核心命令"></a>核心命令</h1><pre><code>命令          描述
 -------       -----------
@@ -318,65 +280,70 @@ threads       查看和操纵后台线程
 unload        卸载框架插件
 unset         取消设置一个或多个上下文特定变量的值
 unsetg        取消设置一个或多个全局变量的值
-version       显示框架和控制台库版本号</code></pre><h1 id="Module-Commands"><a href="#Module-Commands" class="headerlink" title="Module Commands"></a>Module Commands</h1><pre><code>Command       Description
+version       显示框架和控制台库版本号</code></pre><h1 id="模块命令"><a href="#模块命令" class="headerlink" title="模块命令"></a>模块命令</h1><pre><code>命令             描述
 -------       -----------
-advanced      Displays advanced options for one or more modules
-back          Move back from the current context
-info          Displays information about one or more modules
-loadpath      Searches for and loads modules from a path
-options       Displays global options or for one or more modules
-popm          Pops the latest module off the stack and makes it active
-previous      Sets the previously loaded module as the current module
-pushm         Pushes the active or list of modules onto the module stack
-reload_all    Reloads all modules from all defined module paths
-search        Searches module names and descriptions
-show          Displays modules of a given type, or all modules
-use           Selects a module by name</code></pre><h1 id="Job-Commands"><a href="#Job-Commands" class="headerlink" title="Job Commands"></a>Job Commands</h1><pre><code>Command       Description
+advanced      显示一个或多个模块的高级选项
+back          从当前上下文后退
+info          显示一个或多个模块的信息
+loadpath      从路径搜索模块并加载
+options       显示一个或多个模块的全局选项
+popm          将最新模块弹出堆栈并使其激活
+previous      将先前加载的模块设置为当前模块
+pushm         将活动模块或模块列表推入模块堆栈
+reload_all    从所有定义的模块路径重新加载所有模块
+search        搜索模块名称和描述
+show          显示给定类型的模块，或者所有模块
+use           按名称选择模块</code></pre><h1 id="作业命令"><a href="#作业命令" class="headerlink" title="作业命令"></a>作业命令</h1><pre><code>命令          描述
 -------       -----------
-handler       Start a payload handler as job
-jobs          Displays and manages jobs
-kill          Kill a job
-rename_job    Rename a job</code></pre><h1 id="Resource-Script-Commands"><a href="#Resource-Script-Commands" class="headerlink" title="Resource Script Commands"></a>Resource Script Commands</h1><pre><code>Command       Description
+handler       启动有效负载处理程序作为作业
+jobs          显示和管理作业
+kill          杀死作业
+rename_job    重命名作业</code></pre><h1 id="资源脚本命令"><a href="#资源脚本命令" class="headerlink" title="资源脚本命令"></a>资源脚本命令</h1><pre><code>命令          描述
 -------       -----------
-makerc        Save commands entered since start to a file
-resource      Run the commands stored in a file</code></pre><h1 id="Database-Backend-Commands"><a href="#Database-Backend-Commands" class="headerlink" title="Database Backend Commands"></a>Database Backend Commands</h1><pre><code>Command           Description
+makerc        将启动之后输入的命令保存到文件中
+resource      运行文件中的命令</code></pre><h1 id="数据库后端命令"><a href="#数据库后端命令" class="headerlink" title="数据库后端命令"></a>数据库后端命令</h1><pre><code>命令              描述
 -------           -----------
-analyze           Analyze database information about a specific address or address range
-db_connect        Connect to an existing data service
-db_disconnect     Disconnect from the current data service
-db_export         Export a file containing the contents of the database
-db_import         Import a scan result file (filetype will be auto-detected)
-db_nmap           Executes nmap and records the output automatically
-db_rebuild_cache  Rebuilds the database-stored module cache
-db_remove         Remove the saved data service entry
-db_save           Save the current data service connection as the default to reconnect on startup
-db_status         Show the current data service status
-hosts             List all hosts in the database
-loot              List all loot in the database
-notes             List all notes in the database
-services          List all services in the database
-vulns             List all vulnerabilities in the database
-workspace         Switch between database workspaces</code></pre><h1 id="Credentials-Backend-Commands"><a href="#Credentials-Backend-Commands" class="headerlink" title="Credentials Backend Commands"></a>Credentials Backend Commands</h1><pre><code>Command       Description
+analyze           分析有关特定地址或地址范围的数据库信息
+db_connect        连接到现有的数据服务
+db_disconnect     断开当前数据服务
+db_export         导出包含数据库内容的文件
+db_import         导入扫描结果文件（将自动检测文件类型）
+db_nmap           执行nmap并自动记录输出
+db_rebuild_cache  重建数据库存储的模块缓存
+db_remove         删除保存的数据服务条目
+db_save           将当前数据服务连接保存为默认值，以便在启动时重新连接
+db_status         显示当前数据服务状态
+hosts             列出数据库中的所有主机
+loot              列出数据库中的所有Loot(战利品)
+notes             列出数据库中的所有注释
+services          列出数据库中的所有服务
+vulns             列出数据库中的所有漏洞
+workspace         在数据库工作区之间切换</code></pre><h1 id="凭证后端命令"><a href="#凭证后端命令" class="headerlink" title="凭证后端命令"></a>凭证后端命令</h1><pre><code>命令          描述
 -------       -----------
-creds         List all credentials in the database</code></pre><h1 id="Developer-Commands"><a href="#Developer-Commands" class="headerlink" title="Developer Commands"></a>Developer Commands</h1><pre><code>Command       Description
+creds         列出数据库中的所有证书</code></pre><h1 id="开发人员命令"><a href="#开发人员命令" class="headerlink" title="开发人员命令"></a>开发人员命令</h1><pre><code>命令          描述
 -------       -----------
-edit          Edit the current module or a file with the preferred editor
-irb           Open an interactive Ruby shell in the current context
-log           Display framework.log paged to the end if possible
-pry           Open the Pry debugger on the current module or Framework
-reload_lib    Reload Ruby library files from specified paths</code></pre><h1 id="msfconsole"><a href="#msfconsole" class="headerlink" title="msfconsole"></a>msfconsole</h1><p><code>msfconsole</code> is the primary interface to Metasploit Framework. There is quite a<br>lot that needs go here, please be patient and keep an eye on this space!</p>
-<h2 id="Building-ranges-and-lists"><a href="#Building-ranges-and-lists" class="headerlink" title="Building ranges and lists"></a>Building ranges and lists</h2><p>Many commands and options that take a list of things can use ranges to avoid<br>having to manually list each desired thing. All ranges are inclusive.</p>
-<h3 id="Ranges-of-IDs"><a href="#Ranges-of-IDs" class="headerlink" title="Ranges of IDs"></a>Ranges of IDs</h3><p>Commands that take a list of IDs can use ranges to help. Individual IDs must be<br>separated by a <code>,</code> (no space allowed) and ranges can be expressed with either<br><code>-</code> or <code>..</code>.</p>
-<h3 id="Ranges-of-IPs"><a href="#Ranges-of-IPs" class="headerlink" title="Ranges of IPs"></a>Ranges of IPs</h3><p>There are several ways to specify ranges of IP addresses that can be mixed<br>together. The first way is a list of IPs separated by just a <code></code> (ASCII space),<br>with an optional <code>,</code>. The next way is two complete IP addresses in the form of<br><code>BEGINNING_ADDRESS-END_ADDRESS</code> like <code>127.0.1.44-127.0.2.33</code>. CIDR<br>specifications may also be used, however the whole address must be given to<br>Metasploit like <code>127.0.0.0/8</code> and not <code>127/8</code>, contrary to the RFC.<br>Additionally, a netmask can be used in conjunction with a domain name to<br>dynamically resolve which block to target. All these methods work for both IPv4<br>and IPv6 addresses. IPv4 addresses can also be specified with special octet<br>ranges from the <a href="https://nmap.org/book/man-target-specification.html" target="_blank" rel="noopener">NMAP target<br>specification</a></p>
-<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><p>Terminate the first sessions:</p>
-<pre><code>sessions -k 1</code></pre><p>Stop some extra running jobs:</p>
-<pre><code>jobs -k 2-6,7,8,11..15</code></pre><p>Check a set of IP addresses:</p>
-<pre><code>check 127.168.0.0/16, 127.0.0-2.1-4,15 127.0.0.255</code></pre><p>Target a set of IPv6 hosts:</p>
-<pre><code>set RHOSTS fe80::3990:0000/110, ::1-::f0f0</code></pre><p>Target a block from a resolved domain name:</p>
-<pre><code>set RHOSTS www.example.test/24</code></pre><p>Framework: 5.0.16-dev-a5184d39dc6a3a8cf2b85538327b57706057e94c</p>
-<p>Console  : 5.0.16-dev-a5184d39dc6a3a8cf2b85538327b57706057e94c</p>
-<blockquote>
-<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/Metasploit命令/" target="_blank" rel="noopener">https://www.boringboys.top/article/Metasploit命令/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+edit          使用首选的编辑器编辑当前模块或文件
+irb           在当前上下文中打开一个交互式Ruby Shell
+log           如果可以，将framework.log显示到页面末尾
+pry           在当前模块或框架上打开Pry调试器
+reload_lib    从指定路径重新加载Ruby库文件</code></pre><h1 id="msfconsole"><a href="#msfconsole" class="headerlink" title="msfconsole"></a>msfconsole</h1><p><strong>msfconsole</strong>是Metasploit框架的主要接口。使用者可以通过这个控制台高效的使用MSF中的各种功能。<br>可以在终端或命令行界面直接输入<code>msfconsole</code>启动。</p>
+<h2 id="范围和列表"><a href="#范围和列表" class="headerlink" title="范围和列表"></a>范围和列表</h2><p>上面列出的许多命令和选项都可以使用范围，所以不必手动列出每个需要的事物。所有范围均包括在内。</p>
+<h3 id="ID范围"><a href="#ID范围" class="headerlink" title="ID范围"></a>ID范围</h3><p>带有ID列表的命令可以使用范围来提供帮助。各个ID必须以<code>,</code>分隔（不允许有空格），<br>范围可以用<code>-</code>或<code>..</code>表示。</p>
+<h3 id="IP范围"><a href="#IP范围" class="headerlink" title="IP范围"></a>IP范围</h3><p>这里有多种方法可以用来指定能混合在一起的IP地址范围：</p>
+<ul>
+<li>第一种方法是一个IP列表，这些IP仅由<code>&#39; &#39;</code>（ASCII空格）分隔，并带有可选的<code>,</code>。</li>
+<li>第二种方式是用两个完整的IP地址表示范围，格式为<em>“开始地址-结束地址”</em>，例如<code>127.0.1.44-127.0.2.33</code>。</li>
+<li>也可以使用CIDR规范，但是，与RFC相反，必须将整个地址提供给Metasploit，例如127.0.0.0/8，而不是127/8。</li>
+<li>此外，可以将网络掩码与域名一起使用以动态解析要定位的块。</li>
+</ul>
+<p>所有这些方法都适用于IPv4和IPv6地址。也可以根据<a href="https://nmap.org/book/man-target-specification.html" target="_blank" rel="noopener">NMAP目标规范</a>用特殊的八位位组范围指定IPv4地址。</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>终止第一个会话：</p>
+<pre><code>sessions -k 1</code></pre><p>停止一些正在运行的作业：</p>
+<pre><code>jobs -k 2-6,7,8,11..15</code></pre><p>检查一组IP地址：</p>
+<pre><code>check 127.168.0.0/16, 127.0.0-2.1-4,15 127.0.0.255</code></pre><p>定位一组IPv6主机：</p>
+<pre><code>set RHOSTS fe80::3990:0000/110, ::1-::f0f0</code></pre><p>定位来自解析域名的块：</p>
+<pre><code>set RHOSTS www.example.test/24</code></pre><blockquote>
+<p>翻译：Boringboys<br>原文链接：<a href="http://127.0.0.1:4000/2019/03/29/Metasploit%E5%91%BD%E4%BB%A4/" target="_blank" rel="noopener">http://127.0.0.1:4000/2019/03/29/Metasploit%E5%91%BD%E4%BB%A4/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -385,6 +352,51 @@ reload_lib    Reload Ruby library files from specified paths</code></pre><h1 id=
       <tags>
         <tag>安全</tag>
         <tag>工具</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>密码学 Diffie-Hellman密钥交换协议</title>
+    <url>/2018/12/04/%E5%AF%86%E7%A0%81%E5%AD%A6Diffie-Hellman%E5%AF%86%E9%92%A5%E4%BA%A4%E6%8D%A2%E5%8D%8F%E8%AE%AE/</url>
+    <content><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p><strong>Diffie-Hellman密钥交换协议</strong>（Diffie-Hellman key exchange agreement）简称“D-H<strong>协议</strong>”，是1976年 Whitfield Diffie 和 Martin Hellman 合作发明的安全协议，它可以让双方在完全没有对方任何预先信息的条件下通过不安全信道创建起一个密钥。这个密钥可以在后续的通信中作为对称密钥来加密通信内容。</p>
+<a id="more"></a>
+<h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h2><p>（1）通信双方 Alice 和 Bob 先确定<em>两个大素数</em> p 和 q ，这两个数不需要保密，因此通信双方可以通过不安全信道协商并确定这两个数；</p>
+<p>（2）Alice 选择一个大的<em>随机数</em> <code>r1</code> 并计算：<code>A=q^r1 (mod p)</code>；</p>
+<p>（3）Alice 将 <code>A</code> 发送给 Bob；</p>
+<p>（4）Bob 选择另外一个大的<em>随机数</em> <code>r2</code> 并计算：<code>B=q^r2 (mod p)</code>；</p>
+<p>（5）Bob 将 <code>B</code> 发送给 Alice；</p>
+<p>（6）Alice 计算密钥：<code>k1=B^r1 (mod p)</code>；</p>
+<p>（7）Bob 计算密钥：<code>k2=A^r2 (mod p)</code></p>
+<p>ps:最后，Alice 和 Bob 计算得到的 <code>k1=k2</code>，即得到的密钥</p>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>（1）假设 Alice 和 Bob 选取的 <code>p=11 ， q=5</code>；</p>
+<p>（2）Alice 选择的随机数取 <code>r1=3</code>，则 <code>A=5^3 (mod 11)=4</code>；</p>
+<p>（3）Alice 将 <code>A=4</code> 发送给 Bob；</p>
+<p>（4）Bob 选择的随机数取 <code>r2=6</code>，则 <code>B=5^6 (mod 11)=5</code>；</p>
+<p>（5）Bob 将 <code>B=5</code> 发送给 Alice；</p>
+<p>（6）Alice 计算：<code>k1=5^3 (mod 11)=4</code>；</p>
+<p>（7）Bob 计算：<code>k2=4^6 (mod 11)=4</code>；</p>
+<p>（8）交换得到的密钥：<code>k1=k2=4</code></p>
+<h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><p><em>D-H协议的安全性在于，在有限域中计算离散对数远远难于在同一个域中计算指数。</em></p>
+<p>从上面给出的例子解释，就是当 Alice 知道 r1=3，以及 p 和 q 的情况下可以十分容易的计算得到 A；<br>而第三方在只知道 p，q 和 A 的情况下却很难计算得到 Alice 取得随机数 r1，所以无法使用 Bob 通过公共信道发送的 B 计算得到密钥 k；<br>对于 Bob 取的随机数 r2，与对 Alice 的分析一样，第三方同样难以通过计算得到，也就难以通过 Alice 发送的 A 计算出密钥。</p>
+<h2 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h2><p>D-H协议也存在缺陷，即容易受到<strong>中间人攻击</strong> ( <strong>Man-in-the-Middle Attack</strong> ，简称 <strong>“MITM攻击”</strong> ) ，就是通过拦截正常的网络通信数据，并进行数据篡改和嗅探，而通信双方却毫不知情。</p>
+<p>中间人攻击的过程如下：</p>
+<p>（1）第一步和上面所说的一样，通信双方 Alice 和 Bob 先确定两个大素数 <code>p</code> 和 <code>q</code> ，这两个数不需要保密，因此通信双方可以通过不安全信道协商并确定这两个数；<br>设 <code>p=11 ，q=5</code>；</p>
+<p>（2）窥探者 Eve 监听他们两个的会话，并得到了 <code>p</code> 和 <code>q</code> 的值；</p>
+<p>（3）Alice、Bob、Eve 同时选择随机数：<br>设 Alice 选择的还是 <code>r1=3</code> ，Bob 选择的是 <code>r2=6</code>，Eve 选择两个随机数 <code>r1&#39;=8，r2&#39;=9</code>；</p>
+<p>（4）Alice、Bob、Eve 分别计算 <code>q^r (mod p)</code>：<br>Alice 计算得 <code>A=4</code> ，Bob 计算得 <code>B=5</code> ，Eve 计算得 <code>A&#39;=13,B&#39;=12</code></p>
+<p>（5）然后按照协议 Alice 将自己计算的 <code>A</code> 发送给 Bob，此时 Eve 截获这个 <code>A</code>，并将自己计算得到的 <code>A&#39;</code> 发送给 Bob，Bob 对此过程并不知情；</p>
+<p>（6）同样 Eve 也截获了 Bob 发送给 Alice 的 <code>B</code>，并将 <code>B&#39;</code> 发送给 Alice，Alice 同样对此过程毫不知情；</p>
+<p>（7）此时 Eve 可以根据截获的 <code>A</code> 、<code>B</code> 分别计算出 <em>自己和 Alice 通信的密钥</em> 以及 <em>自己和Bob通信的密钥</em>，分别与 Alice 、Bob 共享不同的密钥。</p>
+<p>这样一来，Eve 就可以分别与 Alice 和 Bob 通信，而 Alice 和 Bob 仍认为和自己通信的是对方，对第三方并不知情。</p>
+<blockquote>
+<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/密码学Diffie-Hellman密钥交换协议">https://www.boringboys.top/article/密码学Diffie-Hellman密钥交换协议</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>密码学</category>
+      </categories>
+      <tags>
+        <tag>安全</tag>
         <tag>学习</tag>
       </tags>
   </entry>
