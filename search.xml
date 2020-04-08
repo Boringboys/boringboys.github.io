@@ -9,7 +9,7 @@
 <h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>在同一个冲突域中的每一个节点都能接收到所有被发送的帧；<br>在同一个广播域中的每一个节点都能接收到任一设备发送的广播帧；  </p>
 <p>冲突域是基于物理层的，所以一些处在数据链路层的设备能够划分冲突域；<br>广播域是基于数据链路层的，所以广播域只能有像路由器这样的网络层设备来划分。</p>
 <blockquote>
-<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/网络篇之广播域和冲突域/">https://www.boringboys.top/article/网络篇之广播域和冲突域/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/2019/05/24/网络篇之广播域和冲突域/">https://www.boringboys.top/2019/05/24/网络篇之广播域和冲突域/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -182,7 +182,7 @@ ps:部分语言不支持此语法</td>
 </table>
 
 <blockquote>
-<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/正则表达式/">https://www.boringboys.top/article/正则表达式/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/2019/05/09/正则表达式/">https://www.boringboys.top/2019/05/09/正则表达式/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -236,7 +236,7 @@ ps:部分语言不支持此语法</td>
 
 
 <blockquote>
-<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/Nessus在Windows上的安装/">https://www.boringboys.top/article/Nessus在Windows上的安装/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/2019/04/23/Nessus在Windows上的安装/">https://www.boringboys.top/2019/04/23/Nessus在Windows上的安装/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -252,7 +252,7 @@ ps:部分语言不支持此语法</td>
     <url>/2019/03/29/Metasploit%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>为了方便自己后期的学习，我把metasploit的帮助信息简单翻译了一下，包括命令和一些用法描述。</p>
 <a id="more"></a>
-<p>…翻译中…</p>
+
 <h1 id="核心命令"><a href="#核心命令" class="headerlink" title="核心命令"></a>核心命令</h1><pre><code>命令          描述
 -------       -----------
 ?             帮助菜单
@@ -343,7 +343,7 @@ reload_lib    从指定路径重新加载Ruby库文件</code></pre><h1 id="msfco
 <pre><code>check 127.168.0.0/16, 127.0.0-2.1-4,15 127.0.0.255</code></pre><p>定位一组IPv6主机：</p>
 <pre><code>set RHOSTS fe80::3990:0000/110, ::1-::f0f0</code></pre><p>定位来自解析域名的块：</p>
 <pre><code>set RHOSTS www.example.test/24</code></pre><blockquote>
-<p>翻译：Boringboys<br>原文链接：<a href="http://127.0.0.1:4000/2019/03/29/Metasploit%E5%91%BD%E4%BB%A4/" target="_blank" rel="noopener">http://127.0.0.1:4000/2019/03/29/Metasploit%E5%91%BD%E4%BB%A4/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+<p>翻译：Boringboys<br>原文链接：<a href="https://www.boringboys.top/2019/03/29/Metasploit命令/">https://www.boringboys.top/2019/03/29/Metasploit命令/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -389,7 +389,7 @@ reload_lib    从指定路径重新加载Ruby库文件</code></pre><h1 id="msfco
 <p>（7）此时 Eve 可以根据截获的 <code>A</code> 、<code>B</code> 分别计算出 <em>自己和 Alice 通信的密钥</em> 以及 <em>自己和Bob通信的密钥</em>，分别与 Alice 、Bob 共享不同的密钥。</p>
 <p>这样一来，Eve 就可以分别与 Alice 和 Bob 通信，而 Alice 和 Bob 仍认为和自己通信的是对方，对第三方并不知情。</p>
 <blockquote>
-<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/article/密码学Diffie-Hellman密钥交换协议">https://www.boringboys.top/article/密码学Diffie-Hellman密钥交换协议</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/2018/12/04/密码学Diffie-Hellman密钥交换协议/">https://www.boringboys.top/2018/12/04/密码学Diffie-Hellman密钥交换协议/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
 </blockquote>
 ]]></content>
       <categories>
