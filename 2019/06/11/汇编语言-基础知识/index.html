@@ -11,7 +11,7 @@
   <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
   
   
-    <meta name="keywords" content="广播域,冲突域,网络," />
+    <meta name="keywords" content="汇编语言,基础知识," />
   
 
   
@@ -21,7 +21,7 @@
   
   <link rel="icon" type="image/x-icon" href="/images/mylogo.png">
   
-  <title>广播域和冲突域 [ Boringboys ]</title>
+  <title>汇编语言-基础知识 [ Boringboys ]</title>
   
     <!-- stylesheets list from config.yml -->
     
@@ -110,19 +110,19 @@
   <article class="post" id="post">
     <header class="post-header text-center">
       <h1 class="title">
-        广播域和冲突域
+        汇编语言-基础知识
       </h1>
       <span>
         
-        <time class="time" datetime="2019-05-24T14:10:23.000Z">
-        2019-05-24
+        <time class="time" datetime="2019-06-11T11:49:48.000Z">
+        2019-06-11
       </time>
         
       </span>
       <span class="slash">/</span>
       <span class="post-meta">
       <span class="post-tags">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%86%B2%E7%AA%81%E5%9F%9F/" rel="tag">冲突域</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B9%BF%E6%92%AD%E5%9F%9F/" rel="tag">广播域</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li></ul>
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">基础知识</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/" rel="tag">汇编语言</a></li></ul>
       </span>
     </span>
       <span class="slash">/</span>
@@ -130,18 +130,11 @@
       <span id="busuanzi_value_page_pv"></span> 点击
     </span>
       <span class="slash">/</span>
-      <span class="read">阅读耗时 2 分钟</span>
+      <span class="read">阅读耗时 1 分钟</span>
     </header>
 
     <div class="post-content">
-      <h2 id="广播域"><a href="#广播域" class="headerlink" title="广播域"></a>广播域</h2><p>简单地说，广播域是一种环境，在该环境中通过线路发送的广播消息，可以被所有该环境中的主机或节点接收。</p>
-<h2 id="冲突域"><a href="#冲突域" class="headerlink" title="冲突域"></a>冲突域</h2><p>冲突域是其中的流量可能与其他流量相冲突的网络。冲突域中所有节点都链接到同一个被交换机和学习型网桥划分的相互连接的中继器集合。</p>
-<a id="more"></a>
-<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>在同一个冲突域中的每一个节点都能接收到所有被发送的帧；<br>在同一个广播域中的每一个节点都能接收到任一设备发送的广播帧；  </p>
-<p>冲突域是基于物理层的，所以一些处在数据链路层的设备能够划分冲突域；<br>广播域是基于数据链路层的，所以广播域只能有像路由器这样的网络层设备来划分。</p>
-<blockquote>
-<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/2019/05/24/网络篇之广播域和冲突域/">https://www.boringboys.top/2019/05/24/网络篇之广播域和冲突域/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
-</blockquote>
+      <h2 id="汇编语言的产生"><a href="#汇编语言的产生" class="headerlink" title="汇编语言的产生"></a>汇编语言的产生</h2><p>首先，我们来了解一下机器语言</p>
 
     </div>
 
@@ -150,7 +143,7 @@
     
   <div id="toc" class="toc-article">
     <strong class="toc-title">Posts</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#广播域"><span class="toc-text">广播域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#冲突域"><span class="toc-text">冲突域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#区别"><span class="toc-text">区别</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#汇编语言的产生"><span class="toc-text">汇编语言的产生</span></a></li></ol>
   </div>
 
 
@@ -168,19 +161,14 @@
       <div class="post-nav-item post-nav-next">
         
           <span>〈 </span>
-          <a href="/2019/05/09/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="next" title="正则表达式">
-          正则表达式
+          <a href="/2019/05/24/%E7%BD%91%E7%BB%9C%E7%AF%87%E4%B9%8B%E5%B9%BF%E6%92%AD%E5%9F%9F%E5%92%8C%E5%86%B2%E7%AA%81%E5%9F%9F/" rel="next" title="广播域和冲突域">
+          广播域和冲突域
           </a>
         
       </div>
   
       <div class="post-nav-item post-nav-prev">
           
-          <a href="/2019/06/11/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="prev" title="汇编语言-基础知识">
-            汇编语言-基础知识
-          </a>
-          <span>〉</span>
-        
       </div>
     </div>
   
