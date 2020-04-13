@@ -1016,5 +1016,32 @@ code {
 .highlight .function .title {
   color: #525252;
 }
+.NotFound_Font {
+	color: #565656;
+	font-size:100px;
+}
+.NotFound_Content_Font{
+	color: #565656;
+	font-size:20px;
+}
+.NotFound_Back_Home {
+	margin:20px 0;
+	height: 45px;
+    line-height: 45px;
+    padding: 0 11px;
+    background: #e5e4e4;
+    border: 1px #8e7aff solid;
+    border-radius: 5px;
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 25px;
+    outline: none;
+}
+.NotFound_Content_Font_End{
+	
+}
 
 /*# sourceMappingURL=xoxo.css.map */
+
+
