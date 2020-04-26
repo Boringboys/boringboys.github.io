@@ -1016,6 +1016,7 @@ code {
 .highlight .function .title {
   color: #525252;
 }
+/*自定*/
 .NotFound_Font {
 	color: #565656;
 	font-size:100px;
@@ -1041,7 +1042,12 @@ code {
 .NotFound_Content_Font_End{
 	
 }
-
+*{
+	cursor:url('/images/cursor/cursor.png'),auto;
+}
+a{
+	cursor:url('/images/cursor/cursor_hand.png'),auto;
+}
 /*# sourceMappingURL=xoxo.css.map */
 
 
