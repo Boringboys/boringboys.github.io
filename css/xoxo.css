@@ -1043,10 +1043,10 @@ code {
 	
 }
 *{
-	cursor:url('/images/cursor/cursor.png'),auto;
+	cursor:url('/images/cursor/cursor.ico') 12 8,auto;
 }
-a{
-	cursor:url('/images/cursor/cursor_hand.png'),auto;
+a,a *{
+	cursor:url('/images/cursor/cursor_hand.ico') 12 8,auto;
 }
 /*# sourceMappingURL=xoxo.css.map */
 
