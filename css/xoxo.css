@@ -1025,7 +1025,7 @@ code {
 	color: #565656;
 	font-size:20px;
 }
-.NotFound_Back_Home {
+.NotFound_Back_Home{
 	margin:20px 0;
 	height: 45px;
     line-height: 45px;
@@ -1042,9 +1042,15 @@ code {
 .NotFound_Content_Font_End{
 	
 }
+
 *{
 	cursor:url('/images/cursor/cursor.ico') 12 8,auto;
-}
+} 
+
+/* p,span,time,h1,h2,h3,h4,h5,h6,em,code,strong{
+  cursor:text;
+} */
+
 a,a *{
 	cursor:url('/images/cursor/cursor_hand.ico') 12 8,auto;
 }
