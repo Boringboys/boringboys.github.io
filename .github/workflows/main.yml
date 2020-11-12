@@ -20,7 +20,8 @@ jobs:
       
       - name: Install git
         run: |
-          sudo apt-get install git-core -y
+          apt-get update
+          apt-get install git -y
       
       - name: Install Hexo
         run: |
@@ -40,5 +41,5 @@ jobs:
           git config user.name boringboys
           git config user.email boringboys@email.auwave
           git add .
-          git commit -m "deploy:Auto deploy gitpages at $(data + '%Y-%m-%d %H:%M:%S %s')"
+          git commit -m "Auto deploy gitpages at $(data + '%Y-%m-%d %H:%M:%S %s')"
           git push --force --quiet "https://${{ secrets.MY_ACCESS_TOKEN }}@$REPO" master:pages
