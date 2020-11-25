@@ -5,6 +5,12 @@ on:
     branches:
       - master
 
+env:
+  USER: Boringboys
+  EMAIL: boringboys@qq.com
+  DEPLOY_REPO: Boringboys/boringboys.github.io
+  DEPLOY_BRANCH: pages
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -12,34 +18,35 @@ jobs:
     steps:
       - name: Check-out
         uses: actions/checkout@v2
+
+      - name: Check-Out-Deploy-Branch
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ env.DEPLOY_REPO }}
+          ref: ${{ env.DEPLOY_BRANCH }}
+          path: .deploy_git
         
-      - name: Set-node
-        uses: actions/setup-node@v2.1.2
+      - name: Set-Node
+        uses: actions/setup-node@v1
         with:
           node-version: '12'
       
-      - name: Install git
+      - name: Configuration-Environment
+        env:
+          AUTO_DEPLOY_KEY: ${{ secrets.AUTO_DEPLOY_KEY }}
         run: |
-          sudo apt-get update
-          sudo apt-get install git -y
+          sudo timedatectl set-timezone "Asia/Shanghai"
+          mkdir -p ~/.ssh/
+          echo "$AUTO_DEPLOY_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git config --global user.name $USER
+          git config --global user.email $EMAIL
       
-      - name: Install Hexo
-        run: |
-          npm install -g hexo-cli
-      
-      - name: Build
+      - name: Install-Dependencies
         run: |
           npm install
-          hexo generate
-      
+
       - name: Deploy
-        env: 
-          REPO: github.com/Boringboys/boringboys.github.io
         run: |
-          cd ./public
-          git init
-          git config user.name boringboys
-          git config user.email boringboys@email.auwave
-          git add .
-          git commit -m "Auto deploy gitpages at $(data + '%Y-%m-%d %H:%M:%S %s')"
-          git push --force --quiet "https://${{ secrets.MY_ACCESS_TOKEN }}@$REPO" master:pages
+          npm run deploy
