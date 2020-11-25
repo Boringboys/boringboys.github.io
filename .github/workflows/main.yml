@@ -49,5 +49,5 @@ jobs:
 
       - name: Build-And-Deploy
         run: |
-          npm run build
-          npm run deploy
+          hexo generate
+          hexo deploy
