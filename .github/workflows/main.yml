@@ -43,12 +43,18 @@ jobs:
           git config --global user.name $USER
           git config --global user.email $EMAIL
       
-      - name: Install-Dependencies
+      - name: Install-Hexo
         run: |
           npm install -g hexo-cli
+
+      - name: Install-Dependencies
+        run: |
           npm install
 
-      - name: Build-And-Deploy
+      - name: Build
         run: |
           hexo generate
+      
+      - name: Deploy
+        run: |
           hexo deploy
