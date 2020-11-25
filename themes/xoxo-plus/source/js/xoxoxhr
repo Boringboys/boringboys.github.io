@@ -1,0 +1,1 @@
+clear();var xmlhttp=new XMLHttpRequest();xmlhttp.onreadystatechange=function(){if(xmlhttp.readyState==4 && xmlhttp.status==200){console.log("链接：\n"+eval("("+xmlhttp.response+")")[Object.keys(eval("("+xmlhttp.response+")"))[0]]);}};xmlhttp.open("GET","https://text-1254394685.cos.ap-shanghai.myqcloud.com/links/link",true);xmlhttp.send();
