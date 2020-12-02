@@ -70,19 +70,27 @@ links:
 projects:
   My-Blog:
     url: https://github.com/Boringboys/boringboys.github.io
-    descript: a github pages
+    descript: 本博客的GitHub仓库
 
 # activitys
 activitys:
-  暂时没有活动:
-    date: 0000-00-00
-    url: /
-    type: 无
+  雷神众测 HackingDay 2020: 
+    date: 2020-11-14
+    url: https://mp.weixin.qq.com/s/XPP9ypa7ay5xIjYP7B4Q3g
+    type: 安全交流论坛
 
 # papers
 papers:
-    什么都没有: /
-    
+    《BurpSuite 实战指南》: https://share-1254394685.cos.ap-shanghai.myqcloud.com/book/BurpSuite%20%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97.pdf
+    《Metasploit渗透测试指南》: https://share-1254394685.cos.ap-shanghai.myqcloud.com/book/Metasploit%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%8C%87%E5%8D%97.pdf
+    《Metasploit渗透测试魔鬼训练营-完整版》: https://share-1254394685.cos.ap-shanghai.myqcloud.com/book/Metasploit%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E9%AD%94%E9%AC%BC%E8%AE%AD%E7%BB%83%E8%90%A5-%E5%AE%8C%E6%95%B4%E7%89%88.pdf
+    《SQL注入攻击与防御 第2版》: https://share-1254394685.cos.ap-shanghai.myqcloud.com/book/SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E4%B8%8E%E9%98%B2%E5%BE%A1%20%20%E7%AC%AC2%E7%89%88.pdf
+    《Web渗透技术及实战案例解析》: https://share-1254394685.cos.ap-shanghai.myqcloud.com/book/Web%E6%B8%97%E9%80%8F%E6%8A%80%E6%9C%AF%E5%8F%8A%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E8%A7%A3%E6%9E%90.pdf
+    《XSS跨站脚本攻击剖析与防御》: https://share-1254394685.cos.ap-shanghai.myqcloud.com/book/XSS%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BB%E5%89%96%E6%9E%90%E4%B8%8E%E9%98%B2%E5%BE%A1.pdf
+    《模糊测试-强制发掘安全漏洞的利器》: https://share-1254394685.cos.ap-shanghai.myqcloud.com/book/%E6%A8%A1%E7%B3%8A%E6%B5%8B%E8%AF%95-%E5%BC%BA%E5%88%B6%E5%8F%91%E6%8E%98%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E%E7%9A%84%E5%88%A9%E5%99%A8.pdf
+    渗透Webpack等站点，从此更加优雅-HackingDay（录制版）.pptx: https://share-1254394685.cos.ap-shanghai.myqcloud.com/activity/hackingday2020/%E6%B8%97%E9%80%8FWebpack%E7%AD%89%E7%AB%99%E7%82%B9%EF%BC%8C%E4%BB%8E%E6%AD%A4%E6%9B%B4%E5%8A%A0%E4%BC%98%E9%9B%85%20-%20HackingDay%EF%BC%88%E5%BD%95%E5%88%B6%E7%89%88%EF%BC%89.pptx
+    雷神2020.11.14HackingDay3.0.pptx: https://share-1254394685.cos.ap-shanghai.myqcloud.com/activity/hackingday2020/%E9%9B%B7%E7%A5%9E2020.11.14HackingDay3.0.pptx
+
 # Local search
 ## 
 ## 
