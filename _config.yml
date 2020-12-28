@@ -136,3 +136,8 @@ jsonContent:
       permalink: tag.permalink
     }]
     preview: true
+
+feed:
+    type: atom
+    path: atom.xml
+    limit: 20
