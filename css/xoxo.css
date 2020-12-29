@@ -253,7 +253,7 @@ body {
   margin-left: 10px;
   display: inline-block;
   vertical-align: middle;
-  font-family: cursive;
+  font-family: "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace;
   font-weight: 700;
   font-size: 24px;
   line-height: 40px;
@@ -843,7 +843,7 @@ body {
 }
 .archives .archive .date {
   color: #999;
-  font-family: cursive;
+  font-family: "Brush Script MT", "Brush Script Std", "Lucida Calligraphy", "Lucida Handwriting", "Apple Chancery", cursive;
   text-transform: uppercase;
   font-size: 1.0rem;
   font-weight: 300;
