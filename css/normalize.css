@@ -242,7 +242,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: cursive; /* 1 */
+  font-family: serif; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */

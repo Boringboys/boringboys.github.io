@@ -92,7 +92,7 @@ footer {
   padding-top: 1rem!important;
   margin-top: 2rem!important;
   color: #999;
-  font-size: 12px;
+  font-size: 18px;
   position: relative;
   z-index: 1024;
 }
@@ -139,7 +139,7 @@ footer .bottom-item:hover {
   color: #fff;
 }
 .tag-button {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 20px;
   display: inline-block;
   height: 20px;
@@ -177,7 +177,7 @@ footer .bottom-item:hover {
 }
 html,
 body {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   font-family: "Brush Script MT", "Brush Script Std", "Lucida Calligraphy", "Lucida Handwriting", "Apple Chancery", cursive;
 }
@@ -300,7 +300,7 @@ body {
 }
 .recent-posts .recent-post-item .post-excerpt {
   color: #999;
-  font-size: 14px;
+  font-size: 18px;
 }
 @media screen and (max-width: 576px) {
   .recent-posts .recent-post-item .post-excerpt {
@@ -308,13 +308,13 @@ body {
   }
 }
 .recent-posts .recent-post-item .post-meta {
-  font-size: 12px;
+  font-size: 18px;
   position: relative;
   padding-right: 60px;
   min-height: 30px;
 }
 .recent-posts .recent-post-item .title {
-  font-size: 12px;
+  font-size: 18px;
 }
 .recent-posts .recent-post-item .title h2 {
   font-size: 1.2rem;
@@ -352,7 +352,7 @@ body {
   padding: 10px 0 10px;
 }
 .page-nav .page-number {
-  font-size: 14px;
+  font-size: 18px;
   display: inline-block;
   position: relative;
   margin: 0 5px;
@@ -403,10 +403,10 @@ body {
 }
 .post .post-header .time {
   color: #999;
-  font-size: 14px;
+  font-size: 18px;
 }
 .post .post-header .read {
-  font-size: 14px;
+  font-size: 18px;
   color: #999;
 }
 .post .post-meta {
@@ -416,7 +416,7 @@ body {
   text-align: center;
 }
 .post .post-meta .post-tags .article-tag-list-item {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 20px;
   display: inline-block;
   height: 20px;
@@ -559,7 +559,7 @@ body {
   border-radius: 3px;
   background: #f6f6f6;
   min-width: 30px;
-  font-size: 14px;
+  font-size: 18px;
   text-align: center;
   line-height: 30px;
   height: 30px;
@@ -603,7 +603,7 @@ body {
 }
 .tag-page .tag-item time {
   color: #999;
-  font-size: 14px;
+  font-size: 18px;
   float: right;
 }
 @media screen and (max-width: 576px) {
@@ -628,7 +628,7 @@ body {
   display: inline-block;
   -ms-flex: 1;
       flex: 1;
-  font-size: 14px;
+  font-size: 18px;
   padding: 10px 0;
   position: relative;
   vertical-align: top;
@@ -674,7 +674,7 @@ body {
     max-width: 200px;
     top: 80px;
     right: 5px;
-    font-size: 12px;
+    font-size: 18px;
     padding: 10px;
     overflow-y: auto;
     overflow-x: auto;
@@ -812,7 +812,7 @@ body {
 }
 .copyright {
   margin: 15px 30px;
-  font-size: 12px;
+  font-size: 18px;
   text-align: center;
 }
 .copyright a {
@@ -840,7 +840,7 @@ code {
   display: block;
   overflow-x: auto;
   color: #555;
-  font-size: 14px;
+  font-size: 18px;
   border-radius: 2px;
   background-color: #f6f6f6;
   overflow-y: hidden;
