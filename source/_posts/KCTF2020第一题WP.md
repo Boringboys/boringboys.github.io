@@ -20,8 +20,6 @@ http://121.36.145.157:8088/
 
 利用技术绕过限制，获得flag.txt文件中的值。
 
-<!--more-->
-
 访问页面，是一张图片，查看页面源代码：  
 
 ![ ](https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/KCTF2020-First-WP/pic1.png)

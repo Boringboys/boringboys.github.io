@@ -12,8 +12,6 @@ description:
 
 #　签到题
 
-<!--more-->
-
 目标程序执行如下：  
 ![pic1](https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/KCTF2020-CheckIn-WP/pic1.png)
 需要输入正确的flag  
