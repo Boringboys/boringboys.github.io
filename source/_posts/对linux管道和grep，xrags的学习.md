@@ -82,7 +82,7 @@ cat test.txt | sort | grep a | grep b | grep c
 
 还是上面的命令，这次通过管道链接到 `xargs`，效果如下
 ```
-# cat test.txt | sort | xargs
+$ cat test.txt | sort | xargs
 a ab abc b c d e
 ```
 
