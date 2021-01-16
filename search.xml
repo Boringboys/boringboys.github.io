@@ -478,6 +478,23 @@ reload_lib    从指定路径重新加载Ruby库文件</code></pre><h1 id="msfco
       </tags>
   </entry>
   <entry>
+    <title>对linux管道和grep，xrags的学习</title>
+    <url>/2021/01/16/%E5%AF%B9linux%E7%AE%A1%E9%81%93%E5%92%8Cgrep%EF%BC%8Cxrags%E7%9A%84%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h2><p>在linux中，管道可以将两个或多个命令的输入输出链接起来<a id="more"></a>，它将上一个命令的标准输出重定向到下一个命令的标准输入<br>假设在当前目录下的结构是：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── a</span><br><span class="line">│   └── a.txt</span><br><span class="line">├── b</span><br><span class="line">│   └── b.txt</span><br><span class="line">├── c</span><br><span class="line">│   └── c.txt</span><br><span class="line">├── d</span><br><span class="line">│   └── d.txt</span><br><span class="line">├── e</span><br><span class="line">│   └── e.txt</span><br><span class="line">└── test.txt</span><br></pre></td></tr></table></figure>
+<p>而文件 <code>test.txt</code> 内容是：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">c</span><br><span class="line">a</span><br><span class="line">b</span><br><span class="line">e</span><br><span class="line">d</span><br><span class="line">ab</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
+<p>通过执行下面命令，<code>cat</code> 命令会将文件 <code>test.txt</code> 的内容打印到标准输出，但不会直接显示在标准输出设备上，而是会通过管道 <code>|</code> 重定向到 <code>sort</code> 命令并被 <code>sort</code> 命令排序之后再进行打印:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | sort</span><br><span class="line">a</span><br><span class="line">b</span><br><span class="line">c</span><br><span class="line">d</span><br><span class="line">e</span><br></pre></td></tr></table></figure>
+<p>这里要注意的是，在这种使用方式中，后面的命令一定要支持接收标准输入，如果是 <code>ls</code> 这种不支持接收标准输入的命令，就会出现下面这种情况：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | ls</span><br><span class="line">a  b  c  d  e  test.txt</span><br></pre></td></tr></table></figure>
+<p>显然显示的内容只是 <code>ls</code> 命令的输出结果</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
     <title>正则表达式</title>
     <url>/2019/05/09/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
     <content><![CDATA[<p><strong>正则表达式</strong>，又称规则表达式。（英语：Regular Expression，代码中简写为regex、regexp或RE），计算机科学的一个概念。<a id="more"></a><br>正则表达式通常被用来检索、替换那些符合某个模式(规则)的文本。</p>
@@ -681,12 +698,6 @@ ps:部分语言不支持此语法</td>
         <tag>汇编语言</tag>
         <tag>基础知识</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>汇编语言-新文章</title>
-    <url>/2021/01/14/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80-%E6%96%B0%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<a id="more"></a>
-]]></content>
   </entry>
   <entry>
     <title>广播域和冲突域</title>
