@@ -516,6 +516,12 @@ reload_lib    从指定路径重新加载Ruby库文件</code></pre><h1 id="msfco
       <categories>
         <category>Linux</category>
       </categories>
+      <tags>
+        <tag>grep</tag>
+        <tag>xargs</tag>
+        <tag>管道</tag>
+        <tag>Linux</tag>
+      </tags>
   </entry>
   <entry>
     <title>正则表达式</title>
