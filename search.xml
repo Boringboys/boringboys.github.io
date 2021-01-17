@@ -716,14 +716,17 @@ ps:部分语言不支持此语法</td>
   <entry>
     <title>广播域和冲突域</title>
     <url>/2019/05/24/%E7%BD%91%E7%BB%9C%E7%AF%87%E4%B9%8B%E5%B9%BF%E6%92%AD%E5%9F%9F%E5%92%8C%E5%86%B2%E7%AA%81%E5%9F%9F/</url>
-    <content><![CDATA[<h2 id="广播域"><a href="#广播域" class="headerlink" title="广播域"></a>广播域</h2><p>简单地说，广播域是一种环境，在该环境中通过线路发送的广播消息，可以被所有该环境中的主机或节点接收。</p>
+    <content><![CDATA[<h2 id="冲突域"><a href="#冲突域" class="headerlink" title="冲突域"></a>冲突域</h2><p>又称为碰撞域，连接在同一导线上的所有工作站的集合，或者说是同一物理网段上所有节点的集合或以太网上竞争同一带宽的节点集合。在任一时刻，在一个冲突域中只能有一个节点在发送消息。如果有两个节点同时发送消息就会产生冲突。</p>
 <a id="more"></a>
 
-<h2 id="冲突域"><a href="#冲突域" class="headerlink" title="冲突域"></a>冲突域</h2><p>冲突域是其中的流量可能与其他流量相冲突的网络。冲突域中所有节点都链接到同一个被交换机和学习型网桥划分的相互连接的中继器集合。</p>
-<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>在同一个冲突域中的每一个节点都能接收到所有被发送的帧；<br>在同一个广播域中的每一个节点都能接收到任一设备发送的广播帧；  </p>
-<p>冲突域是基于物理层的，所以一些处在数据链路层的设备能够划分冲突域；<br>广播域是基于数据链路层的，所以广播域只能有像路由器这样的网络层设备来划分。</p>
+<h2 id="广播域"><a href="#广播域" class="headerlink" title="广播域"></a>广播域</h2><p>简单地说，广播域是一种环境，在该环境中通过线路发送的广播消息，可以被所有该环境中的主机或节点接收。这些主机往往通过以太网中继器或者交换机连接到一起。</p>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>在同一个冲突域中的每一个节点都能接收到所有被其它节点发送的帧；<br>在同一个广播域中的每一个节点都能接收到其他节点发送的广播帧；  </p>
+<p><strong>冲突域</strong>是基于物理层的，所以像工作在物理层的集线器、中继器之类的设备是无法划分冲突域的，因为它们本身不能识别MAC地址和IP地址，在传输数据时只是简单的复制信号。而一些处在数据链路层以上的设备都可以划分冲突域，因为它们会通过查询自身维护的一个MAC和端口的对应表，将数据传送到对应的端口，如数据链路层的交换机、网桥，网络层的路由器等设备；<br><strong>广播域</strong>是基于数据链路层的，所以像前面提到的集线器、中继器、网桥、交换机等设备都是无法划分广播域的，而像路由器这样的网络层设备是可以划分广播域的。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><blockquote>
+<p>知乎：<a href="https://zhuanlan.zhihu.com/p/74366236" target="_blank" rel="noopener">冲突域、广播域的通俗讲解</a><br>维基百科：<a href="https://zh.wikipedia.org/wiki/%E5%B9%BF%E6%92%AD%E5%9F%9F" target="_blank" rel="noopener">广播域</a><br>百度百科：<a href="https://baike.baidu.com/item/%E5%86%B2%E7%AA%81%E5%9F%9F" target="_blank" rel="noopener">冲突域</a>  </p>
+</blockquote>
 <blockquote>
-<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/2019/05/24/网络篇之广播域和冲突域/">https://www.boringboys.top/2019/05/24/网络篇之广播域和冲突域/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+<p>版权声明：本文采用[BY-NC-SA](<a href="https://creativecommons.org/licenses/" target="_blank" rel="noopener">https://creativecommons.org/licenses/</a><br>by-nc-sa/4.0/)协议授权，转载请遵守此协议</p>
 </blockquote>
 ]]></content>
       <categories>
