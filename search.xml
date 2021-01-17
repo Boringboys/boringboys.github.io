@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>KCTF2020第一题WP</title>
-    <url>/2020/11/20/KCTF2020%E7%AC%AC%E4%B8%80%E9%A2%98WP/</url>
+    <title>KCTF2020 WriteUp</title>
+    <url>/2020/11/20/KCTF2020%20WriteUp/</url>
     <content><![CDATA[<h2 id="第一题-至暗时刻"><a href="#第一题-至暗时刻" class="headerlink" title="第一题 至暗时刻"></a>第一题 至暗时刻</h2><a id="more"></a>
 
 <p>题目描述：</p>
@@ -124,6 +124,125 @@ https://{1}.pediy.com/{2}</code></pre><p>{1}处不允许出现’？’，’#�
 =================================================================================</code></pre><p>获得flag截图：</p>
 <p><img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/KCTF2020-First-WP/pic20.png" alt=" "></p>
 <p>获得的flag是 <code>flag{congratulations-Path-the-spring-boot}</code></p>
+<h2 id="签到题"><a href="#签到题" class="headerlink" title="签到题"></a>签到题</h2><!--more-->
+
+<p>目标程序执行如下：<br><img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/KCTF2020-CheckIn-WP/pic1.png" alt="pic1"><br>需要输入正确的flag  </p>
+<p>直接在IDA Pro中打开 F5查看<br><img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/KCTF2020-CheckIn-WP/pic2.png" alt="pic2"><br>分析代码：  </p>
+<pre><code>int __cdecl main(int argc, const char **argv, const char **envp)
+{
+char *v3; // rdx
+signed __int64 v4; // rcx
+int *v5; // r8
+__int64 v6; // rax
+char v7; // dl
+char v8; // cl
+char v9; // cl
+int v11; // [rsp+20h] [rbp-E0h]
+__int16 v12; // [rsp+24h] [rbp-DCh]
+char Dst; // [rsp+30h] [rbp-D0h]
+char v14; // [rsp+31h] [rbp-CFh]
+char v15; // [rsp+32h] [rbp-CEh]
+char v16; // [rsp+33h] [rbp-CDh]
+char v17; // [rsp+34h] [rbp-CCh]
+int v18; // [rsp+35h] [rbp-CBh]
+__int16 v19; // [rsp+39h] [rbp-C7h]
+char v20; // [rsp+3Bh] [rbp-C5h]
+char v21; // [rsp+130h] [rbp+30h]
+char v22; // [rsp+131h] [rbp+31h]
+char v23; // [rsp+132h] [rbp+32h]
+char v24; // [rsp+133h] [rbp+33h]
+char v25; // [rsp+134h] [rbp+34h]
+char v26; // [rsp+135h] [rbp+35h]
+
+memset(&amp;Dst, 0, 0x100ui64);
+memset(&amp;v21, 0, 0x100ui64);
+sub_140001250((__int64)&quot;KCTF 2020!\n&quot;);
+sub_140001250((__int64)&quot;http://bbs.pediy.com\n&quot;);
+sub_140001250((__int64)&quot;Please input your flag: &quot;);
+sub_1400011E0((__int64)&quot;%s&quot;, &amp;Dst, 256i64);
+v3 = &amp;Dst;
+v4 = -1i64;
+do
+    ++v4;
+while ( *(&amp;Dst + v4) );
+if ( (_DWORD)v4 == 12 &amp;&amp; Dst == 102 &amp;&amp; v14 == 108 &amp;&amp; v15 == 97 &amp;&amp; v16 == 103 &amp;&amp; v17 == 123 &amp;&amp; v20 == 125 )
+{
+    v5 = &amp;v11;
+    v6 = 0i64;
+    v12 = v19;
+    v3 = 0i64;
+    v11 = v18;
+    while ( (unsigned __int8)(*(_BYTE *)v5 - 48) &lt;= 9u )
+    {
+    v3 = (char *)(unsigned int)((_DWORD)v3 + 1);
+    v5 = (int *)((char *)v5 + 1);
+    if ( (unsigned int)v3 &gt;= 6 )
+    {
+        v21 = v18;
+        v7 = v18 + BYTE1(v18) - 48 + BYTE2(v18) - 48;
+        v22 = v18 + BYTE1(v18) - 48;
+        v23 = v7;
+        v8 = v7 + HIBYTE(v18) - 48;
+        v3 = &amp;v21;
+        v24 = v8;
+        v25 = v8 + v19 - 48;
+        v26 = v25 + HIBYTE(v19) - 48;
+        while ( 1 )
+        {
+        v9 = *(&amp;v21 + v6++);
+        if ( v9 != a2Efi[v6 - 1] )
+            break;
+        if ( v6 == 7 )
+        {
+            sub_140001250((__int64)&quot;You are winner!\n&quot;, &amp;v21, &quot;2;=EFI&quot;);
+            return 0;
+        }
+        }
+        break;
+    }
+    }
+}
+sub_140001250((__int64)&quot;Try again!\n&quot;, v3);
+return -1;
+}</code></pre><hr>
+<p><img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/KCTF2020-CheckIn-WP/pic3.png" alt="pic3">  </p>
+<p>输入的字符串从Dst处开始存放  </p>
+<p><img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/KCTF2020-CheckIn-WP/pic7.png" alt="pic7">  </p>
+<p>首先会做以下判断：  </p>
+<p><img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/KCTF2020-CheckIn-WP/pic4.png" alt="pic4">  </p>
+<p>查询ASCII码，DST、v14、v15、v16、v17和v20处对应的字符分别应该是<br>‘f’、’l’、’a’、’g’、’{‘和’}’  </p>
+<p>然后会继续做以下判断：  </p>
+<p><img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/KCTF2020-CheckIn-WP/pic5.png" alt="pic5">  </p>
+<p>从v21往后的字符要分别等于a2Efi中的字符，</p>
+<p><img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/KCTF2020-CheckIn-WP/pic8.png" alt="pic8">  </p>
+<p>看到对应的字符是2;=EFI  </p>
+<p>ASCII码分别是 50 59 61 69 70 73  </p>
+<p>要比较六个字符，列出以下对应关系：  </p>
+<pre><code>v21 = 50  
+v22 = 59  
+v23 = 61  
+v24 = 69  
+v25 = 70  
+v26 = 73  </code></pre><p>观察这六个变量的值是如何取得：  </p>
+<p><img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/KCTF2020-CheckIn-WP/pic6.png" alt="pic6">  </p>
+<p>发现是根据v18和v19的值决定的<br>从上面定义处可以发现v18是一个int型变量，所以占4个字节，四个字节中的值分别设为A、B、C、D<br>v19是一个16位的int型，占2个字节，值分别设为E、F  </p>
+<pre><code>BYTE1(v18) 取v18的第二个字节 B
+BYTE2(v18) 取v18的第三个字节 C
+HIBYTE(v18) 取v18最高位的一个字节 D
+HIBYTE(v19) 取v19最高位的一个字节 F
+v18 和 v19 在存放到一个字节的内存时，高位字节丢失，分别取最低位A和E</code></pre><p>所以根据上图，列出以下关系式：  </p>
+<pre><code>50 = v21 = A  
+59 = v22 = A + B - 48  
+61 = v23 = A + B - 48 + C - 48   
+69 = v24 = A + B - 48 + C - 48 + D - 48  
+70 = v25 = A + B - 48 + C - 48 + D - 48 + E - 48  
+73 = v26 = A + B - 48 + C - 48 + D - 48 + E - 48 + F - 48  </code></pre><p>得到结果：</p>
+<pre><code>A = 50  
+B = 57
+C = 50
+D = 56
+E = 49
+F = 51</code></pre><p>对应的字符分别是：2、9、2、8、1、3<br>所以得到最终结果就是：flag{292813}</p>
 <blockquote>
 <p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/2020/11/20/KCTF2020第一题WP/">https://www.boringboys.top/2020/11/20/KCTF2020第一题WP/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
 </blockquote>
@@ -134,6 +253,7 @@ https://{1}.pediy.com/{2}</code></pre><p>{1}处不允许出现’？’，’#�
       <tags>
         <tag>WEB</tag>
         <tag>CTF</tag>
+        <tag>逆向</tag>
       </tags>
   </entry>
   <entry>
@@ -271,8 +391,8 @@ F = 51</code></pre><p>对应的字符分别是：2、9、2、8、1、3<br>所以
       </tags>
   </entry>
   <entry>
-    <title>Metasploit命令</title>
-    <url>/2019/03/29/Metasploit%E5%91%BD%E4%BB%A4/</url>
+    <title>Metasploit命令学习</title>
+    <url>/2018/03/29/Metasploit%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>为了方便自己后期的学习，我把metasploit的帮助信息简单翻译了一下，包括命令和一些用法描述。</p>
 <a id="more"></a>
 
@@ -380,7 +500,7 @@ reload_lib    从指定路径重新加载Ruby库文件</code></pre><h1 id="msfco
   </entry>
   <entry>
     <title>Nessus在Windows上的安装</title>
-    <url>/2019/04/23/Nessus%E5%9C%A8Windows%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/</url>
+    <url>/2018/04/23/Nessus%E5%9C%A8Windows%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h2 id="Nessus"><a href="#Nessus" class="headerlink" title="Nessus"></a>Nessus</h2><p><a href="https://baike.baidu.com/item/Nessus/10718713" target="_blank" rel="noopener">Nessus</a> 是目前全世界最多人使用的系统漏洞扫描与分析软件。<a id="more"></a>总共有超过75,000个机构使用Nessus 作为扫描该机构电脑系统的软件。</p>
 <p>该工具提供完整的电脑漏洞扫描服务，并及时更新其漏洞数据库。</p>
 <p>Nessus不同于传统的漏洞扫描工具，它可以同时在本机或远端上遥控，进行系统的漏洞分析扫描。</p>
@@ -694,8 +814,8 @@ ps:部分语言不支持此语法</td>
       </tags>
   </entry>
   <entry>
-    <title>汇编语言-基础知识</title>
-    <url>/2019/06/11/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+    <title>汇编语言学习笔记（一）</title>
+    <url>/2018/06/11/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
     <content><![CDATA[<h2 id="汇编语言的产生"><a href="#汇编语言的产生" class="headerlink" title="汇编语言的产生"></a>汇编语言的产生</h2><a id="more"></a>
 
 <h3 id="机器语言"><a href="#机器语言" class="headerlink" title="机器语言"></a>机器语言</h3><p>首先，我们了解一下<strong>机器语言</strong>，机器语言是机器指令的集合。  </p>
@@ -725,7 +845,6 @@ ps:部分语言不支持此语法</td>
       </categories>
       <tags>
         <tag>汇编语言</tag>
-        <tag>基础知识</tag>
       </tags>
   </entry>
   <entry>
