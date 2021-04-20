@@ -9,11 +9,11 @@ menu:
       类别: /categories
       归档: /archives
       标签: /tags
-  # 文件: /paper
-  # 项目: /project
-  # 动态: /activity
+  文件: /paper
+  项目: /project
+  动态: /activity
   关于: /about
-  搜索: /search
+  # 搜索: /search
   # rss: /atom.xml
 
 # Miscelaneous
