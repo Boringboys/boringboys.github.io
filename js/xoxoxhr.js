@@ -13,6 +13,8 @@ function givelink(kkeeyy){
 
 function bibilailai(str){
     str = str.replace("吗", "")
+    str = str.replace("么", "")
+    str = str.replace("没", "")
     str = str.replace("?", "!")
     str = str.replace("？", "！")
     console.log(str)
