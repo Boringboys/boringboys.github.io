@@ -1,5 +1,6 @@
 ---
 title: 对linux管道和grep，xrags的学习
+author: Boringboys
 date: 2021-01-16 11:52:33
 categories: 
     - Linux

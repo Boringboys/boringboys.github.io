@@ -1,5 +1,6 @@
 ---
 title: Windows Terminal安装和美化
+author: Boringboys
 date: 2021-07-25 15:30:13
 tags:
 	- 工具
@@ -10,6 +11,8 @@ description: Windows Terminal安装和美化
 ---
 
 最近撸了人生中第一台自己的游戏主机（当然除了显卡，暂时是买不起了，也不太敢买），除了玩游戏，当然也得拿来学习啊，就开始配置之前的一些环境。索性就记录一下Windows Terminal的安装和简单美化。
+
+<!--more-->
 
 ## 安装 Windows Terminal
 
@@ -41,7 +44,7 @@ Windows Terminal截图如下：
 
 > 至于什么是配色方案？emmm...据我的观察，应该就是定义红（red）是什么样的红，黑（black）是什么样的黑，以及黄（yellow）是什么样的黄这样的配置，以此类推，（逃）
 
-然后是 **profiles**，这里就是添加一些配置的地方了，其中 **profiles->list** 列表中保存一些单独的配置，而 **profiles->defaults** 中是应用到所有配置中的通用配置，每个配置有自己的名字，也是列表，配置添加格式和 **schemes** 列表一样，每个配置有自己的名字：
+然后是 **profiles**，这里就是添加一些配置的地方了，其中 **profiles->list** 列表中保存一些单独的配置，而 **profiles->defaults** 中是应用到所有配置中的通用配置，列表中的每个配置都有自己的名字，配置添加格式和 **schemes** 列表一样：
 
 ![Windows Terminal 自定义配置](https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Windows-Terminal-Install/Windows%20Terminal%20%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE.png)
 
@@ -60,7 +63,7 @@ Windows Terminal截图如下：
 这个网站有一些别人提供的配置，可以参考一下：
 https://terminalsplash.com/
 
-配置背景图片，通过 **backgroundImage** 参数可以自定义终端的背景图片，同时可以通过参数配置背景图片的位置、透明度等：
+配置背景图片，通过 **backgroundImage** 参数可以自定义终端的背景图片，同时也可以通过参数配置背景图片的位置、透明度等：
 
 ![Windows Terminal配置背景图片](https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Windows-Terminal-Install/Windows%20Terminal%20%E9%85%8D%E7%BD%AE%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87.png)
 
@@ -122,9 +125,11 @@ If (-Not (Test-Path Variable:PSise)) {
 
 可以看到有一些乱码，因为很多oh-my-posh主题使用的是powerline字体，你的系统上可能没有安装，可以自行到这里下载并安装自己喜欢的powerline字体：https://github.com/powerline/fonts
 
+安装好字体后还需要配置Windows Terminal使用安装好的字体才可以
+
 Windows Terminal字体的配置就是在上面提到的 **profile** 中的 **fontFace** 参数
 
-针对vscode等其它应用中也需要配置终端使用powerline字体才可以正常展示，具体方法自行检索
+针对vscode等其它应用，也需要配置终端使用powerline字体才可以正常显示，具体方法自行检索
 
 **oh-my-posh** 展示
 
