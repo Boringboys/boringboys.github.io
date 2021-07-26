@@ -134,3 +134,5 @@ Windows Terminal字体的配置就是在上面提到的 **profile** 中的 **fon
 **oh-my-posh** 展示
 
 ![oh-my-posh主题展示](https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Windows-Terminal-Install/oh-my-posh%E4%B8%BB%E9%A2%98%E5%B1%95%E7%A4%BA.png)
+
+>参考教程：https://blog.reilkay.com/BeautifyWindowsTerminal/
