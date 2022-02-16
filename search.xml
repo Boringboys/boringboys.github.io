@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World?</title>
+    <url>/1899/11/30/Hello_World/</url>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>好！！！</p>
+<a id="more"></a>
+
+<p>好～～～～～！！！</p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>延迟退休</tag>
+        <tag>离婚冷静</tag>
+        <tag>恶意返乡</tag>
+        <tag>异常维权</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>KCTF2020 WriteUp</title>
     <url>/2020/11/20/KCTF2020%20WriteUp/</url>
     <content><![CDATA[<h2 id="第一题-至暗时刻"><a href="#第一题-至暗时刻" class="headerlink" title="第一题 至暗时刻"></a>第一题 至暗时刻</h2><a id="more"></a>
