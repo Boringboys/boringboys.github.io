@@ -1,0 +1,100 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <style type="text/css">
+    @keyframes typing {
+        from {
+            width:0;
+        }
+    }
+    @keyframes blink-caret {
+        50% {
+            border-color:transparent;
+        }
+    }
+    @keyframes slidein-img {
+        from {
+            margin-left: 75%;
+        }
+
+        to {
+            margin-left: 0px;
+        }
+    }
+    @keyframes slidein-text {
+        from {
+            margin-left: 0px;
+        }
+
+        to {
+            margin-left: 50%;
+        }
+    }
+    h1 {
+        font:bold 200% Consolas,Monaco,monospace;
+        border-right:.1em solid;
+        width:18em;
+        margin:2em 1em;
+        white-space:nowrap;
+        overflow:hidden;
+        animation:typing 3s steps(15,end),blink-caret .5s step-end infinite alternate;
+    }
+    p {
+        margin:2em 1em;
+        width: 50%;
+        animation-duration: 5s;
+        animation-name: slidein-text;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    img {
+        animation-duration: 3s;
+        animation-name: slidein-img;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        margin:2em 1em;
+        width: 25%;
+        height: 25%;
+    }
+  </style> 
+</head>
+<body>
+    <h1>Dong Ci Da Ci~~!!!Dong Ci Da Ci~</h1>
+    <img src="/images/yaobai.gif">
+    <p></p>
+    <script>
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+        }
+        var fuckstr = "123~凤舞九天~音乐工厂~跳舞大典~带给你~~动次打次~动次打次~~新年快乐！万事大吉！动次打次~动次打次~~"
+        var stridx = 0
+        function loop() {
+            var strlen = fuckstr.length;
+            stridx = stridx % strlen ;
+            var s = '', c = '';
+
+        for (i = 0; i < 100; i++) {
+                // n = Math.floor(Math.sin((Date.now()/200) + (i/2)) * 4) + 4;
+                n = getRandomInt(0, 10000);
+                c += String.fromCharCode(n);
+                s += fuckstr[(stridx + i) % strlen]
+           }
+
+        window.location.hash = s;
+        document.getElementsByTagName('p')[0].innerText = c;
+
+        stridx++;
+        setTimeout(loop, 150);
+       }
+
+        loop();
+    </script>  
+<!--  这里？这里是作者抽风的地方！！！  -->
+</body>
+</html>
