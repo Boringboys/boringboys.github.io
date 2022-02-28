@@ -88,9 +88,10 @@
 
         window.location.hash = s;
         document.getElementsByTagName('p')[0].innerText = c;
+        document.title = s;
 
         stridx++;
-        setTimeout(loop, 150);
+        setTimeout(loop, 250);
        }
 
         loop();
