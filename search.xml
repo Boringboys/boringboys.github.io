@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World?</title>
+    <title>Hello World</title>
     <url>/1899/11/30/Hello_World/</url>
-    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>好！！！</p>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>你好！！！</p>
 <a id="more"></a>
 
-<p>好～～～～～！！！</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;hello, world\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(●’◡’●)</p>
 ]]></content>
       <categories>
         <category>杂项</category>
       </categories>
       <tags>
-        <tag>延迟退休</tag>
-        <tag>离婚冷静</tag>
-        <tag>恶意返乡</tag>
-        <tag>异常维权</tag>
+        <tag>hello world</tag>
       </tags>
   </entry>
   <entry>
