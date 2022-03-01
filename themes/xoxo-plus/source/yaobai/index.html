@@ -18,7 +18,7 @@
     }
     @keyframes slidein-img {
         from {
-            margin-right: 0px;
+            margin-left: 65%;
         }
 
         to {
@@ -64,18 +64,20 @@
   </style> 
 </head>
 <body>
-    <audio src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/gal/music/%E7%BA%AF%E9%9F%B3%E4%B9%90%20-%20%E6%A4%8D%E7%89%A9%E5%A4%A7%E6%88%98%E5%83%B5%E5%B0%B8%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90.mp3" autoplay="autoplay" loop="loop"></audio>
+    <audio id='yaobaiMusic' src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/gal/music/%E7%BA%AF%E9%9F%B3%E4%B9%90%20-%20%E6%A4%8D%E7%89%A9%E5%A4%A7%E6%88%98%E5%83%B5%E5%B0%B8%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90.mp3" autoplay="autoplay" loop="loop"></audio>
     <h1>Dong Ci Da Ci~~!!!Dong Ci Da Ci~</h1>
     <img src="/images/yaobai.gif">
     <p></p>
     <script>
+        var yaobaiMusic = document.getElementById("yaobaiMusic");
+        document.onclick=function(){yaobaiMusic.paly();}
         function getRandomInt(min, max) {
             min = Math.ceil(min);
             max = Math.floor(max);
             return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
         }
-        var fuckstr = "123~凤舞九天~音乐工厂~跳舞大典~带给你~~动次打次~动次打次~~新年快乐！万事大吉！动次打次~动次打次~~"
-        var stridx = 0
+        var fuckstr = "123~凤舞九天~音乐工厂~跳舞大典~带给你~~动次打次~动次打次~~新年快乐！万事大吉！动次打次~动次打次~~";
+        var stridx = 0;
         function loop() {
             var strlen = fuckstr.length;
             stridx = stridx % strlen ;
