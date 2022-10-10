@@ -24,9 +24,13 @@ function get_indentattion(n){
 function output_TOC(t){
     // 参数t为第一个h标签
     var html = "";  //待会的sidebar内容
-
-    var line = get_indentattion(Number(t.nodeName[1])) + "<a href=\"#" + t.id +"\" class=\"a_list\">" + t.textContent + "</a><br>\n";
-    html += line;
+    var line = "";
+    
+    if(n.nodeName.length === 2 && n.nodeName.toLowerCase()[0] === "h"){
+        line = get_indentattion(Number(t.nodeName[1])) + "<a href=\"#" + t.id +"\" class=\"a_list\">" + t.textContent + "</a><br>\n";
+        html += line;
+    }
+    
     t = next_h(t);
     while(t!== null){
         line = get_indentattion(Number(t.nodeName[1])) + "<a href=\"#" + t.id +"\"class=\"a_list\">" + t.textContent + "</a><br>\n";
