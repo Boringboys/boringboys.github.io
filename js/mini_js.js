@@ -81,7 +81,7 @@
 				
             }
 if(window.DeviceMotionEvent) {  
-    var speed = 25;  
+    var speed = 15;  
     var x = y = z = lastX = lastY = lastZ = 0;  
     window.addEventListener('devicemotion', function(){  
         var acceleration =event.accelerationIncludingGravity;  
