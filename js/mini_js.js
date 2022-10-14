@@ -4,8 +4,8 @@
             var btn=document.getElementById('mini_button');
 
 
-//             var abc=document.getElementsByClassName("post-content")[0];///////将文章第一个标签填写在main处
-	    var abc=document.body;
+            var abc=document.getElementsByClassName("post-content")[0];///////将文章第一个标签填写在main处
+// 	    var abc=document.body;
 
 			var speed=20;//速度
 			var timer,timer2;
