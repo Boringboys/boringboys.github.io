@@ -21,7 +21,7 @@ function get_indentattion(n){
 }
 
 // 扫描目录输出目录信息
-function output_TOC(t){
+function output_TOC(t, html){
     // 参数t为第一个标签
 //     var html = "";  //待会的sidebar内容
 //     var line = "";
