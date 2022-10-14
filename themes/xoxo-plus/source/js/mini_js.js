@@ -88,7 +88,9 @@ if(window.DeviceMotionEvent) {
         x = acceleration.x;  
         y = acceleration.y;  
         if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed) {  
-            alert('摇一摇'); 
+            clearInterval(timer2);
+	    timer2=setInterval(moveRight,50);
+            btn.style.display="inline-block";
         }  
         lastX = x;  
         lastY = y;  
