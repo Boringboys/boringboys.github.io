@@ -23,20 +23,34 @@ function get_indentattion(n){
 // 扫描目录输出目录信息
 function output_TOC(t){
     // 参数t为第一个标签
-    var html = "";  //待会的sidebar内容
+//     var html = "";  //待会的sidebar内容
+//     var line = "";
+    
+//     if(t.nodeName.length === 2 && t.nodeName.toLowerCase()[0] === "h"){
+//         line = get_indentattion(Number(t.nodeName[1])) + "<a href=\"#" + t.id +"\" class=\"a_list\">" + t.textContent + "</a><br>\n";
+//         html += line;
+//     }
+    
+//     t = next_h(t);
+//     while(t!== null){
+//         line = get_indentattion(Number(t.nodeName[1])) + "<a href=\"#" + t.id +"\"class=\"a_list\">" + t.textContent + "</a><br>\n";
+//         html += line;
+//         t = next_h(t);
+//     }
     var line = "";
-    
+    //console.log(t)
+
     if(t.nodeName.length === 2 && t.nodeName.toLowerCase()[0] === "h"){
-        line = get_indentattion(Number(t.nodeName[1])) + "<a href=\"#" + t.id +"\" class=\"a_list\">" + t.textContent + "</a><br>\n";
+        console.log(t)
+        console.log('是h标签')
+        line = get_indentattion(Number(t.nodeName[1])) + "<a href=\"#" + t.id +"\" class=\"a_list\" style=\"text-decoration: none;color: rgb(197, 194, 194)\">" + t.textContent + "</a><br>\n";
         html += line;
     }
-    
-    t = next_h(t);
-    while(t!== null){
-        line = get_indentattion(Number(t.nodeName[1])) + "<a href=\"#" + t.id +"\"class=\"a_list\">" + t.textContent + "</a><br>\n";
-        html += line;
-        t = next_h(t);
+
+    for (let node of t.childNodes) {
+        html = output_TOC(node, html)
     }
+
     return html;
 }
 
@@ -44,8 +58,10 @@ function output_TOC(t){
 function set_TOC(m){
     // 参数m为内容区域
     // 侧边栏
-    t = m.firstElementChild; // 内容区域的第一个元素节点（一般是h标签）
-    html = output_TOC(t);
+    // t = m.firstElementChild; // 内容区域的第一个元素节点（一般是h标签）
+    // html = output_TOC(t);
+    var html = ""; //待会的sidebar内容
+    html = output_TOC(m, html);
     
     var sdbar = document.getElementById("mini_list");  // 侧边栏
     if(sdbar === null){
