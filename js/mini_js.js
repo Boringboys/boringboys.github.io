@@ -80,5 +80,19 @@
 				}
 				
             }
+if(window.DeviceMotionEvent) {  
+    var speed = 25;  
+    var x = y = z = lastX = lastY = lastZ = 0;  
+    window.addEventListener('devicemotion', function(){  
+        var acceleration =event.accelerationIncludingGravity;  
+        x = acceleration.x;  
+        y = acceleration.y;  
+        if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed) {  
+            alert('摇一摇'); 
+        }  
+        lastX = x;  
+        lastY = y;  
+    }, false);  
+}  
             set_TOC(abc);//如果文章是异步加载，须让此函数在文章加载后执行
 		}
