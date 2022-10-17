@@ -84,13 +84,13 @@ function init() {
 
 	function ios13grant(){
 		var ua = navigator.userAgent.toLowerCase();
-		alert('UA：'+ua);
+		// alert('UA：'+ua);
 		if(ua.indexOf("mac os x") > 0)
 		{
 			var reg = /os [\d._]*/gi ;
 			var verinfo = ua.match(reg) ;
 			var version = (verinfo+"").replace(/[^0-9|_.]/ig,"").replace(/_/ig,".");
-			alert('版本：'+version);
+			// alert('版本：'+version);
 			if (Number(version)>=13.3) 
 			{
 				if (typeof (DeviceMotionEvent) !== 'undefined' && typeof (DeviceMotionEvent.requestPermission) === 'function') {
@@ -98,14 +98,14 @@ function init() {
 						if (state === "granted") { 
 							// 监听传感器运动事件
 							if (window.DeviceMotionEvent) {
-								alert("授权成功")
+								// alert("授权成功")
 							} else {
-								alert('手机不支持陀螺仪功能');
+								// alert('手机不支持陀螺仪功能');
 							}
 						} else if (state === "denied") { 
-							alert("拒绝授权")
+							// alert("拒绝授权")
 						} else if (state === "prompt") {
-							alert("你对手机做了啥")
+							// alert("你对手机做了啥")
 						}
 					})
 				} 
@@ -122,31 +122,7 @@ function init() {
 			}
 		}
 	}
-	
-				
-	function ios13granted() 
-	{
-		var ua = navigator.userAgent.toLowerCase();
-		if(ua.indexOf("like mac os x") > 0)
-		{
-			var reg = /os [\d._]*/gi ;
-			var verinfo = ua.match(reg) ;
-			var version = (verinfo+"").replace(/[^0-9|_.]/ig,"").replace(/_/ig,".");
-			if (Number(version)>=13.3) 
-			{
-				DeviceMotionEvent.requestPermission()
-				.then(permissionState => {                
-					if (permissionState == 'granted') {
-						console.log('ios授权成功！')
-					}
-				}).catch((err)=>
-				{
-					console.log('ios授权失败！')
-				})
-			}
-		}
-	}
-	
+
 	if(window.DeviceMotionEvent) {  
 		var speed = 15;  
 		var x = y = z = lastX = lastY = lastZ = 0;  
