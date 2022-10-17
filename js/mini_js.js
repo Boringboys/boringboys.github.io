@@ -11,6 +11,7 @@ function init() {
 	var timer,timer2;
 	//鼠标点击事件
 	btn.onclick=function(){
+		ios13grant();
 		clearInterval(timer2);//清除定时器
 		timer2=setInterval(moveLeft,50);
 		btn.style.display="none";
@@ -80,28 +81,48 @@ function init() {
 		}
 		
 	}
-	var ua = navigator.userAgent.toLowerCase();
-	alert('UA：'+ua);
-	if(ua.indexOf("mac os x") > 0)
-	{
-		var reg = /os [\d._]*/gi ;
-		var verinfo = ua.match(reg) ;
-		var version = (verinfo+"").replace(/[^0-9|_.]/ig,"").replace(/_/ig,".");
-		alert('版本：'+version);
-		if (Number(version)>=13.3) 
+
+	function ios13grant(){
+		var ua = navigator.userAgent.toLowerCase();
+		alert('UA：'+ua);
+		if(ua.indexOf("mac os x") > 0)
 		{
-			DeviceMotionEvent.requestPermission()
-			.then(permissionState => {                
-				if (permissionState == 'granted') {
-					console.log('ios授权成功！')
-				}
-			}).catch((err)=>
+			var reg = /os [\d._]*/gi ;
+			var verinfo = ua.match(reg) ;
+			var version = (verinfo+"").replace(/[^0-9|_.]/ig,"").replace(/_/ig,".");
+			alert('版本：'+version);
+			if (Number(version)>=13.3) 
 			{
-				// $("#fkIOS").css("display","block");
-				$("#fkIOS").style.setProperty('display','block');
-			})
+				if (typeof (DeviceMotionEvent) !== 'undefined' && typeof (DeviceMotionEvent.requestPermission) === 'function') {
+					window.DeviceOrientationEvent.requestPermission().then(state => {
+						if (state === "granted") { 
+							// 监听传感器运动事件
+							if (window.DeviceMotionEvent) {
+								alert("授权成功")
+							} else {
+								alert('手机不支持陀螺仪功能');
+							}
+						} else if (state === "denied") { 
+							alert("拒绝授权")
+						} else if (state === "prompt") {
+							alert("你对手机做了啥")
+						}
+					})
+				} 
+				// DeviceMotionEvent.requestPermission()
+				// .then(permissionState => {                
+				// 	if (permissionState == 'granted') {
+				// 		console.log('ios授权成功！')
+				// 	}
+				// }).catch((err)=>
+				// {
+				// 	// $("#fkIOS").css("display","block");
+				// 	$("#fkIOS").style.setProperty('display','block');
+				// })
+			}
 		}
 	}
+	
 				
 	function ios13granted() 
 	{
@@ -125,6 +146,7 @@ function init() {
 			}
 		}
 	}
+	
 	if(window.DeviceMotionEvent) {  
 		var speed = 15;  
 		var x = y = z = lastX = lastY = lastZ = 0;  
