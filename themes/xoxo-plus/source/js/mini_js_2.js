@@ -41,9 +41,12 @@ function output_TOC(t, html){
     //console.log(t)
 
     if(t.nodeName.length === 2 && t.nodeName.toLowerCase()[0] === "h"){
-        console.log(t)
-        console.log('是h标签')
-        line = get_indentattion(Number(t.nodeName[1])) + "<a href=\"#" + t.id +"\" class=\"a_list\" style=\"text-decoration: none;color: rgb(197, 194, 194)\">" + t.textContent + "</a><br>\n";
+        console.log(t);
+        console.log('是h标签');
+        let miniListIndex = crypto.randomUUID();
+        let tagName = t.nodeName;
+        t.setAttribute('mini_list_index', miniListIndex);
+        line = get_indentattion(Number(t.nodeName[1])) + "<a href=\"javascript:document.querySelector(\"" + tagName + "[mini_list_index='" + miniListIndex + "']\").scrollIntoView()\" class=\"a_list\" style=\"text-decoration: none;color: rgb(197, 194, 194)\">" + t.textContent + "</a><br>\n";
         html += line;
     }
 
