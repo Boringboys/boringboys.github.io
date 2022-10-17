@@ -81,11 +81,13 @@
 				
             }
 var ua = navigator.userAgent.toLowerCase();
+console.log('UA：', ua);
 if(ua.indexOf("like mac os x") > 0)
 {
 	var reg = /os [\d._]*/gi ;
 	var verinfo = ua.match(reg) ;
 	var version = (verinfo+"").replace(/[^0-9|_.]/ig,"").replace(/_/ig,".");
+	console.log('版本：', version);
 	if (Number(version)>=13.3) 
 	{
 		DeviceMotionEvent.requestPermission()
