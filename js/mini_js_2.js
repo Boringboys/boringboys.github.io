@@ -46,7 +46,7 @@ function output_TOC(t, html){
         let miniListIndex = crypto.randomUUID();
         let tagName = t.nodeName;
         t.setAttribute('mini_list_index', miniListIndex);
-        line = get_indentattion(Number(t.nodeName[1])) + "<a href=\"javascript:document.querySelector(\"" + tagName + "[mini_list_index='" + miniListIndex + "']\").scrollIntoView()\" class=\"a_list\" style=\"text-decoration: none;color: rgb(197, 194, 194)\">" + t.textContent + "</a><br>\n";
+        line = get_indentattion(Number(t.nodeName[1])) + "<a href=\"javascript:document.querySelector(\\\"" + tagName + "[mini_list_index='" + miniListIndex + "']\\\").scrollIntoView()\" class=\"a_list\" style=\"text-decoration: none;color: rgb(197, 194, 194)\">" + t.textContent + "</a><br>\n";
         html += line;
     }
 
