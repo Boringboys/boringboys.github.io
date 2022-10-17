@@ -97,7 +97,8 @@ function init() {
 				}
 			}).catch((err)=>
 			{
-				$("#fkIOS").css("display","block")
+				// $("#fkIOS").css("display","block");
+				$("#fkIOS").style.setProperty('display','block');
 			})
 		}
 	}
