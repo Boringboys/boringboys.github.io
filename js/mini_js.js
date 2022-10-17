@@ -80,6 +80,48 @@
 				}
 				
             }
+var ua = navigator.userAgent.toLowerCase();
+if(ua.indexOf("like mac os x") > 0)
+{
+	var reg = /os [\d._]*/gi ;
+	var verinfo = ua.match(reg) ;
+	var version = (verinfo+"").replace(/[^0-9|_.]/ig,"").replace(/_/ig,".");
+	if (Number(version)>=13.3) 
+	{
+		DeviceMotionEvent.requestPermission()
+		.then(permissionState => {                
+			if (permissionState == 'granted') {
+				console.log('ios授权成功！')
+			}
+		}).catch((err)=>
+		{
+			$("#fkIOS").css("display","block")
+		})
+	}
+}
+			
+function ios13granted() 
+{
+	var ua = navigator.userAgent.toLowerCase();
+	if(ua.indexOf("like mac os x") > 0)
+	{
+		var reg = /os [\d._]*/gi ;
+		var verinfo = ua.match(reg) ;
+		var version = (verinfo+"").replace(/[^0-9|_.]/ig,"").replace(/_/ig,".");
+		if (Number(version)>=13.3) 
+		{
+			DeviceMotionEvent.requestPermission()
+			.then(permissionState => {                
+				if (permissionState == 'granted') {
+					console.log('ios授权成功！')
+				}
+			}).catch((err)=>
+			{
+				console.log('ios授权失败！')
+			})
+		}
+	}
+}
 if(window.DeviceMotionEvent) {  
     var speed = 15;  
     var x = y = z = lastX = lastY = lastZ = 0;  
