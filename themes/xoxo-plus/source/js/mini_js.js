@@ -82,7 +82,7 @@ function init() {
 	}
 	var ua = navigator.userAgent.toLowerCase();
 	console.log('UA：', ua);
-	if(ua.indexOf("like mac os x") > 0)
+	if(ua.indexOf("mac os x") > 0)
 	{
 		var reg = /os [\d._]*/gi ;
 		var verinfo = ua.match(reg) ;
