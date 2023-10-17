@@ -34,7 +34,7 @@ stylesheets:
 - /css/mini_css.css
 
 # baidu url js push
-baidu_url_js_push: true
+baidu_url_js_push: false
 
 
 # comment extend, support gialk
