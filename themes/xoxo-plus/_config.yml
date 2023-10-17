@@ -70,10 +70,9 @@ activity: /activity
 # 友情链接
 links:
   cshsonice的技术分享博客: https://xchens.cn/
-  湖畔的小亭子: https://pandatea.life/
+  湖畔的小亭子(已停止服务): https://pandatea.life/
   Weekbin: https://vercel.weekbin.icu/
-  Auwaves: https://www.auwaves.com
-  vailigood 的团队笔记: http://github.weekbin.icu/
+  LiRiu.Life: https://liriu.life/
 
 # project
 projects:
@@ -83,10 +82,10 @@ projects:
 
 # activitys
 activitys:
-  雷神众测 HackingDay 2020: 
-    date: 2020-11-14
-    url: https://mp.weixin.qq.com/s/XPP9ypa7ay5xIjYP7B4Q3g
-    type: 安全交流论坛
+  无: 
+    date: 2000-12-30
+    url: https://www.boringboys.top/
+    type: boringboys
 
 # papers
 papers:
