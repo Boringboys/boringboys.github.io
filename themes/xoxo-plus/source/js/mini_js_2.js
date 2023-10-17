@@ -41,8 +41,8 @@ function output_TOC(t, html){
     //console.log(t)
 
     if(t.nodeName.length === 2 && t.nodeName.toLowerCase()[0] === "h"){
-        console.log(t);
-        console.log('是h标签');
+        // console.log(t);
+        // console.log('是h标签');
         let miniListIndex = crypto.randomUUID();
         let tagName = t.nodeName;
         t.setAttribute('mini_list_index', miniListIndex);
