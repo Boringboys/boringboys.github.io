@@ -53,6 +53,7 @@ scripts:
 #- /js/xoxo.js
 - /js/mini_js.js
 - /js/mini_js_2.js
+- /js/md5.min.js
 
 # switch
 show_excerpt: true
