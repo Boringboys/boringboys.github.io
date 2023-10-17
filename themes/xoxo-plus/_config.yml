@@ -40,12 +40,12 @@ baidu_url_js_push: true
 # comment extend, support gialk
 comment_extend:
     gitalk:
-        enable: true
+        enable: false
         owner: Boringboys
         repo: boringboys.github.io
         admin: Boringboys
-        clientID: 198263188d4839476f77
-        clientSecret: 191b4db05dddbd27c73bb8d793cbfa6baa9b416e
+        clientID: 111111
+        clientSecret: 111111
 
 # scripts loaded in the end of the body
 scripts:
