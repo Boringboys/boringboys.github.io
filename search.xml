@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>GPIO针脚笔记</title>
-    <url>/2023/07/12/GPIO%E9%92%88%E8%84%9A%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="树莓派"><a href="#树莓派" class="headerlink" title="树莓派"></a>树莓派</h2><h2 id="L298N"><a href="#L298N" class="headerlink" title="L298N"></a>L298N</h2><h2 id="SG90舵机"><a href="#SG90舵机" class="headerlink" title="SG90舵机"></a>SG90舵机</h2>]]></content>
-      <categories>
-        <category>GPIO</category>
-      </categories>
-      <tags>
-        <tag>树莓派</tag>
-        <tag>L298N</tag>
-        <tag>SG90舵机</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/1899/11/30/Hello_World/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>你好！！！</p>
