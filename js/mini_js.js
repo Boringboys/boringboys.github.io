@@ -146,7 +146,7 @@ function init() {
 
 	if(window.DeviceMotionEvent) {  
 		// 传感器敏感度，甩动手机速度，越低越灵敏
-		var swingSpeed = 8;
+		var swingSpeed = 10;
 		var x = y = z = lastX = lastY = lastZ = 0;  
 		window.addEventListener('devicemotion', function(){  
 			var acceleration =event.accelerationIncludingGravity;  
