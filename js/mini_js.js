@@ -171,6 +171,8 @@ function init() {
 			// }
 			if (boxMovingFlag) {
 				// 如果mini_box正在移动中，不做任何响应
+				lastX = x;
+				lastY = y;
 				return
 			}
 			if(x-lastX > swingSpeed) {
@@ -192,8 +194,8 @@ function init() {
 					btn.style.display="inline-block";
 				}
 			}
-			lastX = x;  
-			lastY = y;  
+			lastX = x;
+			lastY = y;
 		}, false);  
 	}  
     set_TOC(abc);//如果文章是异步加载，须让此函数在文章加载后执行
