@@ -144,6 +144,7 @@ function init() {
 		}
 	}
 
+	// TODO: 改成以传感器数值曲线来判断
 	if(window.DeviceMotionEvent) {  
 		// 传感器敏感度，甩动手机速度，越低越灵敏
 		var swingSpeed = 15;
