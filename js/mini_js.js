@@ -175,6 +175,7 @@ function init() {
 			}
 			if(x-lastX > swingSpeed || y-lastY > swingSpeed) {
 				// 向左甩动
+				alert(x-lastX, y-lastY)
 				if (btn.style.display != "none"){
 					clearInterval(timer2);//清除定时器
 					boxMovingFlag = true;
@@ -183,6 +184,7 @@ function init() {
 				}
 			} else if (x-lastX < -swingSpeed || y-lastY < -swingSpeed) {
 				// 向右甩动
+				alert(x-lastX, y-lastY)
 				if (btn.style.display == "none"){
 					clearInterval(timer2);
 					boxMovingFlag = true;
