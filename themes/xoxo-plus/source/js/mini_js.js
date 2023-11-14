@@ -146,7 +146,7 @@ function init() {
 
 	if(window.DeviceMotionEvent) {  
 		// 传感器敏感度，甩动手机速度，越低越灵敏
-		var swingSpeed = 10;
+		var swingSpeed = 15;
 		var x = y = z = lastX = lastY = lastZ = 0;  
 		window.addEventListener('devicemotion', function(){  
 			var acceleration =event.accelerationIncludingGravity;  
@@ -173,18 +173,18 @@ function init() {
 				// 如果mini_box正在移动中，不做任何响应
 				return
 			}
-			if(x-lastX > swingSpeed || y-lastY > swingSpeed) {
+			if(x-lastX > swingSpeed) {
 				// 向左甩动
-				alert((x-lastX).toString() + "x" + (y-lastY).toString())
+				// alert((x-lastX).toString() + "x" + (y-lastY).toString())
 				if (btn.style.display != "none"){
 					clearInterval(timer2);//清除定时器
 					boxMovingFlag = true;
 					timer2=setInterval(moveLeft,50);
 					btn.style.display="none";
 				}
-			} else if (x-lastX < -swingSpeed || y-lastY < -swingSpeed) {
+			} else if (x-lastX < -swingSpeed) {
 				// 向右甩动
-				alert((x-lastX).toString() + "x" + (y-lastY).toString())
+				// alert((x-lastX).toString() + "x" + (y-lastY).toString())
 				if (btn.style.display == "none"){
 					clearInterval(timer2);
 					boxMovingFlag = true;
