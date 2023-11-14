@@ -139,7 +139,7 @@ function init() {
 	}
 
 	if(window.DeviceMotionEvent) {  
-		var speed = 15;  
+		var speed = 10;  
 		var x = y = z = lastX = lastY = lastZ = 0;  
 		window.addEventListener('devicemotion', function(){  
 			var acceleration =event.accelerationIncludingGravity;  
