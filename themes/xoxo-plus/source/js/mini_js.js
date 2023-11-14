@@ -37,6 +37,21 @@ function init() {
 		btn.style.display="inline-block";
 	};
 
+	//鼠标点击其他位置
+	document.onmouseup = function(e) {
+		var e = e || window.event;
+		var target = e.target || e.srcElement;
+		if (!(target == box) && !box.contains(target)) {
+			// 点击了mini_box元素外的区域
+			if (btn.style.display == "none"){  
+				clearInterval(timer2);
+				timer2=setInterval(moveRight,50);
+				btn.style.display="inline-block";
+			}
+		}
+	}
+
+
 	//按钮加深
 	function btn_display(){
 		var arl=btn.style.opacity;
@@ -130,10 +145,16 @@ function init() {
 			var acceleration =event.accelerationIncludingGravity;  
 			x = acceleration.x;  
 			y = acceleration.y;  
-			if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed) {  
-				clearInterval(timer2);
-			timer2=setInterval(moveRight,50);
-				btn.style.display="inline-block";
+			if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed) {
+				if (btn.style.display == "none"){  
+					clearInterval(timer2);
+					timer2=setInterval(moveRight,50);
+					btn.style.display="inline-block";
+				} else {
+					clearInterval(timer2);//清除定时器
+					timer2=setInterval(moveLeft,50);
+					btn.style.display="none";
+				}
 			}  
 			lastX = x;  
 			lastY = y;  
