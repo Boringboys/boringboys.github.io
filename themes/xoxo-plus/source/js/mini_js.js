@@ -2,6 +2,7 @@ window.onload=init;
 function init() {
 	var box=document.getElementById('mini_box');
 	var btn=document.getElementById('mini_button');
+	var boxMovingFlag = false;  // 正在移动中
 
 
 	var abc=document.getElementsByClassName("post-content")[0];///////将文章第一个标签填写在main处
@@ -13,6 +14,7 @@ function init() {
 	btn.onclick=function(){
 		ios13grant();
 		clearInterval(timer2);//清除定时器
+		boxMovingFlag = true;
 		timer2=setInterval(moveLeft,50);
 		btn.style.display="none";
 	};
@@ -33,6 +35,7 @@ function init() {
 	//鼠标离开弹窗
 	box.onmouseleave=function(){
 		clearInterval(timer2);
+		boxMovingFlag = true;
 		timer2=setInterval(moveRight,50);
 		btn.style.display="inline-block";
 	};
@@ -43,8 +46,9 @@ function init() {
 		var target = e.target || e.srcElement;
 		if (!(target == box) && !box.contains(target)) {
 			// 点击了mini_box元素外的区域
-			if (btn.style.display == "none"){  
+			if (btn.style.display == "none"){
 				clearInterval(timer2);
+				boxMovingFlag = true;
 				timer2=setInterval(moveRight,50);
 				btn.style.display="inline-block";
 			}
@@ -78,6 +82,7 @@ function init() {
 		var arl=box.style.opacity;	
 		if(r>=320){
 			clearInterval(timer2);
+			boxMovingFlag = true;
 		}else{
 			box.style.right=r-300+speed+'px';
 			box.style.opacity=Number(arl)+0.1;
@@ -90,6 +95,7 @@ function init() {
 		var arl=box.style.opacity;
 		if(r<=0){
 			clearInterval(timer2);//停止
+			boxMovingFlag = false;
 		}else{
 			box.style.right=r-300-speed+'px';	//移动
 			box.style.opacity=Number(arl)-0.1;
@@ -139,19 +145,26 @@ function init() {
 	}
 
 	if(window.DeviceMotionEvent) {  
-		var speed = 10;  
+		// 传感器敏感度
+		var speed = 5;
 		var x = y = z = lastX = lastY = lastZ = 0;  
 		window.addEventListener('devicemotion', function(){  
 			var acceleration =event.accelerationIncludingGravity;  
 			x = acceleration.x;  
-			y = acceleration.y;  
+			y = acceleration.y;
 			if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed) {
-				if (btn.style.display == "none"){  
+				if (boxMovingFlag) {
+					// 如果mini_box正在移动中，不做任何响应
+					return
+				}
+				if (btn.style.display == "none"){
 					clearInterval(timer2);
+					boxMovingFlag = true;
 					timer2=setInterval(moveRight,50);
 					btn.style.display="inline-block";
 				} else {
 					clearInterval(timer2);//清除定时器
+					boxMovingFlag = true;
 					timer2=setInterval(moveLeft,50);
 					btn.style.display="none";
 				}
