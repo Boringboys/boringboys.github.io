@@ -82,7 +82,7 @@ function init() {
 		var arl=box.style.opacity;	
 		if(r>=320){
 			clearInterval(timer2);
-			boxMovingFlag = true;
+			boxMovingFlag = false;
 		}else{
 			box.style.right=r-300+speed+'px';
 			box.style.opacity=Number(arl)+0.1;
@@ -145,30 +145,51 @@ function init() {
 	}
 
 	if(window.DeviceMotionEvent) {  
-		// 传感器敏感度
-		var speed = 5;
+		// 传感器敏感度，甩动手机速度，越低越灵敏
+		var swingSpeed = 8;
 		var x = y = z = lastX = lastY = lastZ = 0;  
 		window.addEventListener('devicemotion', function(){  
 			var acceleration =event.accelerationIncludingGravity;  
 			x = acceleration.x;  
 			y = acceleration.y;
-			if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed) {
-				if (boxMovingFlag) {
-					// 如果mini_box正在移动中，不做任何响应
-					return
-				}
-				if (btn.style.display == "none"){
-					clearInterval(timer2);
-					boxMovingFlag = true;
-					timer2=setInterval(moveRight,50);
-					btn.style.display="inline-block";
-				} else {
+			// if(Math.abs(x-lastX) > swingSpeed || Math.abs(y-lastY) > swingSpeed) {
+			// 	if (boxMovingFlag) {
+			// 		// 如果mini_box正在移动中，不做任何响应
+			// 		return
+			// 	}
+			// 	if (btn.style.display == "none"){
+			// 		clearInterval(timer2);
+			// 		boxMovingFlag = true;
+			// 		timer2=setInterval(moveRight,50);
+			// 		btn.style.display="inline-block";
+			// 	} else {
+			// 		clearInterval(timer2);//清除定时器
+			// 		boxMovingFlag = true;
+			// 		timer2=setInterval(moveLeft,50);
+			// 		btn.style.display="none";
+			// 	}
+			// }
+			if (boxMovingFlag) {
+				// 如果mini_box正在移动中，不做任何响应
+				return
+			}
+			if(x-lastX > swingSpeed || y-lastY > swingSpeed) {
+				// 向左甩动
+				if (btn.style.display != "none"){
 					clearInterval(timer2);//清除定时器
 					boxMovingFlag = true;
 					timer2=setInterval(moveLeft,50);
 					btn.style.display="none";
 				}
-			}  
+			} else if (x-lastX < -swingSpeed || y-lastY < -swingSpeed) {
+				// 向右甩动
+				if (btn.style.display == "none"){
+					clearInterval(timer2);
+					boxMovingFlag = true;
+					timer2=setInterval(moveRight,50);
+					btn.style.display="inline-block";
+				}
+			}
 			lastX = x;  
 			lastY = y;  
 		}, false);  
