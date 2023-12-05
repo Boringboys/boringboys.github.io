@@ -14,5 +14,5 @@ preview:
 ## 预告片
 
 <video id="video" controls="" preload="none" style="width:100%">
-      <source id="mp4" src="https://www.caijisec.com/videos/GTA6T1.mp4" type="video/mp4">
+      <source id="mp4" src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/video/GTA6T1.mp4" type="video/mp4">
 </videos>
