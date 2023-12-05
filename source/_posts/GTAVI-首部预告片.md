@@ -13,4 +13,6 @@ preview:
 
 ## 预告片
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QdBZY2fkU-0?si=HagtzOiJw_CJotPB&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<video id="video" controls="" preload="none" style="width:100%">
+      <source id="mp4" src="/videos/GTA6T1.mp4" type="video/mp4">
+</videos>
