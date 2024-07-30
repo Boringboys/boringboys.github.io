@@ -211,9 +211,9 @@ async function dynamicMode() {
         node.style.setProperty("background-color", "rgba(" + parseInt(Math.random() * 150 + 100, 10) + "," + parseInt(Math.random() * 150 + 100, 10) + "," + parseInt(Math.random() * 150 + 100, 10) + ",0.9)");
         for (let childNode of node.childNodes) {
             childNode.style.setProperty("color", "rgb(" + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + ")");
-            await sleep(50);
+            await sleep(1000);
         }
-        await sleep(50);
+        await sleep(1000);
     }
 }
 
@@ -232,9 +232,9 @@ async function resetColor() {
             } else {
                 childNode.style.setProperty("color", "#b9dada");
             }
-            await sleep(50);
+            await sleep(1000);
         }
-        await sleep(50);
+        await sleep(1000);
     }
 }
 
@@ -354,6 +354,7 @@ console.log(locationHash);
 if (locationHash) {
     audioPlayer.src = locationHash.split("#")[1];
     audioPlayer.setAttribute("autoplay", "autoplay");
+    audioPlayer.setAttribute("loop", "loop");
 } else {
     let audioSrcPrefix = "https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/UnreliableSchedule/music/";
     let numOfAudio = 7;
@@ -372,7 +373,7 @@ audioPlayBtn.onclick = function () {
         // 为什么是这个符号？你只要知道能暂停就行了
         if (!audioPlayer.paused) {
             audioPlayBtn.innerText = "| |";
-            dynamicModeInterval = setInterval(dynamicMode, 200);
+            dynamicModeInterval = setInterval(dynamicMode, 1000);
         }
     } else {
         audioPlayer.pause();
