@@ -1,0 +1,104 @@
+/* #headArea {
+    margin-top: 10px;
+}
+
+#mainArea {
+    margin-top: 10px;
+} */
+
+body {
+    background-color: #f8f5f5;
+    /* background: url('imgs/xsbg.gif'); */
+    /* background: url("https://1012553642-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FXOicOAC1wqoz8G4R30ma%2Fuploads%2FoGmPFADBaFq9V7Ah4Y7i%2Fbg1.png?alt=media&token=c352e855-7720-4c70-99d9-d011b9dfd71e"); */
+    /* background: url("https://1012553642-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FXOicOAC1wqoz8G4R30ma%2Fuploads%2FIKJxOezX1dbygEKGiUeS%2F%E5%9B%BE%E5%B1%82003.png?alt=media&token=22ae10ee-a5c7-47fb-8c52-e0707fac3c7a"); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto 100%;
+    background-position: center;
+    animation: ;
+}
+
+#audioBtn {
+    position: fixed;
+    text-align: center;
+    line-height: 100px;
+    font-size: 60px;
+    color: aliceblue;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    padding: 0;
+    background-color: rgba(50, 50, 50, 0.6);
+    /* background: url("https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/tubiao1.png") 0 0 no-repeat; */
+    bottom: 200px;
+    right: 100px;
+    z-index: 9999;
+}
+
+.festival {
+    /* background-color: rgb(206, 228, 205); */
+    margin: 15px;
+    border-radius: 10px;
+    background-color: #191970;
+    position: relative;
+    padding: 10px;
+    height: 200px;
+}
+
+.festivalName {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #c3d8bf;
+    margin: 10px;
+}
+
+.festivalTime {
+    top: 10px;
+    left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    color: #b9dada;
+    font-size: 40px;
+}
+
+.festivalDistanceDays {
+    position: absolute;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 10px;
+    right: 10px;
+    color: #b9dada;
+    margin: 10px;
+
+}
+
+.festivalDistanceWorkDays {
+    position: absolute;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    bottom: 10px;
+    right: 10px;
+    color: #b9dada;
+    margin: 10px;
+}
+
+.nextVacationDay {
+    margin: 15px;
+    /* top: 10px;
+    left: 10px;
+    right: 10px; */
+    /* z-index: 9999; */
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #191970;
+    /* color: #111111; */
+    color: #b9dada;
+    /* font-weight: bold; */
+    font-size: 35px;
+}
