@@ -354,7 +354,6 @@ console.log(locationHash);
 if (locationHash) {
     audioPlayer.src = locationHash.split("#")[1];
     audioPlayer.setAttribute("autoplay", "autoplay");
-    audioPlayer.setAttribute("loop", "loop");
 } else {
     let audioSrcPrefix = "https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/UnreliableSchedule/music/";
     let numOfAudio = 7;
@@ -385,4 +384,5 @@ audioPlayer.onpause = function () {
     clearInterval(dynamicModeInterval);
     dynamicModeInterval = null;
     setTimeout(resetColor, 300);
+    audioPlayBtn.click();
 }
