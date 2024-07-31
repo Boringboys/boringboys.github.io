@@ -365,14 +365,14 @@ if (locationHash) {
 }
 
 
-let dynamicModeInterval = null;
+// let dynamicModeInterval = null;
 audioPlayBtn.onclick = function () {
     if (audioPlayer.paused) {
         audioPlayer.play();
         // 为什么是这个符号？你只要知道能暂停就行了
         if (!audioPlayer.paused) {
             audioPlayBtn.innerText = "| |";
-            dynamicModeInterval = setInterval(dynamicMode, 1000);
+            // dynamicModeInterval = setInterval(dynamicMode, 1000);
         }
     } else {
         audioPlayer.pause();
@@ -381,8 +381,10 @@ audioPlayBtn.onclick = function () {
 
 audioPlayer.onpause = function () {
     audioPlayBtn.innerText = "▶";
-    clearInterval(dynamicModeInterval);
-    dynamicModeInterval = null;
+    // clearInterval(dynamicModeInterval);
+    // dynamicModeInterval = null;
     setTimeout(resetColor, 300);
     audioPlayBtn.click();
 }
+
+dynamicModeInterval = setInterval(dynamicMode, 1000);
