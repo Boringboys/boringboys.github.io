@@ -44,7 +44,6 @@ body {
     position: relative;
     padding: 10px;
     height: 200px;
-    opacity: 0.5;
 }
 
 .festivalName {
@@ -106,5 +105,4 @@ body {
     color: #b9dada;
     /* font-weight: bold; */
     font-size: 35px;
-    opacity: 0.5;
 }
