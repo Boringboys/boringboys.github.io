@@ -40,7 +40,7 @@ body {
     /* background-color: rgb(206, 228, 205); */
     margin: 15px;
     border-radius: 10px;
-    background-color: #278db6;
+    background-color: #000000;
     position: relative;
     padding: 10px;
     height: 200px;
@@ -101,7 +101,7 @@ body {
     text-align: center;
     border-radius: 10px;
     padding: 10px;
-    background-color: #278db6;
+    background-color: #000000;
     /* color: #111111; */
     color: #b9dada;
     /* font-weight: bold; */
