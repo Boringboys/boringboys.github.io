@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>GTAVI-首部预告片</title>
-    <url>/2023/12/05/GTAVI-%E9%A6%96%E9%83%A8%E9%A2%84%E5%91%8A%E7%89%87/</url>
-    <content><![CDATA[<h2 id="预告片"><a href="#预告片" class="headerlink" title="预告片"></a>预告片</h2><video id="video" controls="" preload="none" style="width:100%">
-      <source id="mp4" src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/video/GTA6T1.mp4" type="video/mp4">
-</videos>]]></content>
-      <categories>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>gtavi</tag>
-        <tag>预告片</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/1899/11/30/Hello_World/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>你好！！！</p>
@@ -29,6 +15,20 @@
       </categories>
       <tags>
         <tag>hello world</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GTAVI-首部预告片</title>
+    <url>/2023/12/05/GTAVI-%E9%A6%96%E9%83%A8%E9%A2%84%E5%91%8A%E7%89%87/</url>
+    <content><![CDATA[<h2 id="预告片"><a href="#预告片" class="headerlink" title="预告片"></a>预告片</h2><video id="video" controls="" preload="none" style="width:100%">
+      <source id="mp4" src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/video/GTA6T1.mp4" type="video/mp4">
+</videos>]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>gtavi</tag>
+        <tag>预告片</tag>
       </tags>
   </entry>
   <entry>
@@ -288,114 +288,6 @@ F = 51</code></pre><p>对应的字符分别是：2、9、2、8、1、3<br>所以
       </tags>
   </entry>
   <entry>
-    <title>Metasploit命令学习</title>
-    <url>/2018/03/29/Metasploit%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>为了方便自己后期的学习，我把metasploit的帮助信息简单翻译了一下，包括命令和一些用法描述。</p>
-<a id="more"></a>
-
-<h1 id="核心命令"><a href="#核心命令" class="headerlink" title="核心命令"></a>核心命令</h1><pre><code>命令          描述
--------       -----------
-?             帮助菜单
-banner        在命令行里显示一个好看的metasploit图案（一个很有趣的命令^0^）
-cd            更改当前工作目录
-color         启用或禁用颜色输出
-connect       连接到一个主机
-exit          退出msfconsole
-get           获得一个上下文特定变量的值
-getg          获得一个全局变量的值
-grep          从另一个命令的输出中查找符合条件的行
-help          帮助菜单
-history       显示历史命令
-load          加载框架插件
-quit          退出msfconsole（有提示Y/N）
-repeat        重复一个命令列表
-route         通过会话路由流量
-save          保存活动数据
-sessions      转储会话列表并显示有关会话的信息
-set           设置一个上下文特定变量的值
-setg          设置一个全局变量的值
-sleep         在指定的秒数内不执行任何操作
-spool         将控制台输出写入某个文件
-threads       查看和操纵后台线程
-unload        卸载框架插件
-unset         取消设置一个或多个上下文特定变量的值
-unsetg        取消设置一个或多个全局变量的值
-version       显示框架和控制台库版本号</code></pre><h1 id="模块命令"><a href="#模块命令" class="headerlink" title="模块命令"></a>模块命令</h1><pre><code>命令             描述
--------       -----------
-advanced      显示一个或多个模块的高级选项
-back          从当前上下文后退
-info          显示一个或多个模块的信息
-loadpath      从路径搜索模块并加载
-options       显示一个或多个模块的全局选项
-popm          将最新模块弹出堆栈并使其激活
-previous      将先前加载的模块设置为当前模块
-pushm         将活动模块或模块列表推入模块堆栈
-reload_all    从所有定义的模块路径重新加载所有模块
-search        搜索模块名称和描述
-show          显示给定类型的模块，或者所有模块
-use           按名称选择模块</code></pre><h1 id="作业命令"><a href="#作业命令" class="headerlink" title="作业命令"></a>作业命令</h1><pre><code>命令          描述
--------       -----------
-handler       启动有效负载处理程序作为作业
-jobs          显示和管理作业
-kill          杀死作业
-rename_job    重命名作业</code></pre><h1 id="资源脚本命令"><a href="#资源脚本命令" class="headerlink" title="资源脚本命令"></a>资源脚本命令</h1><pre><code>命令          描述
--------       -----------
-makerc        将启动之后输入的命令保存到文件中
-resource      运行文件中的命令</code></pre><h1 id="数据库后端命令"><a href="#数据库后端命令" class="headerlink" title="数据库后端命令"></a>数据库后端命令</h1><pre><code>命令              描述
--------           -----------
-analyze           分析有关特定地址或地址范围的数据库信息
-db_connect        连接到现有的数据服务
-db_disconnect     断开当前数据服务
-db_export         导出包含数据库内容的文件
-db_import         导入扫描结果文件（将自动检测文件类型）
-db_nmap           执行nmap并自动记录输出
-db_rebuild_cache  重建数据库存储的模块缓存
-db_remove         删除保存的数据服务条目
-db_save           将当前数据服务连接保存为默认值，以便在启动时重新连接
-db_status         显示当前数据服务状态
-hosts             列出数据库中的所有主机
-loot              列出数据库中的所有Loot(战利品)
-notes             列出数据库中的所有注释
-services          列出数据库中的所有服务
-vulns             列出数据库中的所有漏洞
-workspace         在数据库工作区之间切换</code></pre><h1 id="凭证后端命令"><a href="#凭证后端命令" class="headerlink" title="凭证后端命令"></a>凭证后端命令</h1><pre><code>命令          描述
--------       -----------
-creds         列出数据库中的所有证书</code></pre><h1 id="开发人员命令"><a href="#开发人员命令" class="headerlink" title="开发人员命令"></a>开发人员命令</h1><pre><code>命令          描述
--------       -----------
-edit          使用首选的编辑器编辑当前模块或文件
-irb           在当前上下文中打开一个交互式Ruby Shell
-log           如果可以，将framework.log显示到页面末尾
-pry           在当前模块或框架上打开Pry调试器
-reload_lib    从指定路径重新加载Ruby库文件</code></pre><h1 id="msfconsole"><a href="#msfconsole" class="headerlink" title="msfconsole"></a>msfconsole</h1><p><strong>msfconsole</strong>是Metasploit框架的主要接口。使用者可以通过这个控制台高效的使用MSF中的各种功能。<br>可以在终端或命令行界面直接输入<code>msfconsole</code>启动。</p>
-<h2 id="范围和列表"><a href="#范围和列表" class="headerlink" title="范围和列表"></a>范围和列表</h2><p>上面列出的许多命令和选项都可以使用范围，所以不必手动列出每个需要的事物。所有范围均包括在内。</p>
-<h3 id="ID范围"><a href="#ID范围" class="headerlink" title="ID范围"></a>ID范围</h3><p>带有ID列表的命令可以使用范围来提供帮助。各个ID必须以<code>,</code>分隔（不允许有空格），<br>范围可以用<code>-</code>或<code>..</code>表示。</p>
-<h3 id="IP范围"><a href="#IP范围" class="headerlink" title="IP范围"></a>IP范围</h3><p>这里有多种方法可以用来指定能混合在一起的IP地址范围：</p>
-<ul>
-<li>第一种方法是一个IP列表，这些IP仅由<code>&#39; &#39;</code>（ASCII空格）分隔，并带有可选的<code>,</code>。</li>
-<li>第二种方式是用两个完整的IP地址表示范围，格式为<em>“开始地址-结束地址”</em>，例如<code>127.0.1.44-127.0.2.33</code>。</li>
-<li>也可以使用CIDR规范，但是，与RFC相反，必须将整个地址提供给Metasploit，例如127.0.0.0/8，而不是127/8。</li>
-<li>此外，可以将网络掩码与域名一起使用以动态解析要定位的块。</li>
-</ul>
-<p>所有这些方法都适用于IPv4和IPv6地址。也可以根据<a href="https://nmap.org/book/man-target-specification.html" target="_blank" rel="noopener">NMAP目标规范</a>用特殊的八位位组范围指定IPv4地址。</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>终止第一个会话：</p>
-<pre><code>sessions -k 1</code></pre><p>停止一些正在运行的作业：</p>
-<pre><code>jobs -k 2-6,7,8,11..15</code></pre><p>检查一组IP地址：</p>
-<pre><code>check 127.168.0.0/16, 127.0.0-2.1-4,15 127.0.0.255</code></pre><p>定位一组IPv6主机：</p>
-<pre><code>set RHOSTS fe80::3990:0000/110, ::1-::f0f0</code></pre><p>定位来自解析域名的块：</p>
-<pre><code>set RHOSTS www.example.test/24</code></pre><blockquote>
-<p>翻译：Boringboys<br>原文链接：<a href="https://www.boringboys.top/2019/03/29/Metasploit命令/">https://www.boringboys.top/2019/03/29/Metasploit命令/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>安全</category>
-      </categories>
-      <tags>
-        <tag>安全</tag>
-        <tag>工具</tag>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Nessus在Windows上的安装</title>
     <url>/2018/04/23/Nessus%E5%9C%A8Windows%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h2 id="Nessus"><a href="#Nessus" class="headerlink" title="Nessus"></a>Nessus</h2><p><a href="https://baike.baidu.com/item/Nessus/10718713" target="_blank" rel="noopener">Nessus</a> 是目前全世界最多人使用的系统漏洞扫描与分析软件。<a id="more"></a>总共有超过75,000个机构使用Nessus 作为扫描该机构电脑系统的软件。</p>
@@ -531,49 +423,111 @@ reload_lib    从指定路径重新加载Ruby库文件</code></pre><h1 id="msfco
       </tags>
   </entry>
   <entry>
-    <title>对linux管道和grep，xrags的学习</title>
-    <url>/2021/01/16/%E5%AF%B9linux%E7%AE%A1%E9%81%93%E5%92%8Cgrep%EF%BC%8Cxrags%E7%9A%84%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h2 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h2><p>在linux中，管道可以将两个或多个命令的输入输出链接起来<a id="more"></a>，它将上一个命令的标准输出重定向到下一个命令的标准输入<br>假设在当前目录下的结构是：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── a</span><br><span class="line">│   └── a.txt</span><br><span class="line">├── b</span><br><span class="line">│   └── b.txt</span><br><span class="line">├── c</span><br><span class="line">│   └── c.txt</span><br><span class="line">├── d</span><br><span class="line">│   └── d.txt</span><br><span class="line">├── e</span><br><span class="line">│   └── e.txt</span><br><span class="line">└── test.txt</span><br></pre></td></tr></table></figure>
-<p>而文件 <code>test.txt</code> 内容是：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">c</span><br><span class="line">a</span><br><span class="line">b</span><br><span class="line">e</span><br><span class="line">d</span><br><span class="line">ab</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
-<p>通过执行下面命令，<code>cat</code> 会将文件 <code>test.txt</code> 的内容打印到标准输出，但不会直接显示在标准输出设备上，而是会通过管道 <code>|</code> 重定向到 <code>sort</code> 并被 <code>sort</code> 排序之后再进行打印:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | sort</span><br><span class="line">a</span><br><span class="line">ab</span><br><span class="line">abc</span><br><span class="line">b</span><br><span class="line">c</span><br><span class="line">d</span><br><span class="line">e</span><br></pre></td></tr></table></figure>
+    <title>Metasploit命令学习</title>
+    <url>/2018/03/29/Metasploit%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>为了方便自己后期的学习，我把metasploit的帮助信息简单翻译了一下，包括命令和一些用法描述。</p>
+<a id="more"></a>
 
-<blockquote>
-<p>对于管道，由它串起来的命令实际上不是依次执行的，而是同时执行的，Linux会在系统内部将它们连接起来，在前面的命令产生输出的同时，输出会被立即送给后面的命令 </p>
+<h1 id="核心命令"><a href="#核心命令" class="headerlink" title="核心命令"></a>核心命令</h1><pre><code>命令          描述
+-------       -----------
+?             帮助菜单
+banner        在命令行里显示一个好看的metasploit图案（一个很有趣的命令^0^）
+cd            更改当前工作目录
+color         启用或禁用颜色输出
+connect       连接到一个主机
+exit          退出msfconsole
+get           获得一个上下文特定变量的值
+getg          获得一个全局变量的值
+grep          从另一个命令的输出中查找符合条件的行
+help          帮助菜单
+history       显示历史命令
+load          加载框架插件
+quit          退出msfconsole（有提示Y/N）
+repeat        重复一个命令列表
+route         通过会话路由流量
+save          保存活动数据
+sessions      转储会话列表并显示有关会话的信息
+set           设置一个上下文特定变量的值
+setg          设置一个全局变量的值
+sleep         在指定的秒数内不执行任何操作
+spool         将控制台输出写入某个文件
+threads       查看和操纵后台线程
+unload        卸载框架插件
+unset         取消设置一个或多个上下文特定变量的值
+unsetg        取消设置一个或多个全局变量的值
+version       显示框架和控制台库版本号</code></pre><h1 id="模块命令"><a href="#模块命令" class="headerlink" title="模块命令"></a>模块命令</h1><pre><code>命令             描述
+-------       -----------
+advanced      显示一个或多个模块的高级选项
+back          从当前上下文后退
+info          显示一个或多个模块的信息
+loadpath      从路径搜索模块并加载
+options       显示一个或多个模块的全局选项
+popm          将最新模块弹出堆栈并使其激活
+previous      将先前加载的模块设置为当前模块
+pushm         将活动模块或模块列表推入模块堆栈
+reload_all    从所有定义的模块路径重新加载所有模块
+search        搜索模块名称和描述
+show          显示给定类型的模块，或者所有模块
+use           按名称选择模块</code></pre><h1 id="作业命令"><a href="#作业命令" class="headerlink" title="作业命令"></a>作业命令</h1><pre><code>命令          描述
+-------       -----------
+handler       启动有效负载处理程序作为作业
+jobs          显示和管理作业
+kill          杀死作业
+rename_job    重命名作业</code></pre><h1 id="资源脚本命令"><a href="#资源脚本命令" class="headerlink" title="资源脚本命令"></a>资源脚本命令</h1><pre><code>命令          描述
+-------       -----------
+makerc        将启动之后输入的命令保存到文件中
+resource      运行文件中的命令</code></pre><h1 id="数据库后端命令"><a href="#数据库后端命令" class="headerlink" title="数据库后端命令"></a>数据库后端命令</h1><pre><code>命令              描述
+-------           -----------
+analyze           分析有关特定地址或地址范围的数据库信息
+db_connect        连接到现有的数据服务
+db_disconnect     断开当前数据服务
+db_export         导出包含数据库内容的文件
+db_import         导入扫描结果文件（将自动检测文件类型）
+db_nmap           执行nmap并自动记录输出
+db_rebuild_cache  重建数据库存储的模块缓存
+db_remove         删除保存的数据服务条目
+db_save           将当前数据服务连接保存为默认值，以便在启动时重新连接
+db_status         显示当前数据服务状态
+hosts             列出数据库中的所有主机
+loot              列出数据库中的所有Loot(战利品)
+notes             列出数据库中的所有注释
+services          列出数据库中的所有服务
+vulns             列出数据库中的所有漏洞
+workspace         在数据库工作区之间切换</code></pre><h1 id="凭证后端命令"><a href="#凭证后端命令" class="headerlink" title="凭证后端命令"></a>凭证后端命令</h1><pre><code>命令          描述
+-------       -----------
+creds         列出数据库中的所有证书</code></pre><h1 id="开发人员命令"><a href="#开发人员命令" class="headerlink" title="开发人员命令"></a>开发人员命令</h1><pre><code>命令          描述
+-------       -----------
+edit          使用首选的编辑器编辑当前模块或文件
+irb           在当前上下文中打开一个交互式Ruby Shell
+log           如果可以，将framework.log显示到页面末尾
+pry           在当前模块或框架上打开Pry调试器
+reload_lib    从指定路径重新加载Ruby库文件</code></pre><h1 id="msfconsole"><a href="#msfconsole" class="headerlink" title="msfconsole"></a>msfconsole</h1><p><strong>msfconsole</strong>是Metasploit框架的主要接口。使用者可以通过这个控制台高效的使用MSF中的各种功能。<br>可以在终端或命令行界面直接输入<code>msfconsole</code>启动。</p>
+<h2 id="范围和列表"><a href="#范围和列表" class="headerlink" title="范围和列表"></a>范围和列表</h2><p>上面列出的许多命令和选项都可以使用范围，所以不必手动列出每个需要的事物。所有范围均包括在内。</p>
+<h3 id="ID范围"><a href="#ID范围" class="headerlink" title="ID范围"></a>ID范围</h3><p>带有ID列表的命令可以使用范围来提供帮助。各个ID必须以<code>,</code>分隔（不允许有空格），<br>范围可以用<code>-</code>或<code>..</code>表示。</p>
+<h3 id="IP范围"><a href="#IP范围" class="headerlink" title="IP范围"></a>IP范围</h3><p>这里有多种方法可以用来指定能混合在一起的IP地址范围：</p>
+<ul>
+<li>第一种方法是一个IP列表，这些IP仅由<code>&#39; &#39;</code>（ASCII空格）分隔，并带有可选的<code>,</code>。</li>
+<li>第二种方式是用两个完整的IP地址表示范围，格式为<em>“开始地址-结束地址”</em>，例如<code>127.0.1.44-127.0.2.33</code>。</li>
+<li>也可以使用CIDR规范，但是，与RFC相反，必须将整个地址提供给Metasploit，例如127.0.0.0/8，而不是127/8。</li>
+<li>此外，可以将网络掩码与域名一起使用以动态解析要定位的块。</li>
+</ul>
+<p>所有这些方法都适用于IPv4和IPv6地址。也可以根据<a href="https://nmap.org/book/man-target-specification.html" target="_blank" rel="noopener">NMAP目标规范</a>用特殊的八位位组范围指定IPv4地址。</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>终止第一个会话：</p>
+<pre><code>sessions -k 1</code></pre><p>停止一些正在运行的作业：</p>
+<pre><code>jobs -k 2-6,7,8,11..15</code></pre><p>检查一组IP地址：</p>
+<pre><code>check 127.168.0.0/16, 127.0.0-2.1-4,15 127.0.0.255</code></pre><p>定位一组IPv6主机：</p>
+<pre><code>set RHOSTS fe80::3990:0000/110, ::1-::f0f0</code></pre><p>定位来自解析域名的块：</p>
+<pre><code>set RHOSTS www.example.test/24</code></pre><blockquote>
+<p>翻译：Boringboys<br>原文链接：<a href="https://www.boringboys.top/2019/03/29/Metasploit命令/">https://www.boringboys.top/2019/03/29/Metasploit命令/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
 </blockquote>
-<p>这里要注意的是，在这种使用方式中，后面的命令一定要支持接收标准输入，如果是 <code>ls</code> 这种不支持接收标准输入的命令，就会出现下面这种情况：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | ls</span><br><span class="line">a  b  c  d  e  test.txt</span><br></pre></td></tr></table></figure>
-<p>显然显示的内容只是 <code>ls</code> 命令的输出结果</p>
-<h2 id="grep命令"><a href="#grep命令" class="headerlink" title="grep命令"></a>grep命令</h2><p><code>grep</code> 命令会从给定的文件中或者标准输入中搜索匹配的行或文本并输出</p>
-<p>因为 <code>grep</code> 命令是支持接收标准输入的，所以它也可以作为管道后面的命令来处理前面命令的输出，如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | sort | grep a</span><br><span class="line">a</span><br><span class="line">ab</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
-<p><code>grep a</code> 会对前面命令的结果进行筛选，并只将包含字符 <code>a</code> 的行打印出来</p>
-<p>这里也可以看出来，在一条命令里可以使用多条管道。实际上，只要你想，可以在命令里使用任意多条管道，如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat test.txt | sort | grep a | grep b | grep c</span><br></pre></td></tr></table></figure>
-
-<h2 id="xargs命令"><a href="#xargs命令" class="headerlink" title="xargs命令"></a>xargs命令</h2><p><code>xargs</code> 命令可以将标准输入转换为命令行参数</p>
-<p>还是上面的命令，这次通过管道链接到 <code>xargs</code>，效果如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | sort | xargs</span><br><span class="line">a ab abc b c d e</span><br></pre></td></tr></table></figure>
-
-<p>回到前面，我们知道 <code>ls</code> 命令是不支持接收标准输入的，但我们可以通过 <code>xrags</code> 命令将标准输入转换成参数后传递给 <code>ls</code> 并进一步执行，如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | xargs ls</span><br><span class="line">ls: cannot access &#39;ab&#39;: No such file or directory</span><br><span class="line">ls: cannot access &#39;abc&#39;: No such file or directory</span><br><span class="line">a:</span><br><span class="line">a.txt</span><br><span class="line"></span><br><span class="line">b:</span><br><span class="line">b.txt</span><br><span class="line"></span><br><span class="line">c:</span><br><span class="line">c.txt</span><br><span class="line"></span><br><span class="line">d:</span><br><span class="line">d.txt</span><br><span class="line"></span><br><span class="line">e:</span><br><span class="line">e.txt</span><br></pre></td></tr></table></figure>
-<p><code>cat test.txt</code> 的输出被管道重定向到后面的命令，并由 <code>xargs</code> 转换成参数传递给了 <code>ls</code>，然后依次执行，就分别列出了对应目录的内容，或者报出文件不存在的错误</p>
-<p>对于 <code>xargs</code> 命令还可以通过参数 <code>-I</code> 指定其转换后的参数在后面命令中的位置，比如我们想将 <code>test.txt</code> 文件中所列的目录拷贝到 <code>./test/</code> 中，就可以用下面命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat test.txt | xargs -I &#123;&#125; cp -r &#123;&#125; .&#x2F;test&#x2F;</span><br></pre></td></tr></table></figure>
-<p>执行结果如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | xargs -I &#123;&#125; cp -r &#123;&#125; .&#x2F;test&#x2F;</span><br><span class="line">cp: cannot stat &#39;ab&#39;: No such file or directory</span><br><span class="line">cp: cannot stat &#39;abc&#39;: No such file or directory</span><br><span class="line"></span><br><span class="line">$ ls test</span><br><span class="line">a  b  c  d  e</span><br></pre></td></tr></table></figure>
-<p>可以看到，结果会把 <code>test.txt</code> 中列出来并且存在的目录拷贝到 <code>./test/</code> 目录下</p>
 ]]></content>
       <categories>
-        <category>Linux</category>
+        <category>安全</category>
       </categories>
       <tags>
-        <tag>grep</tag>
-        <tag>xargs</tag>
-        <tag>管道</tag>
-        <tag>Linux</tag>
+        <tag>安全</tag>
+        <tag>工具</tag>
+        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
@@ -621,37 +575,49 @@ reload_lib    从指定路径重新加载Ruby库文件</code></pre><h1 id="msfco
       </tags>
   </entry>
   <entry>
-    <title>汇编语言学习笔记（一）</title>
-    <url>/2018/06/11/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-    <content><![CDATA[<h2 id="汇编语言的产生"><a href="#汇编语言的产生" class="headerlink" title="汇编语言的产生"></a>汇编语言的产生</h2><a id="more"></a>
+    <title>对linux管道和grep，xrags的学习</title>
+    <url>/2021/01/16/%E5%AF%B9linux%E7%AE%A1%E9%81%93%E5%92%8Cgrep%EF%BC%8Cxrags%E7%9A%84%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h2><p>在linux中，管道可以将两个或多个命令的输入输出链接起来<a id="more"></a>，它将上一个命令的标准输出重定向到下一个命令的标准输入<br>假设在当前目录下的结构是：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── a</span><br><span class="line">│   └── a.txt</span><br><span class="line">├── b</span><br><span class="line">│   └── b.txt</span><br><span class="line">├── c</span><br><span class="line">│   └── c.txt</span><br><span class="line">├── d</span><br><span class="line">│   └── d.txt</span><br><span class="line">├── e</span><br><span class="line">│   └── e.txt</span><br><span class="line">└── test.txt</span><br></pre></td></tr></table></figure>
+<p>而文件 <code>test.txt</code> 内容是：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">c</span><br><span class="line">a</span><br><span class="line">b</span><br><span class="line">e</span><br><span class="line">d</span><br><span class="line">ab</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
+<p>通过执行下面命令，<code>cat</code> 会将文件 <code>test.txt</code> 的内容打印到标准输出，但不会直接显示在标准输出设备上，而是会通过管道 <code>|</code> 重定向到 <code>sort</code> 并被 <code>sort</code> 排序之后再进行打印:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | sort</span><br><span class="line">a</span><br><span class="line">ab</span><br><span class="line">abc</span><br><span class="line">b</span><br><span class="line">c</span><br><span class="line">d</span><br><span class="line">e</span><br></pre></td></tr></table></figure>
 
-<h3 id="机器语言"><a href="#机器语言" class="headerlink" title="机器语言"></a>机器语言</h3><p>首先，我们了解一下<strong>机器语言</strong>，机器语言是机器指令的集合。  </p>
-<p><strong>机器指令</strong>就是CPU可以正确执行的命令。实际上就是一列二进制数字。CPU内部将这些二进制数字转变成对应的一列高低电平，然后驱动电子器件进行运算。  </p>
-<p>CPU具体的工作原理这里就不深入的说了，感兴趣的读者可以自己搜索学习。  </p>
-<p>我们都知道CPU是一种微处理器，对于不同的微处理器由于硬件设计和结构的不同，会需要不同的电平脉冲来驱动电子器件，进行运算。所以每种处理器都有自己的机器指令集（像x86架构的CPU和ARM架构的CPU就是拥有各自的指令集），这些指令集就是<strong>机器语言</strong>。  </p>
-<p>所以，对于不同架构的CPU，可使用的机器语言也不同。</p>
-<h3 id="汇编语言"><a href="#汇编语言" class="headerlink" title="汇编语言"></a>汇编语言</h3><p>早期的程序设计就是用的机器语言，程序员们使用 0、1 数字进行编程。机器语言过于抽象，使用机器语言实现的代码晦涩难懂、不易查错，而且难于记忆和分辨。于是就产生了<strong>汇编语言</strong>。  </p>
-<p><strong>汇编语言</strong>的主体是汇编指令。汇编指令和机器指令是一一对应的，可以理解成把机器指令对应成了便于记忆的书写格式。<br>例如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">机器指令 1000100111011000  </span><br><span class="line">对应的  </span><br><span class="line">汇编指令 mov ax,bx  </span><br><span class="line">所表示的操作就是：将寄存器BX的内容送到AX中</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>对于管道，由它串起来的命令实际上不是依次执行的，而是同时执行的，Linux会在系统内部将它们连接起来，在前面的命令产生输出的同时，输出会被立即送给后面的命令 </p>
+</blockquote>
+<p>这里要注意的是，在这种使用方式中，后面的命令一定要支持接收标准输入，如果是 <code>ls</code> 这种不支持接收标准输入的命令，就会出现下面这种情况：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | ls</span><br><span class="line">a  b  c  d  e  test.txt</span><br></pre></td></tr></table></figure>
+<p>显然显示的内容只是 <code>ls</code> 命令的输出结果</p>
+<h2 id="grep命令"><a href="#grep命令" class="headerlink" title="grep命令"></a>grep命令</h2><p><code>grep</code> 命令会从给定的文件中或者标准输入中搜索匹配的行或文本并输出</p>
+<p>因为 <code>grep</code> 命令是支持接收标准输入的，所以它也可以作为管道后面的命令来处理前面命令的输出，如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | sort | grep a</span><br><span class="line">a</span><br><span class="line">ab</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
+<p><code>grep a</code> 会对前面命令的结果进行筛选，并只将包含字符 <code>a</code> 的行打印出来</p>
+<p>这里也可以看出来，在一条命令里可以使用多条管道。实际上，只要你想，可以在命令里使用任意多条管道，如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat test.txt | sort | grep a | grep b | grep c</span><br></pre></td></tr></table></figure>
 
-<p>程序员可以用汇编语言编写源程序，给计算机执行时，要先用<strong>编译器</strong>将程序员写的 <em>汇编语言</em> 编译为 <em>机器码</em> ，然后才能被计算机理解并执行。</p>
-<h2 id="汇编语言的组成"><a href="#汇编语言的组成" class="headerlink" title="汇编语言的组成"></a>汇编语言的组成</h2><p>汇编语言包括3类指令：  </p>
-<ol>
-<li>汇编指令：机器指令的助记符，对应特定的机器码  </li>
-<li>伪指令：没有对应的机器码，由编译器执行，计算机不执行  </li>
-<li>其他符号：由编译器识别，没有对应的机器码，如+、-、*、/等  </li>
-</ol>
-<p>其中，汇编指令是汇编语言的核心。  </p>
-<h2 id="存储器"><a href="#存储器" class="headerlink" title="存储器"></a>存储器</h2><p>提供给CPU的指令和数据存放在存储器中，这里说的存储器指的是内存，与磁盘不同的是，内存中的数据是可以直接被CPU使用的。</p>
-<h2 id="地址总线"><a href="#地址总线" class="headerlink" title="地址总线"></a>地址总线</h2><p>CPU通过<strong>地址总线</strong>来指定存储单元。  </p>
-<h2 id="数据总线"><a href="#数据总线" class="headerlink" title="数据总线"></a>数据总线</h2><p>CPU和各种器件之间是通过<strong>数据总线</strong>来传送数据的，<em>数据总线</em>的宽度决定了CPU和其它器件之间的数据是传送速度。  </p>
-<h2 id="控制总线"><a href="#控制总线" class="headerlink" title="控制总线"></a>控制总线</h2><p>CPU对外部器件的控制是通过<strong>控制总线</strong>实现的。控制总线是一些不同控制线的集合，有多少控制线就表示CPU提供了多少种对外部器件的控制，也就是说，<em>控制总线</em>的宽度决定了CPU对外部器件的控制能力。</p>
+<h2 id="xargs命令"><a href="#xargs命令" class="headerlink" title="xargs命令"></a>xargs命令</h2><p><code>xargs</code> 命令可以将标准输入转换为命令行参数</p>
+<p>还是上面的命令，这次通过管道链接到 <code>xargs</code>，效果如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | sort | xargs</span><br><span class="line">a ab abc b c d e</span><br></pre></td></tr></table></figure>
+
+<p>回到前面，我们知道 <code>ls</code> 命令是不支持接收标准输入的，但我们可以通过 <code>xrags</code> 命令将标准输入转换成参数后传递给 <code>ls</code> 并进一步执行，如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | xargs ls</span><br><span class="line">ls: cannot access &#39;ab&#39;: No such file or directory</span><br><span class="line">ls: cannot access &#39;abc&#39;: No such file or directory</span><br><span class="line">a:</span><br><span class="line">a.txt</span><br><span class="line"></span><br><span class="line">b:</span><br><span class="line">b.txt</span><br><span class="line"></span><br><span class="line">c:</span><br><span class="line">c.txt</span><br><span class="line"></span><br><span class="line">d:</span><br><span class="line">d.txt</span><br><span class="line"></span><br><span class="line">e:</span><br><span class="line">e.txt</span><br></pre></td></tr></table></figure>
+<p><code>cat test.txt</code> 的输出被管道重定向到后面的命令，并由 <code>xargs</code> 转换成参数传递给了 <code>ls</code>，然后依次执行，就分别列出了对应目录的内容，或者报出文件不存在的错误</p>
+<p>对于 <code>xargs</code> 命令还可以通过参数 <code>-I</code> 指定其转换后的参数在后面命令中的位置，比如我们想将 <code>test.txt</code> 文件中所列的目录拷贝到 <code>./test/</code> 中，就可以用下面命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat test.txt | xargs -I &#123;&#125; cp -r &#123;&#125; .&#x2F;test&#x2F;</span><br></pre></td></tr></table></figure>
+<p>执行结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | xargs -I &#123;&#125; cp -r &#123;&#125; .&#x2F;test&#x2F;</span><br><span class="line">cp: cannot stat &#39;ab&#39;: No such file or directory</span><br><span class="line">cp: cannot stat &#39;abc&#39;: No such file or directory</span><br><span class="line"></span><br><span class="line">$ ls test</span><br><span class="line">a  b  c  d  e</span><br></pre></td></tr></table></figure>
+<p>可以看到，结果会把 <code>test.txt</code> 中列出来并且存在的目录拷贝到 <code>./test/</code> 目录下</p>
 ]]></content>
       <categories>
-        <category>汇编语言</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>汇编语言</tag>
+        <tag>grep</tag>
+        <tag>xargs</tag>
+        <tag>管道</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -822,6 +788,40 @@ ps:部分语言不支持此语法</td>
       </categories>
       <tags>
         <tag>正则匹配</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>汇编语言学习笔记（一）</title>
+    <url>/2018/06/11/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="汇编语言的产生"><a href="#汇编语言的产生" class="headerlink" title="汇编语言的产生"></a>汇编语言的产生</h2><a id="more"></a>
+
+<h3 id="机器语言"><a href="#机器语言" class="headerlink" title="机器语言"></a>机器语言</h3><p>首先，我们了解一下<strong>机器语言</strong>，机器语言是机器指令的集合。  </p>
+<p><strong>机器指令</strong>就是CPU可以正确执行的命令。实际上就是一列二进制数字。CPU内部将这些二进制数字转变成对应的一列高低电平，然后驱动电子器件进行运算。  </p>
+<p>CPU具体的工作原理这里就不深入的说了，感兴趣的读者可以自己搜索学习。  </p>
+<p>我们都知道CPU是一种微处理器，对于不同的微处理器由于硬件设计和结构的不同，会需要不同的电平脉冲来驱动电子器件，进行运算。所以每种处理器都有自己的机器指令集（像x86架构的CPU和ARM架构的CPU就是拥有各自的指令集），这些指令集就是<strong>机器语言</strong>。  </p>
+<p>所以，对于不同架构的CPU，可使用的机器语言也不同。</p>
+<h3 id="汇编语言"><a href="#汇编语言" class="headerlink" title="汇编语言"></a>汇编语言</h3><p>早期的程序设计就是用的机器语言，程序员们使用 0、1 数字进行编程。机器语言过于抽象，使用机器语言实现的代码晦涩难懂、不易查错，而且难于记忆和分辨。于是就产生了<strong>汇编语言</strong>。  </p>
+<p><strong>汇编语言</strong>的主体是汇编指令。汇编指令和机器指令是一一对应的，可以理解成把机器指令对应成了便于记忆的书写格式。<br>例如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">机器指令 1000100111011000  </span><br><span class="line">对应的  </span><br><span class="line">汇编指令 mov ax,bx  </span><br><span class="line">所表示的操作就是：将寄存器BX的内容送到AX中</span><br></pre></td></tr></table></figure>
+
+<p>程序员可以用汇编语言编写源程序，给计算机执行时，要先用<strong>编译器</strong>将程序员写的 <em>汇编语言</em> 编译为 <em>机器码</em> ，然后才能被计算机理解并执行。</p>
+<h2 id="汇编语言的组成"><a href="#汇编语言的组成" class="headerlink" title="汇编语言的组成"></a>汇编语言的组成</h2><p>汇编语言包括3类指令：  </p>
+<ol>
+<li>汇编指令：机器指令的助记符，对应特定的机器码  </li>
+<li>伪指令：没有对应的机器码，由编译器执行，计算机不执行  </li>
+<li>其他符号：由编译器识别，没有对应的机器码，如+、-、*、/等  </li>
+</ol>
+<p>其中，汇编指令是汇编语言的核心。  </p>
+<h2 id="存储器"><a href="#存储器" class="headerlink" title="存储器"></a>存储器</h2><p>提供给CPU的指令和数据存放在存储器中，这里说的存储器指的是内存，与磁盘不同的是，内存中的数据是可以直接被CPU使用的。</p>
+<h2 id="地址总线"><a href="#地址总线" class="headerlink" title="地址总线"></a>地址总线</h2><p>CPU通过<strong>地址总线</strong>来指定存储单元。  </p>
+<h2 id="数据总线"><a href="#数据总线" class="headerlink" title="数据总线"></a>数据总线</h2><p>CPU和各种器件之间是通过<strong>数据总线</strong>来传送数据的，<em>数据总线</em>的宽度决定了CPU和其它器件之间的数据是传送速度。  </p>
+<h2 id="控制总线"><a href="#控制总线" class="headerlink" title="控制总线"></a>控制总线</h2><p>CPU对外部器件的控制是通过<strong>控制总线</strong>实现的。控制总线是一些不同控制线的集合，有多少控制线就表示CPU提供了多少种对外部器件的控制，也就是说，<em>控制总线</em>的宽度决定了CPU对外部器件的控制能力。</p>
+]]></content>
+      <categories>
+        <category>汇编语言</category>
+      </categories>
+      <tags>
+        <tag>汇编语言</tag>
       </tags>
   </entry>
   <entry>
