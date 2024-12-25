@@ -413,10 +413,10 @@ audioPlayBtn.onclick = function () {
 
 audioPlayer.onpause = function () {
     audioPlayBtn.innerText = "▶";
-    // clearInterval(dynamicModeInterval);
-    // dynamicModeInterval = null;
-    setTimeout(resetColor, 300);
-    audioPlayBtn.click();
+    clearInterval(dynamicModeInterval);
+    dynamicModeInterval = null;
+    // setTimeout(resetColor, 300);
+    // audioPlayBtn.click();
 }
 
 dynamicModeInterval = setInterval(dynamicMode, 1000);
