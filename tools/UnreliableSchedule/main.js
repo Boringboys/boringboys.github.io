@@ -264,9 +264,9 @@ async function resetColor() {
             } else {
                 childNode.style.setProperty("color", "#b9dada");
             }
-            await sleep(1000);
+            await sleep(10);
         }
-        await sleep(1000);
+        await sleep(10);
     }
 }
 
