@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>GTAVI-首部预告片</title>
+    <url>/2023/12/05/GTAVI-%E9%A6%96%E9%83%A8%E9%A2%84%E5%91%8A%E7%89%87/</url>
+    <content><![CDATA[<h2 id="预告片"><a href="#预告片" class="headerlink" title="预告片"></a>预告片</h2><video id="video" controls="" preload="none" style="width:100%">
+      <source id="mp4" src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/video/GTA6T1.mp4" type="video/mp4">
+</videos>]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>gtavi</tag>
+        <tag>预告片</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/1899/11/30/Hello_World/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>你好！！！</p>
@@ -15,20 +29,6 @@
       </categories>
       <tags>
         <tag>hello world</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GTAVI-首部预告片</title>
-    <url>/2023/12/05/GTAVI-%E9%A6%96%E9%83%A8%E9%A2%84%E5%91%8A%E7%89%87/</url>
-    <content><![CDATA[<h2 id="预告片"><a href="#预告片" class="headerlink" title="预告片"></a>预告片</h2><video id="video" controls="" preload="none" style="width:100%">
-      <source id="mp4" src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/video/GTA6T1.mp4" type="video/mp4">
-</videos>]]></content>
-      <categories>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>gtavi</tag>
-        <tag>预告片</tag>
       </tags>
   </entry>
   <entry>
