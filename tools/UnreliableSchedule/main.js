@@ -243,7 +243,7 @@ async function dynamicMode() {
         node.style.setProperty("background-color", "rgba(" + parseInt(Math.random() * 150 + 100, 10) + "," + parseInt(Math.random() * 150 + 100, 10) + "," + parseInt(Math.random() * 150 + 100, 10) + ",0.9)");
         for (let childNode of node.childNodes) {
             childNode.style.setProperty("color", "rgb(" + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + ")");
-            await sleep(1000);
+            await sleep(100);
         }
         await sleep(1000);
     }
@@ -251,13 +251,17 @@ async function dynamicMode() {
 
 async function resetColor() {
     // document.body.style.setProperty("background-color", "#f8f5f5");
-    document.getElementById("nextVacationDay").style.setProperty("background-color", "#191970");
+    // document.getElementById("nextVacationDay").style.setProperty("background-color", "#191970");
+    // document.getElementById("nextVacationDay").style.setProperty("color", "#b9dada");
+
+    document.getElementById("nextVacationDay").style.setProperty("background-color", "#000000");
     document.getElementById("nextVacationDay").style.setProperty("color", "#b9dada");
 
     document.body.style.removeProperty("background-image");
 
     for (let node of document.getElementById("mainArea").childNodes) {
-        node.style.setProperty("background-color", "#191970");
+        // node.style.setProperty("background-color", "#191970");
+        node.style.setProperty("background-color", "#000000");
         for (let childNode of node.childNodes) {
             if (childNode.className == "festivalName") {
                 childNode.style.setProperty("color", "#c3d8bf");
@@ -415,7 +419,7 @@ audioPlayer.onpause = function () {
     audioPlayBtn.innerText = "▶";
     clearInterval(dynamicModeInterval);
     dynamicModeInterval = null;
-    // setTimeout(resetColor, 300);
+    setTimeout(resetColor, 300);
     // audioPlayBtn.click();
 }
 
