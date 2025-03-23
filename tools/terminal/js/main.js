@@ -152,7 +152,7 @@ $(document).ready(() => {
 
 async function downloadFile(fileUrl,fileName,progressFunc) {
   let blob = await getBlob(fileUrl,progressFunc);
-  addNewTerminalLine('下载进度：100%', '~');
+  addNewLine('下载进度：100%', '~');
   e_html.animate({ scrollTop: $(document).height() }, 0)
   e_input.val('')
   saveFile(blob, fileName);
