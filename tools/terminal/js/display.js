@@ -7,6 +7,12 @@ function addNewTerminalLine(input, position){
     addNewLine(newLine);
 }
 
+function updateTheLastLine(newContent){
+    tmp_e_main_content = e_main.html().split("<br>");
+    tmp_e_main_content[tmp_e_main_content.length-2] = newContent;
+    e_main.html(tmp_e_main_content.join("<br>"));
+}
+
 function displayInputLine(input, position){
     let inputLine = '[<span id="usr">' + usrName + '</span>@<span class="host">caijisec.com</span> ' + position + ']# ' + input;
     e_input_display.html(inputLine);

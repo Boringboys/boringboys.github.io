@@ -27,6 +27,7 @@ let mainFunc = (input, position) => {
       addNewLine('caijish: command not found: ' + command);
       e_html.animate({ scrollTop: $(document).height() }, 0)
     } else {
+      e_input_display.style.display = 'none';
       switch (command) {
         case 'help':
           addNewTerminalLine(input, position);
@@ -63,6 +64,7 @@ let mainFunc = (input, position) => {
           file = input.split(' ')[1]
           break
       }
+      e_input_display.style.display = 'block';
     }
   }
 }
@@ -152,7 +154,7 @@ $(document).ready(() => {
 
 async function downloadFile(fileUrl,fileName,progressFunc) {
   let blob = await getBlob(fileUrl,progressFunc);
-  addNewLine('下载进度：100%', '~');
+  updateTheLastLine('下载进度：100%');
   e_html.animate({ scrollTop: $(document).height() }, 0)
   e_input.val('')
   saveFile(blob, fileName);
@@ -176,6 +178,7 @@ function getBlob(fileUrl,progressFunc) {
           // percentage是当前下载进度，可自行处理
           let percentage = percentComplete * 100;
           console.log(percentage);
+          updateTheLastLine('下载进度：' + parseInt(percentage).toString() + '%');
           progressFunc(percentage);
         }
       },
