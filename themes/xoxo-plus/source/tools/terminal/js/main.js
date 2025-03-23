@@ -55,6 +55,7 @@ let mainFunc = (input, position) => {
           e_html.animate({ scrollTop: $(document).height() }, 0)
           break
         case 'wget':
+          addNewTerminalLine(input, position);
           url = input.split(' ')[1]
           downloadFile(url, 'test', downProgressUpdate)
           break
