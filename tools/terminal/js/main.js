@@ -28,7 +28,7 @@ let mainFunc = (input, position) => {
       addNewLine('caijish: command not found: ' + command);
       e_html.animate({ scrollTop: $(document).height() }, 0)
     } else {
-      e_input_display_by_id.style.display = 'none';
+      e_input_display[0].style.display = 'none';
       switch (command) {
         case 'help':
           addNewTerminalLine(input, position);
@@ -65,7 +65,7 @@ let mainFunc = (input, position) => {
           file = input.split(' ')[1]
           break
       }
-      e_input_display_by_id.style.display = 'block';
+      e_input_display[0].style.display = 'block';
     }
   }
 }
