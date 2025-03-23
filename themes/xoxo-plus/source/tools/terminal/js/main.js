@@ -39,7 +39,8 @@ let mainFunc = (input, position) => {
           exitMsg = '(๑˘̴͈́꒵˘̴͈̀)۶ˮ вyё вyё~';
           addNewLine(exitMsg);
           e_html.animate({ scrollTop: $(document).height() }, 0)
-          window.open("https://www.caijisec.com")
+          // window.open("https://www.caijisec.com")
+          window.location.href="/"
           break
         case 'hi':
         case 'hey':
