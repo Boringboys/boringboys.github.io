@@ -15,23 +15,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/1899/11/30/Hello_World/</url>
-    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>你好！！！</p>
-<a id="more"></a>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;hello, world\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>(●’◡’●)</p>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>hello world</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>KCTF2020 WriteUp</title>
     <url>/2020/11/20/KCTF2020%20WriteUp/</url>
     <content><![CDATA[<h2 id="第一题-至暗时刻"><a href="#第一题-至暗时刻" class="headerlink" title="第一题 至暗时刻"></a>第一题 至暗时刻</h2><a id="more"></a>
@@ -288,6 +271,23 @@ F = 51</code></pre><p>对应的字符分别是：2、9、2、8、1、3<br>所以
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/1899/11/30/Hello_World/</url>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>你好！！！</p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;hello, world\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(●’◡’●)</p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>hello world</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Metasploit命令学习</title>
     <url>/2018/03/29/Metasploit%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>为了方便自己后期的学习，我把metasploit的帮助信息简单翻译了一下，包括命令和一些用法描述。</p>
@@ -396,105 +396,6 @@ reload_lib    从指定路径重新加载Ruby库文件</code></pre><h1 id="msfco
       </tags>
   </entry>
   <entry>
-    <title>密码学 Diffie-Hellman密钥交换协议</title>
-    <url>/2018/12/04/%E5%AF%86%E7%A0%81%E5%AD%A6Diffie-Hellman%E5%AF%86%E9%92%A5%E4%BA%A4%E6%8D%A2%E5%8D%8F%E8%AE%AE/</url>
-    <content><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p><strong>Diffie-Hellman密钥交换协议</strong>（Diffie-Hellman key exchange agreement）简称“D-H<strong>协议</strong>”<a id="more"></a>，是1976年 Whitfield Diffie 和 Martin Hellman 合作发明的安全协议，它可以让双方在完全没有对方任何预先信息的条件下通过不安全信道创建起一个密钥。这个密钥可以在后续的通信中作为对称密钥来加密通信内容。</p>
-<h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h2><p>（1）通信双方 Alice 和 Bob 先确定<em>两个大素数</em> p 和 q ，这两个数不需要保密，因此通信双方可以通过不安全信道协商并确定这两个数；</p>
-<p>（2）Alice 选择一个大的<em>随机数</em> <code>r1</code> 并计算：<code>A=q^r1 (mod p)</code>；</p>
-<p>（3）Alice 将 <code>A</code> 发送给 Bob；</p>
-<p>（4）Bob 选择另外一个大的<em>随机数</em> <code>r2</code> 并计算：<code>B=q^r2 (mod p)</code>；</p>
-<p>（5）Bob 将 <code>B</code> 发送给 Alice；</p>
-<p>（6）Alice 计算密钥：<code>k1=B^r1 (mod p)</code>；</p>
-<p>（7）Bob 计算密钥：<code>k2=A^r2 (mod p)</code></p>
-<p>ps:最后，Alice 和 Bob 计算得到的 <code>k1=k2</code>，即得到的密钥</p>
-<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>（1）假设 Alice 和 Bob 选取的 <code>p=11 ， q=5</code>；</p>
-<p>（2）Alice 选择的随机数取 <code>r1=3</code>，则 <code>A=5^3 (mod 11)=4</code>；</p>
-<p>（3）Alice 将 <code>A=4</code> 发送给 Bob；</p>
-<p>（4）Bob 选择的随机数取 <code>r2=6</code>，则 <code>B=5^6 (mod 11)=5</code>；</p>
-<p>（5）Bob 将 <code>B=5</code> 发送给 Alice；</p>
-<p>（6）Alice 计算：<code>k1=5^3 (mod 11)=4</code>；</p>
-<p>（7）Bob 计算：<code>k2=4^6 (mod 11)=4</code>；</p>
-<p>（8）交换得到的密钥：<code>k1=k2=4</code></p>
-<h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><p><em>D-H协议的安全性在于，在有限域中计算离散对数远远难于在同一个域中计算指数。</em></p>
-<p>从上面给出的例子解释，就是当 Alice 知道 r1=3，以及 p 和 q 的情况下可以十分容易的计算得到 A；<br>而第三方在只知道 p，q 和 A 的情况下却很难计算得到 Alice 取得随机数 r1，所以无法使用 Bob 通过公共信道发送的 B 计算得到密钥 k；<br>对于 Bob 取的随机数 r2，与对 Alice 的分析一样，第三方同样难以通过计算得到，也就难以通过 Alice 发送的 A 计算出密钥。</p>
-<h2 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h2><p>D-H协议也存在缺陷，即容易受到<strong>中间人攻击</strong> ( <strong>Man-in-the-Middle Attack</strong> ，简称 <strong>“MITM攻击”</strong> ) ，就是通过拦截正常的网络通信数据，并进行数据篡改和嗅探，而通信双方却毫不知情。</p>
-<p>中间人攻击的过程如下：</p>
-<p>（1）第一步和上面所说的一样，通信双方 Alice 和 Bob 先确定两个大素数 <code>p</code> 和 <code>q</code> ，这两个数不需要保密，因此通信双方可以通过不安全信道协商并确定这两个数；<br>设 <code>p=11 ，q=5</code>；</p>
-<p>（2）窥探者 Eve 监听他们两个的会话，并得到了 <code>p</code> 和 <code>q</code> 的值；</p>
-<p>（3）Alice、Bob、Eve 同时选择随机数：<br>设 Alice 选择的还是 <code>r1=3</code> ，Bob 选择的是 <code>r2=6</code>，Eve 选择两个随机数 <code>r1&#39;=8，r2&#39;=9</code>；</p>
-<p>（4）Alice、Bob、Eve 分别计算 <code>q^r (mod p)</code>：<br>Alice 计算得 <code>A=4</code> ，Bob 计算得 <code>B=5</code> ，Eve 计算得 <code>A&#39;=13,B&#39;=12</code></p>
-<p>（5）然后按照协议 Alice 将自己计算的 <code>A</code> 发送给 Bob，此时 Eve 截获这个 <code>A</code>，并将自己计算得到的 <code>A&#39;</code> 发送给 Bob，Bob 对此过程并不知情；</p>
-<p>（6）同样 Eve 也截获了 Bob 发送给 Alice 的 <code>B</code>，并将 <code>B&#39;</code> 发送给 Alice，Alice 同样对此过程毫不知情；</p>
-<p>（7）此时 Eve 可以根据截获的 <code>A</code> 、<code>B</code> 分别计算出 <em>自己和 Alice 通信的密钥</em> 以及 <em>自己和Bob通信的密钥</em>，分别与 Alice 、Bob 共享不同的密钥。</p>
-<p>这样一来，Eve 就可以分别与 Alice 和 Bob 通信，而 Alice 和 Bob 仍认为和自己通信的是对方，对第三方并不知情。</p>
-<blockquote>
-<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/2018/12/04/密码学Diffie-Hellman密钥交换协议/">https://www.boringboys.top/2018/12/04/密码学Diffie-Hellman密钥交换协议/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>密码学</category>
-      </categories>
-      <tags>
-        <tag>安全</tag>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nessus在Windows上的安装</title>
-    <url>/2018/04/23/Nessus%E5%9C%A8Windows%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h2 id="Nessus"><a href="#Nessus" class="headerlink" title="Nessus"></a>Nessus</h2><p><a href="https://baike.baidu.com/item/Nessus/10718713" target="_blank" rel="noopener">Nessus</a> 是目前全世界最多人使用的系统漏洞扫描与分析软件。<a id="more"></a>总共有超过75,000个机构使用Nessus 作为扫描该机构电脑系统的软件。</p>
-<p>该工具提供完整的电脑漏洞扫描服务，并及时更新其漏洞数据库。</p>
-<p>Nessus不同于传统的漏洞扫描工具，它可以同时在本机或远端上遥控，进行系统的漏洞分析扫描。</p>
-<h2 id="获取安装包"><a href="#获取安装包" class="headerlink" title="获取安装包"></a>获取安装包</h2><p>Nessus的下载地址:<a href="https://www.tenable.com/downloads/nessus" target="_blank" rel="noopener">https://www.tenable.com/downloads/nessus</a><br>点击此链接在浏览器打开如下所示的界面：</p>
-<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/download_page.png" width="95%">
-
-<p>然后选择要下载的版本，这里我选择的是Nessus-8.3.1-x64.msi，即Windows版的安装包；</p>
-<h2 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h2><p>在使用Nessus之前，必须先激活服务才可以使用，激活服务的激活码可以在官网获取；</p>
-<p>（1）首先在刚才的下载界面，可以看到一个“Get Activation Code”按钮，如下图所示，点击它即可前往获取激活码；</p>
-<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/get_code.png" width="95%">
-
-<p>（2）然后会让你选择获取哪种激活码，如下图所示：  </p>
-<ul>
-<li>一种是Professional版的，即专业版，需要付费获得激活码；  </li>
-<li>另外一种是Home版的，即免费版；<br>这里我选择了Home版，点击“Register Now”，前往注册界面；</li>
-</ul>
-<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/chose_free.png" width="95%">
-
-<p>（3）在注册界面填写信息以及邮箱，然后点击“Register”按钮，如下图；</p>
-<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/register.png" width="95%">
-
-<p>（4）当显示如下所示的“Thank You for Registing …”页面时，说明你已经成功获得激活码，激活码以邮件形式发送到了你所填写的邮箱；</p>
-<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/thanks_page.png" width="95%">
-
-<h2 id="安装Nessus"><a href="#安装Nessus" class="headerlink" title="安装Nessus"></a>安装Nessus</h2><p>（1）点击前面下载的xxx.msi安装包，安装Nessus；</p>
-<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/install.png" width="95%">
-
-<p>按照安装导向成功安装Nessus后，会自动在浏览器打开一个如下图所示的页面，如果没有可以自己在浏览器输入“<a href="https://localhost:8834”打开；">https://localhost:8834”打开；</a></p>
-<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/create_account.png" width="95%">
-
-<p>如果输入链接后无法访问，可能是Nessus服务没有运行，前往Nessus的安装目录点击执行“nessus-service.exe”即可，如图双击“nessus-service.exe”启动Nessus服务，<br>双击“Nessus Web Client”可以打开网页版客户端，即“http:localhost:8834”；</p>
-<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/nessus.png" width="95%">
-
-<p>（2）在打开的“Create an account”页面，输入用户名和密码创建一个账号，以后再次打开此页面使用Nessus时，需要使用这里设置的用户名和密码登录；<br>（3）点击“Continue”后，会出现一个界面让你输入激活码，将前面获得的激活码输入然后继续；<br>（4）然后就是如下图所示的初始化界面了，这一步会下载并安装一些插件，时间会有点久，但没有任何操作，等它完成就可以了；</p>
-<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/nessus_initializing.png" width="95%">
-
-<p>（5）完成之后，显示下面的界面，表示安装成功，你可以创建自己的扫描任务并执行了。</p>
-<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/success.png" width="95%">
-
-
-<blockquote>
-<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/2019/04/23/Nessus在Windows上的安装/">https://www.boringboys.top/2019/04/23/Nessus在Windows上的安装/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>安全</category>
-      </categories>
-      <tags>
-        <tag>安全</tag>
-        <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows Terminal安装和美化</title>
     <url>/2021/07/25/Windows%20Terminal%E5%AE%89%E8%A3%85%E5%92%8C%E7%BE%8E%E5%8C%96/</url>
     <content><![CDATA[<p>最近组了一台主机，然后根据自己的使用习惯又做了一些软件上的配置，这篇文章记录一下Windows Terminal的安装和简单美化。</p>
@@ -575,49 +476,102 @@ reload_lib    从指定路径重新加载Ruby库文件</code></pre><h1 id="msfco
       </tags>
   </entry>
   <entry>
-    <title>对linux管道和grep，xrags的学习</title>
-    <url>/2021/01/16/%E5%AF%B9linux%E7%AE%A1%E9%81%93%E5%92%8Cgrep%EF%BC%8Cxrags%E7%9A%84%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h2 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h2><p>在linux中，管道可以将两个或多个命令的输入输出链接起来<a id="more"></a>，它将上一个命令的标准输出重定向到下一个命令的标准输入<br>假设在当前目录下的结构是：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── a</span><br><span class="line">│   └── a.txt</span><br><span class="line">├── b</span><br><span class="line">│   └── b.txt</span><br><span class="line">├── c</span><br><span class="line">│   └── c.txt</span><br><span class="line">├── d</span><br><span class="line">│   └── d.txt</span><br><span class="line">├── e</span><br><span class="line">│   └── e.txt</span><br><span class="line">└── test.txt</span><br></pre></td></tr></table></figure>
-<p>而文件 <code>test.txt</code> 内容是：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">c</span><br><span class="line">a</span><br><span class="line">b</span><br><span class="line">e</span><br><span class="line">d</span><br><span class="line">ab</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
-<p>通过执行下面命令，<code>cat</code> 会将文件 <code>test.txt</code> 的内容打印到标准输出，但不会直接显示在标准输出设备上，而是会通过管道 <code>|</code> 重定向到 <code>sort</code> 并被 <code>sort</code> 排序之后再进行打印:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | sort</span><br><span class="line">a</span><br><span class="line">ab</span><br><span class="line">abc</span><br><span class="line">b</span><br><span class="line">c</span><br><span class="line">d</span><br><span class="line">e</span><br></pre></td></tr></table></figure>
+    <title>Nessus在Windows上的安装</title>
+    <url>/2018/04/23/Nessus%E5%9C%A8Windows%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="Nessus"><a href="#Nessus" class="headerlink" title="Nessus"></a>Nessus</h2><p><a href="https://baike.baidu.com/item/Nessus/10718713" target="_blank" rel="noopener">Nessus</a> 是目前全世界最多人使用的系统漏洞扫描与分析软件。<a id="more"></a>总共有超过75,000个机构使用Nessus 作为扫描该机构电脑系统的软件。</p>
+<p>该工具提供完整的电脑漏洞扫描服务，并及时更新其漏洞数据库。</p>
+<p>Nessus不同于传统的漏洞扫描工具，它可以同时在本机或远端上遥控，进行系统的漏洞分析扫描。</p>
+<h2 id="获取安装包"><a href="#获取安装包" class="headerlink" title="获取安装包"></a>获取安装包</h2><p>Nessus的下载地址:<a href="https://www.tenable.com/downloads/nessus" target="_blank" rel="noopener">https://www.tenable.com/downloads/nessus</a><br>点击此链接在浏览器打开如下所示的界面：</p>
+<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/download_page.png" width="95%">
+
+<p>然后选择要下载的版本，这里我选择的是Nessus-8.3.1-x64.msi，即Windows版的安装包；</p>
+<h2 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h2><p>在使用Nessus之前，必须先激活服务才可以使用，激活服务的激活码可以在官网获取；</p>
+<p>（1）首先在刚才的下载界面，可以看到一个“Get Activation Code”按钮，如下图所示，点击它即可前往获取激活码；</p>
+<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/get_code.png" width="95%">
+
+<p>（2）然后会让你选择获取哪种激活码，如下图所示：  </p>
+<ul>
+<li>一种是Professional版的，即专业版，需要付费获得激活码；  </li>
+<li>另外一种是Home版的，即免费版；<br>这里我选择了Home版，点击“Register Now”，前往注册界面；</li>
+</ul>
+<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/chose_free.png" width="95%">
+
+<p>（3）在注册界面填写信息以及邮箱，然后点击“Register”按钮，如下图；</p>
+<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/register.png" width="95%">
+
+<p>（4）当显示如下所示的“Thank You for Registing …”页面时，说明你已经成功获得激活码，激活码以邮件形式发送到了你所填写的邮箱；</p>
+<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/thanks_page.png" width="95%">
+
+<h2 id="安装Nessus"><a href="#安装Nessus" class="headerlink" title="安装Nessus"></a>安装Nessus</h2><p>（1）点击前面下载的xxx.msi安装包，安装Nessus；</p>
+<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/install.png" width="95%">
+
+<p>按照安装导向成功安装Nessus后，会自动在浏览器打开一个如下图所示的页面，如果没有可以自己在浏览器输入“<a href="https://localhost:8834”打开；">https://localhost:8834”打开；</a></p>
+<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/create_account.png" width="95%">
+
+<p>如果输入链接后无法访问，可能是Nessus服务没有运行，前往Nessus的安装目录点击执行“nessus-service.exe”即可，如图双击“nessus-service.exe”启动Nessus服务，<br>双击“Nessus Web Client”可以打开网页版客户端，即“http:localhost:8834”；</p>
+<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/nessus.png" width="95%">
+
+<p>（2）在打开的“Create an account”页面，输入用户名和密码创建一个账号，以后再次打开此页面使用Nessus时，需要使用这里设置的用户名和密码登录；<br>（3）点击“Continue”后，会出现一个界面让你输入激活码，将前面获得的激活码输入然后继续；<br>（4）然后就是如下图所示的初始化界面了，这一步会下载并安装一些插件，时间会有点久，但没有任何操作，等它完成就可以了；</p>
+<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/nessus_initializing.png" width="95%">
+
+<p>（5）完成之后，显示下面的界面，表示安装成功，你可以创建自己的扫描任务并执行了。</p>
+<img src="https://boringboys-1254394685.cos.ap-shanghai.myqcloud.com/img/Nessus_install/success.png" width="95%">
+
 
 <blockquote>
-<p>对于管道，由它串起来的命令实际上不是依次执行的，而是同时执行的，Linux会在系统内部将它们连接起来，在前面的命令产生输出的同时，输出会被立即送给后面的命令 </p>
+<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/2019/04/23/Nessus在Windows上的安装/">https://www.boringboys.top/2019/04/23/Nessus在Windows上的安装/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
 </blockquote>
-<p>这里要注意的是，在这种使用方式中，后面的命令一定要支持接收标准输入，如果是 <code>ls</code> 这种不支持接收标准输入的命令，就会出现下面这种情况：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | ls</span><br><span class="line">a  b  c  d  e  test.txt</span><br></pre></td></tr></table></figure>
-<p>显然显示的内容只是 <code>ls</code> 命令的输出结果</p>
-<h2 id="grep命令"><a href="#grep命令" class="headerlink" title="grep命令"></a>grep命令</h2><p><code>grep</code> 命令会从给定的文件中或者标准输入中搜索匹配的行或文本并输出</p>
-<p>因为 <code>grep</code> 命令是支持接收标准输入的，所以它也可以作为管道后面的命令来处理前面命令的输出，如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | sort | grep a</span><br><span class="line">a</span><br><span class="line">ab</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
-<p><code>grep a</code> 会对前面命令的结果进行筛选，并只将包含字符 <code>a</code> 的行打印出来</p>
-<p>这里也可以看出来，在一条命令里可以使用多条管道。实际上，只要你想，可以在命令里使用任意多条管道，如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat test.txt | sort | grep a | grep b | grep c</span><br></pre></td></tr></table></figure>
-
-<h2 id="xargs命令"><a href="#xargs命令" class="headerlink" title="xargs命令"></a>xargs命令</h2><p><code>xargs</code> 命令可以将标准输入转换为命令行参数</p>
-<p>还是上面的命令，这次通过管道链接到 <code>xargs</code>，效果如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | sort | xargs</span><br><span class="line">a ab abc b c d e</span><br></pre></td></tr></table></figure>
-
-<p>回到前面，我们知道 <code>ls</code> 命令是不支持接收标准输入的，但我们可以通过 <code>xrags</code> 命令将标准输入转换成参数后传递给 <code>ls</code> 并进一步执行，如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | xargs ls</span><br><span class="line">ls: cannot access &#39;ab&#39;: No such file or directory</span><br><span class="line">ls: cannot access &#39;abc&#39;: No such file or directory</span><br><span class="line">a:</span><br><span class="line">a.txt</span><br><span class="line"></span><br><span class="line">b:</span><br><span class="line">b.txt</span><br><span class="line"></span><br><span class="line">c:</span><br><span class="line">c.txt</span><br><span class="line"></span><br><span class="line">d:</span><br><span class="line">d.txt</span><br><span class="line"></span><br><span class="line">e:</span><br><span class="line">e.txt</span><br></pre></td></tr></table></figure>
-<p><code>cat test.txt</code> 的输出被管道重定向到后面的命令，并由 <code>xargs</code> 转换成参数传递给了 <code>ls</code>，然后依次执行，就分别列出了对应目录的内容，或者报出文件不存在的错误</p>
-<p>对于 <code>xargs</code> 命令还可以通过参数 <code>-I</code> 指定其转换后的参数在后面命令中的位置，比如我们想将 <code>test.txt</code> 文件中所列的目录拷贝到 <code>./test/</code> 中，就可以用下面命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat test.txt | xargs -I &#123;&#125; cp -r &#123;&#125; .&#x2F;test&#x2F;</span><br></pre></td></tr></table></figure>
-<p>执行结果如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | xargs -I &#123;&#125; cp -r &#123;&#125; .&#x2F;test&#x2F;</span><br><span class="line">cp: cannot stat &#39;ab&#39;: No such file or directory</span><br><span class="line">cp: cannot stat &#39;abc&#39;: No such file or directory</span><br><span class="line"></span><br><span class="line">$ ls test</span><br><span class="line">a  b  c  d  e</span><br></pre></td></tr></table></figure>
-<p>可以看到，结果会把 <code>test.txt</code> 中列出来并且存在的目录拷贝到 <code>./test/</code> 目录下</p>
 ]]></content>
       <categories>
-        <category>Linux</category>
+        <category>安全</category>
       </categories>
       <tags>
-        <tag>grep</tag>
-        <tag>xargs</tag>
-        <tag>管道</tag>
-        <tag>Linux</tag>
+        <tag>安全</tag>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>密码学 Diffie-Hellman密钥交换协议</title>
+    <url>/2018/12/04/%E5%AF%86%E7%A0%81%E5%AD%A6Diffie-Hellman%E5%AF%86%E9%92%A5%E4%BA%A4%E6%8D%A2%E5%8D%8F%E8%AE%AE/</url>
+    <content><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p><strong>Diffie-Hellman密钥交换协议</strong>（Diffie-Hellman key exchange agreement）简称“D-H<strong>协议</strong>”<a id="more"></a>，是1976年 Whitfield Diffie 和 Martin Hellman 合作发明的安全协议，它可以让双方在完全没有对方任何预先信息的条件下通过不安全信道创建起一个密钥。这个密钥可以在后续的通信中作为对称密钥来加密通信内容。</p>
+<h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h2><p>（1）通信双方 Alice 和 Bob 先确定<em>两个大素数</em> p 和 q ，这两个数不需要保密，因此通信双方可以通过不安全信道协商并确定这两个数；</p>
+<p>（2）Alice 选择一个大的<em>随机数</em> <code>r1</code> 并计算：<code>A=q^r1 (mod p)</code>；</p>
+<p>（3）Alice 将 <code>A</code> 发送给 Bob；</p>
+<p>（4）Bob 选择另外一个大的<em>随机数</em> <code>r2</code> 并计算：<code>B=q^r2 (mod p)</code>；</p>
+<p>（5）Bob 将 <code>B</code> 发送给 Alice；</p>
+<p>（6）Alice 计算密钥：<code>k1=B^r1 (mod p)</code>；</p>
+<p>（7）Bob 计算密钥：<code>k2=A^r2 (mod p)</code></p>
+<p>ps:最后，Alice 和 Bob 计算得到的 <code>k1=k2</code>，即得到的密钥</p>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>（1）假设 Alice 和 Bob 选取的 <code>p=11 ， q=5</code>；</p>
+<p>（2）Alice 选择的随机数取 <code>r1=3</code>，则 <code>A=5^3 (mod 11)=4</code>；</p>
+<p>（3）Alice 将 <code>A=4</code> 发送给 Bob；</p>
+<p>（4）Bob 选择的随机数取 <code>r2=6</code>，则 <code>B=5^6 (mod 11)=5</code>；</p>
+<p>（5）Bob 将 <code>B=5</code> 发送给 Alice；</p>
+<p>（6）Alice 计算：<code>k1=5^3 (mod 11)=4</code>；</p>
+<p>（7）Bob 计算：<code>k2=4^6 (mod 11)=4</code>；</p>
+<p>（8）交换得到的密钥：<code>k1=k2=4</code></p>
+<h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><p><em>D-H协议的安全性在于，在有限域中计算离散对数远远难于在同一个域中计算指数。</em></p>
+<p>从上面给出的例子解释，就是当 Alice 知道 r1=3，以及 p 和 q 的情况下可以十分容易的计算得到 A；<br>而第三方在只知道 p，q 和 A 的情况下却很难计算得到 Alice 取得随机数 r1，所以无法使用 Bob 通过公共信道发送的 B 计算得到密钥 k；<br>对于 Bob 取的随机数 r2，与对 Alice 的分析一样，第三方同样难以通过计算得到，也就难以通过 Alice 发送的 A 计算出密钥。</p>
+<h2 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h2><p>D-H协议也存在缺陷，即容易受到<strong>中间人攻击</strong> ( <strong>Man-in-the-Middle Attack</strong> ，简称 <strong>“MITM攻击”</strong> ) ，就是通过拦截正常的网络通信数据，并进行数据篡改和嗅探，而通信双方却毫不知情。</p>
+<p>中间人攻击的过程如下：</p>
+<p>（1）第一步和上面所说的一样，通信双方 Alice 和 Bob 先确定两个大素数 <code>p</code> 和 <code>q</code> ，这两个数不需要保密，因此通信双方可以通过不安全信道协商并确定这两个数；<br>设 <code>p=11 ，q=5</code>；</p>
+<p>（2）窥探者 Eve 监听他们两个的会话，并得到了 <code>p</code> 和 <code>q</code> 的值；</p>
+<p>（3）Alice、Bob、Eve 同时选择随机数：<br>设 Alice 选择的还是 <code>r1=3</code> ，Bob 选择的是 <code>r2=6</code>，Eve 选择两个随机数 <code>r1&#39;=8，r2&#39;=9</code>；</p>
+<p>（4）Alice、Bob、Eve 分别计算 <code>q^r (mod p)</code>：<br>Alice 计算得 <code>A=4</code> ，Bob 计算得 <code>B=5</code> ，Eve 计算得 <code>A&#39;=13,B&#39;=12</code></p>
+<p>（5）然后按照协议 Alice 将自己计算的 <code>A</code> 发送给 Bob，此时 Eve 截获这个 <code>A</code>，并将自己计算得到的 <code>A&#39;</code> 发送给 Bob，Bob 对此过程并不知情；</p>
+<p>（6）同样 Eve 也截获了 Bob 发送给 Alice 的 <code>B</code>，并将 <code>B&#39;</code> 发送给 Alice，Alice 同样对此过程毫不知情；</p>
+<p>（7）此时 Eve 可以根据截获的 <code>A</code> 、<code>B</code> 分别计算出 <em>自己和 Alice 通信的密钥</em> 以及 <em>自己和Bob通信的密钥</em>，分别与 Alice 、Bob 共享不同的密钥。</p>
+<p>这样一来，Eve 就可以分别与 Alice 和 Bob 通信，而 Alice 和 Bob 仍认为和自己通信的是对方，对第三方并不知情。</p>
+<blockquote>
+<p>作者：Boringboys<br>原文链接：<a href="https://www.boringboys.top/2018/12/04/密码学Diffie-Hellman密钥交换协议/">https://www.boringboys.top/2018/12/04/密码学Diffie-Hellman密钥交换协议/</a><br>版权声明：本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA</a>协议授权，转载请遵守此协议</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>密码学</category>
+      </categories>
+      <tags>
+        <tag>安全</tag>
+        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
@@ -791,6 +745,77 @@ ps:部分语言不支持此语法</td>
       </tags>
   </entry>
   <entry>
+    <title>广播域和冲突域</title>
+    <url>/2019/05/24/%E7%BD%91%E7%BB%9C%E7%AF%87%E4%B9%8B%E5%B9%BF%E6%92%AD%E5%9F%9F%E5%92%8C%E5%86%B2%E7%AA%81%E5%9F%9F/</url>
+    <content><![CDATA[<h2 id="冲突域"><a href="#冲突域" class="headerlink" title="冲突域"></a>冲突域</h2><p>又称为碰撞域，连接在同一导线上的所有工作站的集合，或者说是同一物理网段上所有节点的集合或以太网上竞争同一带宽的节点集合。在任一时刻，在一个冲突域中只能有一个节点在发送消息。如果有两个节点同时发送消息就会产生冲突。</p>
+<a id="more"></a>
+
+<h2 id="广播域"><a href="#广播域" class="headerlink" title="广播域"></a>广播域</h2><p>简单地说，广播域是一种环境，在该环境中通过线路发送的广播消息，可以被所有该环境中的主机或节点接收。这些主机往往通过以太网中继器或者交换机连接到一起。</p>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>在同一个冲突域中的每一个节点都能接收到所有被其它节点发送的帧；<br>在同一个广播域中的每一个节点都能接收到其他节点发送的广播帧；  </p>
+<p><strong>冲突域</strong>是基于物理层的，所以像工作在物理层的集线器、中继器之类的设备是无法划分冲突域的，因为它们本身不能识别MAC地址和IP地址，在传输数据时只是简单的复制信号。而一些处在数据链路层以上的设备都可以划分冲突域，因为它们会通过查询自身维护的一个MAC和端口的对应表，将数据传送到对应的端口，如数据链路层的交换机、网桥，网络层的路由器等设备；<br><strong>广播域</strong>是基于数据链路层的，所以像前面提到的集线器、中继器、网桥、交换机等设备都是无法划分广播域的，而像路由器这样的网络层设备是可以划分广播域的。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><blockquote>
+<p>知乎：<a href="https://zhuanlan.zhihu.com/p/74366236" target="_blank" rel="noopener">冲突域、广播域的通俗讲解</a><br>维基百科：<a href="https://zh.wikipedia.org/wiki/%E5%B9%BF%E6%92%AD%E5%9F%9F" target="_blank" rel="noopener">广播域</a><br>百度百科：<a href="https://baike.baidu.com/item/%E5%86%B2%E7%AA%81%E5%9F%9F" target="_blank" rel="noopener">冲突域</a>  </p>
+</blockquote>
+<blockquote>
+<p>版权声明：本文采用[BY-NC-SA](<a href="https://creativecommons.org/licenses/" target="_blank" rel="noopener">https://creativecommons.org/licenses/</a><br>by-nc-sa/4.0/)协议授权，转载请遵守此协议</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>网络</category>
+      </categories>
+      <tags>
+        <tag>广播域</tag>
+        <tag>冲突域</tag>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>对linux管道和grep，xrags的学习</title>
+    <url>/2021/01/16/%E5%AF%B9linux%E7%AE%A1%E9%81%93%E5%92%8Cgrep%EF%BC%8Cxrags%E7%9A%84%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h2><p>在linux中，管道可以将两个或多个命令的输入输出链接起来<a id="more"></a>，它将上一个命令的标准输出重定向到下一个命令的标准输入<br>假设在当前目录下的结构是：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── a</span><br><span class="line">│   └── a.txt</span><br><span class="line">├── b</span><br><span class="line">│   └── b.txt</span><br><span class="line">├── c</span><br><span class="line">│   └── c.txt</span><br><span class="line">├── d</span><br><span class="line">│   └── d.txt</span><br><span class="line">├── e</span><br><span class="line">│   └── e.txt</span><br><span class="line">└── test.txt</span><br></pre></td></tr></table></figure>
+<p>而文件 <code>test.txt</code> 内容是：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">c</span><br><span class="line">a</span><br><span class="line">b</span><br><span class="line">e</span><br><span class="line">d</span><br><span class="line">ab</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
+<p>通过执行下面命令，<code>cat</code> 会将文件 <code>test.txt</code> 的内容打印到标准输出，但不会直接显示在标准输出设备上，而是会通过管道 <code>|</code> 重定向到 <code>sort</code> 并被 <code>sort</code> 排序之后再进行打印:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | sort</span><br><span class="line">a</span><br><span class="line">ab</span><br><span class="line">abc</span><br><span class="line">b</span><br><span class="line">c</span><br><span class="line">d</span><br><span class="line">e</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>对于管道，由它串起来的命令实际上不是依次执行的，而是同时执行的，Linux会在系统内部将它们连接起来，在前面的命令产生输出的同时，输出会被立即送给后面的命令 </p>
+</blockquote>
+<p>这里要注意的是，在这种使用方式中，后面的命令一定要支持接收标准输入，如果是 <code>ls</code> 这种不支持接收标准输入的命令，就会出现下面这种情况：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | ls</span><br><span class="line">a  b  c  d  e  test.txt</span><br></pre></td></tr></table></figure>
+<p>显然显示的内容只是 <code>ls</code> 命令的输出结果</p>
+<h2 id="grep命令"><a href="#grep命令" class="headerlink" title="grep命令"></a>grep命令</h2><p><code>grep</code> 命令会从给定的文件中或者标准输入中搜索匹配的行或文本并输出</p>
+<p>因为 <code>grep</code> 命令是支持接收标准输入的，所以它也可以作为管道后面的命令来处理前面命令的输出，如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | sort | grep a</span><br><span class="line">a</span><br><span class="line">ab</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
+<p><code>grep a</code> 会对前面命令的结果进行筛选，并只将包含字符 <code>a</code> 的行打印出来</p>
+<p>这里也可以看出来，在一条命令里可以使用多条管道。实际上，只要你想，可以在命令里使用任意多条管道，如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat test.txt | sort | grep a | grep b | grep c</span><br></pre></td></tr></table></figure>
+
+<h2 id="xargs命令"><a href="#xargs命令" class="headerlink" title="xargs命令"></a>xargs命令</h2><p><code>xargs</code> 命令可以将标准输入转换为命令行参数</p>
+<p>还是上面的命令，这次通过管道链接到 <code>xargs</code>，效果如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | sort | xargs</span><br><span class="line">a ab abc b c d e</span><br></pre></td></tr></table></figure>
+
+<p>回到前面，我们知道 <code>ls</code> 命令是不支持接收标准输入的，但我们可以通过 <code>xrags</code> 命令将标准输入转换成参数后传递给 <code>ls</code> 并进一步执行，如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | xargs ls</span><br><span class="line">ls: cannot access &#39;ab&#39;: No such file or directory</span><br><span class="line">ls: cannot access &#39;abc&#39;: No such file or directory</span><br><span class="line">a:</span><br><span class="line">a.txt</span><br><span class="line"></span><br><span class="line">b:</span><br><span class="line">b.txt</span><br><span class="line"></span><br><span class="line">c:</span><br><span class="line">c.txt</span><br><span class="line"></span><br><span class="line">d:</span><br><span class="line">d.txt</span><br><span class="line"></span><br><span class="line">e:</span><br><span class="line">e.txt</span><br></pre></td></tr></table></figure>
+<p><code>cat test.txt</code> 的输出被管道重定向到后面的命令，并由 <code>xargs</code> 转换成参数传递给了 <code>ls</code>，然后依次执行，就分别列出了对应目录的内容，或者报出文件不存在的错误</p>
+<p>对于 <code>xargs</code> 命令还可以通过参数 <code>-I</code> 指定其转换后的参数在后面命令中的位置，比如我们想将 <code>test.txt</code> 文件中所列的目录拷贝到 <code>./test/</code> 中，就可以用下面命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat test.txt | xargs -I &#123;&#125; cp -r &#123;&#125; .&#x2F;test&#x2F;</span><br></pre></td></tr></table></figure>
+<p>执行结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat test.txt | xargs -I &#123;&#125; cp -r &#123;&#125; .&#x2F;test&#x2F;</span><br><span class="line">cp: cannot stat &#39;ab&#39;: No such file or directory</span><br><span class="line">cp: cannot stat &#39;abc&#39;: No such file or directory</span><br><span class="line"></span><br><span class="line">$ ls test</span><br><span class="line">a  b  c  d  e</span><br></pre></td></tr></table></figure>
+<p>可以看到，结果会把 <code>test.txt</code> 中列出来并且存在的目录拷贝到 <code>./test/</code> 目录下</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>grep</tag>
+        <tag>xargs</tag>
+        <tag>管道</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>汇编语言学习笔记（一）</title>
     <url>/2018/06/11/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
     <content><![CDATA[<h2 id="汇编语言的产生"><a href="#汇编语言的产生" class="headerlink" title="汇编语言的产生"></a>汇编语言的产生</h2><a id="more"></a>
@@ -822,31 +847,6 @@ ps:部分语言不支持此语法</td>
       </categories>
       <tags>
         <tag>汇编语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>广播域和冲突域</title>
-    <url>/2019/05/24/%E7%BD%91%E7%BB%9C%E7%AF%87%E4%B9%8B%E5%B9%BF%E6%92%AD%E5%9F%9F%E5%92%8C%E5%86%B2%E7%AA%81%E5%9F%9F/</url>
-    <content><![CDATA[<h2 id="冲突域"><a href="#冲突域" class="headerlink" title="冲突域"></a>冲突域</h2><p>又称为碰撞域，连接在同一导线上的所有工作站的集合，或者说是同一物理网段上所有节点的集合或以太网上竞争同一带宽的节点集合。在任一时刻，在一个冲突域中只能有一个节点在发送消息。如果有两个节点同时发送消息就会产生冲突。</p>
-<a id="more"></a>
-
-<h2 id="广播域"><a href="#广播域" class="headerlink" title="广播域"></a>广播域</h2><p>简单地说，广播域是一种环境，在该环境中通过线路发送的广播消息，可以被所有该环境中的主机或节点接收。这些主机往往通过以太网中继器或者交换机连接到一起。</p>
-<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>在同一个冲突域中的每一个节点都能接收到所有被其它节点发送的帧；<br>在同一个广播域中的每一个节点都能接收到其他节点发送的广播帧；  </p>
-<p><strong>冲突域</strong>是基于物理层的，所以像工作在物理层的集线器、中继器之类的设备是无法划分冲突域的，因为它们本身不能识别MAC地址和IP地址，在传输数据时只是简单的复制信号。而一些处在数据链路层以上的设备都可以划分冲突域，因为它们会通过查询自身维护的一个MAC和端口的对应表，将数据传送到对应的端口，如数据链路层的交换机、网桥，网络层的路由器等设备；<br><strong>广播域</strong>是基于数据链路层的，所以像前面提到的集线器、中继器、网桥、交换机等设备都是无法划分广播域的，而像路由器这样的网络层设备是可以划分广播域的。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><blockquote>
-<p>知乎：<a href="https://zhuanlan.zhihu.com/p/74366236" target="_blank" rel="noopener">冲突域、广播域的通俗讲解</a><br>维基百科：<a href="https://zh.wikipedia.org/wiki/%E5%B9%BF%E6%92%AD%E5%9F%9F" target="_blank" rel="noopener">广播域</a><br>百度百科：<a href="https://baike.baidu.com/item/%E5%86%B2%E7%AA%81%E5%9F%9F" target="_blank" rel="noopener">冲突域</a>  </p>
-</blockquote>
-<blockquote>
-<p>版权声明：本文采用[BY-NC-SA](<a href="https://creativecommons.org/licenses/" target="_blank" rel="noopener">https://creativecommons.org/licenses/</a><br>by-nc-sa/4.0/)协议授权，转载请遵守此协议</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>广播域</tag>
-        <tag>冲突域</tag>
-        <tag>网络</tag>
       </tags>
   </entry>
 </search>
