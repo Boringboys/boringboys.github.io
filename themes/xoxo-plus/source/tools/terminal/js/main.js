@@ -170,10 +170,12 @@ function getBlob(fileUrl,progressFunc) {
     xhr.addEventListener(
       'progress',
       function (evt) {
+        console.log("下载进度事件");
         if (evt.lengthComputable) {
           let percentComplete = evt.loaded / evt.total;
           // percentage是当前下载进度，可自行处理
           let percentage = percentComplete * 100;
+          console.log(percentage);
           progressFunc(percentage);
         }
       },
