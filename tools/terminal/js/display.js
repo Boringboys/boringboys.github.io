@@ -10,7 +10,7 @@ function addNewTerminalLine(input, position){
 function updateTheLastLine(newContent){
     tmp_e_main_content = e_main.html().split("<br>");
     tmp_e_main_content[tmp_e_main_content.length-1] = newContent;
-    e_main.html(tmp_e_main_content.join("<br>"));
+    e_main.html(tmp_e_main_content.join("<br>") + '<br/>');
 }
 
 function displayInputLine(input, position){

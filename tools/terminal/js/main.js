@@ -28,7 +28,7 @@ let mainFunc = (input, position) => {
       addNewLine('caijish: command not found: ' + command);
       e_html.animate({ scrollTop: $(document).height() }, 0)
     } else {
-      e_input_display[0].style.display = 'none';
+      // e_input_display[0].style.display = 'none';
       switch (command) {
         case 'help':
           addNewTerminalLine(input, position);
@@ -57,6 +57,7 @@ let mainFunc = (input, position) => {
           e_html.animate({ scrollTop: $(document).height() }, 0)
           break
         case 'wget':
+          e_input_display[0].style.display = 'none';
           addNewTerminalLine(input, position);
           url = input.split(' ')[1]
           downloadFile(url, 'test', downProgressUpdate)
@@ -65,7 +66,7 @@ let mainFunc = (input, position) => {
           file = input.split(' ')[1]
           break
       }
-      e_input_display[0].style.display = 'block';
+      // e_input_display[0].style.display = 'block';
     }
   }
 }
@@ -156,6 +157,7 @@ $(document).ready(() => {
 async function downloadFile(fileUrl,fileName,progressFunc) {
   let blob = await getBlob(fileUrl,progressFunc);
   updateTheLastLine('下载进度：100%');
+  e_input_display[0].style.display = 'block';
   e_html.animate({ scrollTop: $(document).height() }, 0)
   e_input.val('')
   saveFile(blob, fileName);
