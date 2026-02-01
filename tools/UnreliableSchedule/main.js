@@ -110,26 +110,64 @@ let festival = [
         "date": "2026.2.16"
     },
     {
+        "name": "春节假日开始",
+        "date": "2026.2.15"
+    },
+    {
         "name": "春节",
         "date": "2026.2.17"
+    },
+    {
+        "name": "清明节",
+        "date": "2026.4.4"
+    },
+    {
+        "name": "劳动节",
+        "date": "2026.5.1"
+    },
+    {
+        "name": "端午节",
+        "date": "2026.6.19"
+    },
+    {
+        "name": "中秋节",
+        "date": "2026.9.25"
+    },
+    {
+        "name": "国庆节",
+        "date": "2026.10.1"
+    },
+    {
+        "name": "元旦",
+        "date": "2027.1.1"
+    },
+    {
+        "name": "除夕",
+        "date": "2027.2.4"
+    },
+    {
+        "name": "春节",
+        "date": "2027.2.5"
     }
 ]
 
 let vacationDays = [
-    "2025.1.1",
-    "2025.1.28-2025.2.4",
-    "2025.4.4-2025.4.6",
-    "2025.5.1-2025.5.5",
-    "2025.5.31-2025.6.2",
-    "2025.10.1-2024.10.8"
+    "2026.1.1-2026.1.3",
+    "2026.2.15-2026.2.23",
+    "2026.4.4-2026.4.6",
+    "2026.5.1-2026.5.5",
+    "2026.6.19-2026.6.21",
+    "2026.9.25-2026.9.27",
+    "2026.10.1-2026.10.7"
 ]
 
 let workDays = [
-    "2025.1.26",
-    "2025.2.8",
-    "2025.4.27",
-    "2025.9.28",
-    "2025.10.11"
+    "2026.1.4",
+    "2026.2.14",
+    "2026.2.28",
+    "2026.5.9",
+    "2026.9.20",
+    "2026.10.10"
 ]
 
 let dateDayToWeek = [
@@ -316,31 +354,31 @@ function addFestivalToPage(name, date) {
 
     let newFestivalDiv = document.createElement("div");
     newFestivalDiv.setAttribute("class", "festival");
-    // newFestivalDiv.style.setProperty("background-color", "rgba(" + parseInt(Math.random() * 150 + 100, 10) + "," + parseInt(Math.random() * 150 + 100, 10) + "," + parseInt(Math.random() * 150 + 100, 10) + ",0.9)");
-    // newFestivalDiv.style.setProperty("background-color", "rgba(210,210,210,0.9)");
-    // newFestivalDiv.style.setProperty('background-image', "url('imgs/xsbg.gif')");
+    newFestivalDiv.style.setProperty("background-color", "rgba(" + parseInt(Math.random() * 150 + 100, 10) + "," + parseInt(Math.random() * 150 + 100, 10) + "," + parseInt(Math.random() * 150 + 100, 10) + ",0.9)");
+    newFestivalDiv.style.setProperty("background-color", "rgba(210,210,210,0.9)");
+    newFestivalDiv.style.setProperty('background-image', "url('imgs/xsbg.gif')");
 
     let newFestivalTime = document.createElement("div");
     newFestivalTime.setAttribute("class", "festivalTime");
-    // newFestivalTime.style.setProperty("color", "rgb(" + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + ")");
+    newFestivalTime.style.setProperty("color", "rgb(" + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + ")");
     newFestivalTime.innerText = date;
     newFestivalDiv.appendChild(newFestivalTime);
 
     let newFestivalName = document.createElement("div");
     newFestivalName.setAttribute("class", "festivalName");
-    // newFestivalName.style.setProperty("color", "rgb(" + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + ")");
+    newFestivalName.style.setProperty("color", "rgb(" + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + ")");
     newFestivalName.innerText = name;
     newFestivalDiv.appendChild(newFestivalName);
 
     let newFestivalDistanceDays = document.createElement("div");
     newFestivalDistanceDays.setAttribute("class", "festivalDistanceDays");
-    // newFestivalDistanceDays.style.setProperty("color", "rgb(" + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + ")");
+    newFestivalDistanceDays.style.setProperty("color", "rgb(" + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + ")");
     newFestivalDistanceDays.innerText = "还有：" + distanceDays.toString() + "天";
     newFestivalDiv.appendChild(newFestivalDistanceDays);
 
     let newFestivalDistanceWorkDays = document.createElement("div");
     newFestivalDistanceWorkDays.setAttribute("class", "festivalDistanceWorkDays");
-    // newFestivalDistanceWorkDays.style.setProperty("color", "rgb(" + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + ")");
+    newFestivalDistanceWorkDays.style.setProperty("color", "rgb(" + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + ")");
     newFestivalDistanceWorkDays.innerText = "只算工作日：" + distanceWorkDays.toString() + "天";
     newFestivalDiv.appendChild(newFestivalDistanceWorkDays);
 
@@ -368,8 +406,8 @@ while (true) {
 let nextVacationDayDiv = document.createElement("div");
 nextVacationDayDiv.setAttribute("class", "nextVacationDay");
 nextVacationDayDiv.setAttribute("id", "nextVacationDay");
-// nextVacationDayDiv.style.setProperty("background-color", "rgba(210,210,210,0.9)");
-// nextVacationDayDiv.style.setProperty("color", "rgb(" + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + ")");
+nextVacationDayDiv.style.setProperty("background-color", "rgba(210,210,210,0.9)");
+nextVacationDayDiv.style.setProperty("color", "rgb(" + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + "," + parseInt(Math.random() * 100 + 50, 10) + ")");
 nextVacationDayDiv.innerText =
     "今天是 " + todayDate.getFullYear() + "-" + (todayDate.getMonth() + 1) + "-" + todayDate.getDate() + " " + dateDayToWeek[todayDate.getDay()] +
     " 距离下一个休息日\n" + tmpDate.getFullYear() + "-" + (tmpDate.getMonth() + 1) + "-" + tmpDate.getDate() + " " + dateDayToWeek[tmpDate.getDay()] +
