@@ -356,7 +356,7 @@ function addFestivalToPage(name, date) {
     newFestivalDiv.setAttribute("class", "festival");
     newFestivalDiv.style.setProperty("background-color", "rgba(" + parseInt(Math.random() * 150 + 100, 10) + "," + parseInt(Math.random() * 150 + 100, 10) + "," + parseInt(Math.random() * 150 + 100, 10) + ",0.9)");
     newFestivalDiv.style.setProperty("background-color", "rgba(210,210,210,0.9)");
-    newFestivalDiv.style.setProperty('background-image', "url('imgs/xsbg.gif')");
+    // newFestivalDiv.style.setProperty('background-image', "url('imgs/xsbg.gif')");
 
     let newFestivalTime = document.createElement("div");
     newFestivalTime.setAttribute("class", "festivalTime");
