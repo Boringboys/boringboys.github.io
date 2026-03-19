@@ -446,7 +446,7 @@ audioPlayBtn.onclick = function () {
         // 为什么是这个符号？你只要知道能暂停就行了
         if (!audioPlayer.paused) {
             audioPlayBtn.innerText = "| |";
-            // dynamicModeInterval = setInterval(dynamicMode, 1000);
+            dynamicModeInterval = setInterval(dynamicMode, 1000);
         }
     } else {
         audioPlayer.pause();
