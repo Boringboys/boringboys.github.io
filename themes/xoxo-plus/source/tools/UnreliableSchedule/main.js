@@ -306,9 +306,9 @@ async function resetColor() {
             } else {
                 childNode.style.setProperty("color", "#b9dada");
             }
-            await sleep(10);
+            await sleep(100);
         }
-        await sleep(10);
+        await sleep(1000);
     }
 }
 
@@ -444,10 +444,12 @@ audioPlayBtn.onclick = function () {
     if (audioPlayer.paused) {
         audioPlayer.play();
         // 为什么是这个符号？你只要知道能暂停就行了
-        if (!audioPlayer.paused) {
-            audioPlayBtn.innerText = "| |";
-            dynamicModeInterval = setInterval(dynamicMode, 1000);
-        }
+    // if (!audioPlayer.paused) {
+        audioPlayBtn.innerText = "| |";
+        clearInterval(dynamicModeInterval);
+        dynamicModeInterval = null;
+        dynamicModeInterval = setInterval(dynamicMode, 1000);
+    // }
     } else {
         audioPlayer.pause();
     }
@@ -457,7 +459,7 @@ audioPlayer.onpause = function () {
     audioPlayBtn.innerText = "▶";
     clearInterval(dynamicModeInterval);
     dynamicModeInterval = null;
-    setTimeout(resetColor, 300);
+    setTimeout(resetColor, 1000);
     // audioPlayBtn.click();
 }
 
